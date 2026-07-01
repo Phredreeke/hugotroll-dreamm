@@ -1,0 +1,191 @@
+desc[ite-hugoxl]:
+
+name = Hugo XL
+icon = ite-hugoxl.png
+machine = pc
+rootpath = C:\
+launch = $(rootpath)\hugo.exe
+osenv = windows
+winres=640x480x8
+
+//
+// filesystem
+//
+mount[]: vpath = C:\; srcpath = $(ifsdeltapath); writable = true;
+mount[]: vpath = $(rootpath); srcpath = $(ifsinstallpath)
+
+//
+// German version 
+//
+game[pc-de-990603]:
+    name = German
+    anchorfile = hugo.exe
+    file[]: crc = ec2f9895; size =        43; name = Autorun.inf
+    file[]: crc = 9d47ffd0; size =     50812; name = COVER.BOF
+    file[]: crc = 4cc7a621; size =    127488; name = dsetup.dll
+    file[]: crc = 4281f91a; size =       972; name = ErrMsg.txt
+    file[]: crc = 4de12ebf; size =    434176; name = hugo.exe
+    file[]: crc = 98d194fb; size =      2238; name = hugo.ico
+    file[]: crc = 366c1236; size =       168; name = HUGO.PII
+    file[]: crc = 62dd0c55; size =   1585205; name = Launch.exe
+    file[]: crc = 8a48ee68; size = 452000000; name = Misc.dat
+    file[]: crc = 7b57c03c; size =       168; name = SETTING.PII
+    file[]: crc = 8960ddac; size =     95232; name = SMACKW32.DLL
+    file[]: crc = 7d9cbead; size =        37; name = Config\Launch.txt
+    file[]: crc = 47f0d61f; size =       234; name = Config\machine.cfb
+    file[]: crc = 11c950e0; size =   1032716; name = Movie\Forest\branch.smk
+    file[]: crc = 362a218f; size =   2902628; name = Movie\Forest\catap.smk
+    file[]: crc = 899b100b; size =    693232; name = Movie\Forest\knap.smk
+    file[]: crc = ec8fb949; size =   1082868; name = Movie\Forest\stone.smk
+    file[]: crc = fa7eb595; size =   1382248; name = Movie\Forest\trap.smk
+    file[]: crc = 34f9e914; size =    976472; name = Movie\Lumber\dark.smk
+    file[]: crc = 92b94bb6; size =   1162744; name = Movie\Lumber\moose.smk
+    file[]: crc = 1d7ee1bf; size =    580600; name = Movie\Lumber\onfsh.smk
+    file[]: crc = 293fdbbb; size =    503656; name = Movie\Lumber\sc_spell.smk
+    file[]: crc = 1091fb86; size =    356232; name = Movie\MagicH\magich.smk
+    file[]: crc = 81d737fe; size =   2979968; name = Movie\Misc\Extra.smk
+    file[]: crc = 6aa1361e; size =  33587260; name = Movie\Misc\Intro.smk
+    file[]: crc = c7665d17; size =   4686248; name = Movie\Misc\itemedia.smk
+    file[]: crc = 72d0b120; size =  10920908; name = Movie\Misc\Ml1.smk
+    file[]: crc = dbb9dc5a; size =   1856024; name = Movie\Misc\Ml2.smk
+    file[]: crc = cd79a407; size =  18471160; name = Movie\Misc\Outro.smk
+    file[]: crc = 2c488e30; size =   1439852; name = Movie\Mountain\china.smk
+    file[]: crc = 8f11fab1; size =   1340260; name = Movie\Mountain\eatstne.smk
+    file[]: crc = f27f8cc2; size =   2281156; name = Movie\Mountain\hole.smk
+    file[]: crc = 061785aa; size =    778600; name = Movie\Mountain\intro.smk
+    file[]: crc = 415204c7; size =    864104; name = Movie\Mountain\lod.smk
+    file[]: crc = b0a64b50; size =    947816; name = Movie\Mountain\outro.smk
+    file[]: crc = f2aae45b; size =   1571376; name = Movie\Mountain\skwok.smk
+    file[]: crc = f69088a5; size =   1654444; name = Movie\Plane\baloon.smk
+    file[]: crc = baf0ce43; size =    944044; name = Movie\Plane\balsp1.smk
+    file[]: crc = 3be48612; size =    949052; name = Movie\Plane\balsp2.smk
+    file[]: crc = c539236f; size =   1288188; name = Movie\Plane\balsp3.smk
+    file[]: crc = 68b7f46d; size =   1546464; name = Movie\Plane\intro.smk
+    file[]: crc = 907e1cfb; size =    944316; name = Movie\Plane\ougsp1.smk
+    file[]: crc = 3d3da5c5; size =   1024288; name = Movie\Plane\ougsp2.smk
+    file[]: crc = 97b20713; size =   1337092; name = Movie\Plane\ougsp3.smk
+    file[]: crc = 80a6fba4; size =   2598488; name = Movie\Plane\outga.smk
+    file[]: crc = b1ea7df3; size =   6818476; name = Movie\Plane\outro.smk
+    file[]: crc = ff956cd9; size =   1705384; name = Movie\Plane\thunde.smk
+    file[]: crc = a96e8edf; size =    948456; name = Movie\Plane\thusp1.smk
+    file[]: crc = 3374d21c; size =    964960; name = Movie\Plane\thusp2.smk
+    file[]: crc = 788e601d; size =   1307940; name = Movie\Plane\thusp3.smk
+    file[]: crc = 73d90a3e; size =    995516; name = Movie\RopeEnd\fugl_r1.smk
+    file[]: crc = f1a56727; size =   1070564; name = Movie\RopeEnd\fugl_r2.smk
+    file[]: crc = 436dc809; size =   1017452; name = Movie\RopeEnd\fugl_r3.smk
+    file[]: crc = eefef6b9; size =    773584; name = Movie\RopeEnd\h_reb_r1.smk
+    file[]: crc = 44eaaca5; size =    797552; name = Movie\RopeEnd\h_reb_r2.smk
+    file[]: crc = 6ab07f45; size =    884412; name = Movie\RopeEnd\h_reb_r3.smk
+    file[]: crc = f0c1821a; size =   2225496; name = Movie\RopeEnd\happy.smk
+    file[]: crc = 37b013bb; size =   1161044; name = Movie\RopeEnd\hu_sku.smk
+    file[]: crc = 2ba37156; size =   1827044; name = Movie\RopeEnd\intro.smk
+    file[]: crc = ee7bb4d6; size =    801744; name = Movie\RopeEnd\s_reb_r1.smk
+    file[]: crc = e028b324; size =    875068; name = Movie\RopeEnd\s_reb_r2.smk
+    file[]: crc = fc38555b; size =    976364; name = Movie\RopeEnd\s_reb_r3.smk
+    file[]: crc = 00d68e7a; size =    705404; name = Movie\RopeEnd\sc_sku.smk
+    file[]: crc = a47b2b15; size =   4162040; name = Movie\RopeEnd\scylla.smk
+    file[]: crc = 6ecd07d9; size =    723948; name = Movie\Scuba\crab.smk
+    file[]: crc = 9c5c9e72; size =   1114312; name = Movie\Scuba\fish.smk
+    file[]: crc = 8d96b0c9; size =    981860; name = Movie\Scuba\intro.smk
+    file[]: crc = 5d26180c; size =   1528828; name = Movie\Scuba\octop.smk
+    file[]: crc = 154f3d1c; size =   1601052; name = Movie\Scuba\outro.smk
+    file[]: crc = 700f817d; size =   2062760; name = Movie\Scuba\waterf.smk
+    file[]: crc = 471919c8; size =   1515556; name = Movie\Skate\beaver.smk
+    file[]: crc = d0d7ca63; size =   1420164; name = Movie\Skate\outro.smk
+    file[]: crc = 955c6cd3; size =    683900; name = Movie\Skate\skfall.smk
+    file[]: crc = e3f8a389; size =    696972; name = Movie\Skate\stnedi.smk
+    file[]: crc = 42d43e26; size =   1980192; name = Movie\train\deaden.smk
+    file[]: crc = a053b667; size =   2088320; name = Movie\train\hotass.smk
+    file[]: crc = e537a61e; size =   1886958; name = WebChoiceTV\wctv_102.exe
+
+end
+
+
+//
+// Finnish version 
+//
+game[pc-fi-990806]:
+    name = Finnish
+    anchorfile = hugo.exe
+    file[]: crc = ec2f9895; size =        43; name = Autorun.inf
+    file[]: crc = 67821989; size =     38808; name = COVER.BOF
+    file[]: crc = 4cc7a621; size =    127488; name = dsetup.dll
+    file[]: crc = 71e398ec; size =       762; name = ErrMsg.txt
+    file[]: crc = 4de12ebf; size =    434176; name = hugo.exe
+    file[]: crc = 98d194fb; size =      2238; name = hugo.ico
+    file[]: crc = 366c1236; size =       168; name = HUGO.PII
+    file[]: crc = 62dd0c55; size =   1585205; name = Launch.exe
+    file[]: crc = c7305a12; size = 400000000; name = Misc.dat
+    file[]: crc = 7b57c03c; size =       168; name = SETTING.PII
+    file[]: crc = 8960ddac; size =     95232; name = SMACKW32.DLL
+    file[]: crc = 7d6b2876; size =        40; name = Config\Launch.txt
+    file[]: crc = 47f0d61f; size =       234; name = Config\machine.cfb
+    file[]: crc = 91199ae9; size =   1020668; name = Movie\Forest\branch.smk
+    file[]: crc = 882c2a40; size =   2880608; name = Movie\Forest\catap.smk
+    file[]: crc = 899b100b; size =    693232; name = Movie\Forest\knap.smk
+    file[]: crc = 16f8f8d5; size =   1177416; name = Movie\Forest\stone.smk
+    file[]: crc = 94b100e1; size =   1454700; name = Movie\Forest\trap.smk
+    file[]: crc = 37cb31b2; size =   1042228; name = Movie\Lumber\dark.smk
+    file[]: crc = 02a201fe; size =   1177952; name = Movie\Lumber\moose.smk
+    file[]: crc = e4bf5337; size =    695512; name = Movie\Lumber\onfsh.smk
+    file[]: crc = 293fdbbb; size =    503656; name = Movie\Lumber\sc_spell.smk
+    file[]: crc = 1091fb86; size =    356232; name = Movie\MagicH\magich.smk
+    file[]: crc = 5cbd1092; size =   2081104; name = Movie\Misc\Extra.smk
+    file[]: crc = 9a7f6997; size =  33406720; name = Movie\Misc\Intro.smk
+    file[]: crc = c7665d17; size =   4686248; name = Movie\Misc\itemedia.smk
+    file[]: crc = a79a71e0; size =  10889512; name = Movie\Misc\Ml1.smk
+    file[]: crc = bdc6556d; size =   1647576; name = Movie\Misc\Ml2.smk
+    file[]: crc = a0c19d59; size =  19974476; name = Movie\Misc\Outro.smk
+    file[]: crc = 7a1454a7; size =   1120104; name = Movie\Mountain\china.smk
+    file[]: crc = ccb58b8a; size =   1191164; name = Movie\Mountain\eatstne.smk
+    file[]: crc = 4da6b29f; size =   2118380; name = Movie\Mountain\hole.smk
+    file[]: crc = 5b66efb1; size =    699968; name = Movie\Mountain\intro.smk
+    file[]: crc = 415204c7; size =    864104; name = Movie\Mountain\lod.smk
+    file[]: crc = f167d65b; size =    785200; name = Movie\Mountain\outro.smk
+    file[]: crc = 36ce1dd9; size =   1554764; name = Movie\Mountain\skwok.smk
+    file[]: crc = ee6af918; size =   1741404; name = Movie\Plane\baloon.smk
+    file[]: crc = 7ad1cd9f; size =    897596; name = Movie\Plane\balsp1.smk
+    file[]: crc = 127f2efc; size =    911260; name = Movie\Plane\balsp2.smk
+    file[]: crc = a63cd18a; size =   1202316; name = Movie\Plane\balsp3.smk
+    file[]: crc = d9a88630; size =   1703724; name = Movie\Plane\intro.smk
+    file[]: crc = ca50a3c8; size =    985844; name = Movie\Plane\ougsp1.smk
+    file[]: crc = 216c7f35; size =   1000072; name = Movie\Plane\ougsp2.smk
+    file[]: crc = f67f58a3; size =   1319540; name = Movie\Plane\ougsp3.smk
+    file[]: crc = 3c3e1fdb; size =   2596312; name = Movie\Plane\outga.smk
+    file[]: crc = 94b85d7c; size =   7287868; name = Movie\Plane\outro.smk
+    file[]: crc = d66c72c2; size =   1634272; name = Movie\Plane\thunde.smk
+    file[]: crc = eae06182; size =    883904; name = Movie\Plane\thusp1.smk
+    file[]: crc = 2a3cb006; size =    925960; name = Movie\Plane\thusp2.smk
+    file[]: crc = 92e4bcb2; size =   1226424; name = Movie\Plane\thusp3.smk
+    file[]: crc = 73d90a3e; size =    995516; name = Movie\RopeEnd\fugl_r1.smk
+    file[]: crc = f1a56727; size =   1070564; name = Movie\RopeEnd\fugl_r2.smk
+    file[]: crc = 436dc809; size =   1017452; name = Movie\RopeEnd\fugl_r3.smk
+    file[]: crc = eefef6b9; size =    773584; name = Movie\RopeEnd\h_reb_r1.smk
+    file[]: crc = 44eaaca5; size =    797552; name = Movie\RopeEnd\h_reb_r2.smk
+    file[]: crc = 6ab07f45; size =    884412; name = Movie\RopeEnd\h_reb_r3.smk
+    file[]: crc = eadb6860; size =   2205216; name = Movie\RopeEnd\happy.smk
+    file[]: crc = 42f069ec; size =    995040; name = Movie\RopeEnd\hu_sku.smk
+    file[]: crc = 8822d0a3; size =   1457744; name = Movie\RopeEnd\intro.smk
+    file[]: crc = ee7bb4d6; size =    801744; name = Movie\RopeEnd\s_reb_r1.smk
+    file[]: crc = e028b324; size =    875068; name = Movie\RopeEnd\s_reb_r2.smk
+    file[]: crc = fc38555b; size =    976364; name = Movie\RopeEnd\s_reb_r3.smk
+    file[]: crc = b0285700; size =    997144; name = Movie\RopeEnd\sc_sku.smk
+    file[]: crc = a51050dd; size =   3656544; name = Movie\RopeEnd\scylla.smk
+    file[]: crc = 42fdd699; size =    944672; name = Movie\Scuba\crab.smk
+    file[]: crc = a79e3462; size =    911740; name = Movie\Scuba\fish.smk
+    file[]: crc = 68793944; size =    797404; name = Movie\Scuba\intro.smk
+    file[]: crc = 08ee6b0f; size =   1153868; name = Movie\Scuba\octop.smk
+    file[]: crc = edf56eeb; size =   1249520; name = Movie\Scuba\outro.smk
+    file[]: crc = b3b5f456; size =   1950812; name = Movie\Scuba\waterf.smk
+    file[]: crc = 68b922f4; size =   1548236; name = Movie\Skate\beaver.smk
+    file[]: crc = 7a4610fc; size =   1179132; name = Movie\Skate\outro.smk
+    file[]: crc = 2c5341d2; size =    556904; name = Movie\Skate\skfall.smk
+    file[]: crc = 4630e2aa; size =    696268; name = Movie\Skate\stnedi.smk
+    file[]: crc = 2e500341; size =   1233204; name = Movie\train\deaden.smk
+    file[]: crc = 6a6dcbe4; size =   1945236; name = Movie\train\hotass.smk
+    file[]: crc = e537a61e; size =   1886958; name = WebChoiceTV\wctv_102.exe
+
+end
+
+
+end

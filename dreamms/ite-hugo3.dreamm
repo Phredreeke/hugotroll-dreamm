@@ -1,0 +1,43 @@
+desc[ite-hugo3]:
+
+name = Hugo 3
+icon = ite-hugo3.png
+machine = pc
+rootpath = C:\
+launch = $(rootpath)\HUGO.EXE
+osenv = dos
+fixdivover = true
+mips = $(MIPS_P100)
+ramkb = 16384
+audiohw = sb16
+videohw = svga
+
+//
+// filesystem
+//
+mount[]: vpath = C:\; srcpath = $(ifsdeltapath); writable = true;
+mount[]: vpath = $(rootpath); srcpath = $(ifsinstallpath)
+
+//
+// Swedish DOS version
+//
+game[pc-se-960124]:
+    name = Swedish DOS
+    anchorfile = HUGO.EXE
+    file[]: crc = 29f2099e; size = 642373564; name = 4HUGO.DAT
+    file[]: crc = 9486bf0e; size =     26048; name = CHECKRAM.EXE
+    file[]: crc = cb214447; size =    265420; name = DOS4GW.EXE
+    file[]: crc = ee850687; size =    434075; name = HUGO.EXE
+    file[]: crc = f60a1493; size =       766; name = HUGO.OCI
+    file[]: crc = f166b343; size =       995; name = HUGOW95.WIN
+    file[]: crc = b79e73e2; size =       545; name = HUGOWIN.WIN
+    file[]: crc = cd70248e; size =     20368; name = INSTALL.EXE
+    file[]: crc = 56123565; size =     61104; name = INSTALLW.EXE
+    file[]: crc = 1620e660; size =      3005; name = README.TXT
+    file[]: crc = b66cc8dd; size =     21036; name = SNDSETUP.EXE
+    file[]: crc = bf32ea05; size =       766; name = SNDSETUP.OCI
+    file[]: crc = 368471f2; size =       545; name = SNDSETUP.PIF
+
+end
+
+end

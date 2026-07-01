@@ -1,0 +1,50 @@
+desc[ite-hugo5]:
+
+name = Hugo 5
+icon = ite-hugo5.png
+machine = pc
+rootpath = C:\
+launch = $(rootpath)\HUGO.EXE
+osenv = dos
+fixdivover = true
+mips = $(MIPS_P100)
+ramkb = 16384
+audiohw = sb16
+videohw = svga
+
+//
+// filesystem
+//
+mount[]: vpath = C:\; srcpath = $(ifsdeltapath); writable = true;
+mount[]: vpath = $(rootpath); srcpath = $(ifsinstallpath)
+
+//
+// Swedish DOS version
+//
+game[pc-se-980318]:
+    name = Swedish DOS
+    anchorfile = HUGO.EXE
+    file[]: crc = 3430b8d8; size =     43564; name = CHECKRAM.EXE
+    file[]: crc = a802da90; size =       120; name = DATA.TAG
+    file[]: crc = f459d3df; size =      2705; name = DATA1.CAB
+    file[]: crc = cb214447; size =    265420; name = DOS4GW.EXE
+    file[]: crc = c90f35dc; size =       228; name = DSIK.TXT
+    file[]: crc = c4e4dbcd; size = 697629151; name = HUGO.DAT
+    file[]: crc = 955b7683; size =    426448; name = HUGO.EXE
+    file[]: crc = f60a1493; size =       766; name = HUGO.ICO
+    file[]: crc = a06ec6e6; size =    334336; name = HUGOW.EXE
+    file[]: crc = f6e54499; size =    154319; name = INSTALL.EXE
+    file[]: crc = f5324e10; size =     59904; name = INSTALLW.EXE
+    file[]: crc = ba7ee667; size =      4557; name = LANG.DAT
+    file[]: crc = 76d01c8e; size =       353; name = LAYOUT.BIN
+    file[]: crc = f9edc7a9; size =       417; name = OS.DAT
+    file[]: crc = fc8a64c1; size =        82; name = README.TXT
+    file[]: crc = 86621fb2; size =    230456; name = SETUP.BMP
+    file[]: crc = 4dbe84a1; size =        61; name = SETUP.INI
+    file[]: crc = 3d98f1df; size =     56681; name = SETUP.INS
+    file[]: crc = 36578683; size =        47; name = SETUP.LID
+    file[]: crc = 0fc692f2; size =    156411; name = SNDSETUP.DAT
+
+end
+
+end

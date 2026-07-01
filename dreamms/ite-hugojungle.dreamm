@@ -1,0 +1,152 @@
+desc[ite-hugojungle]:
+
+name = Hugo Jungle Island
+icon = ite-hugojungle.png
+machine = pc
+rootpath = C:\
+launch = $(rootpath)\JUNGLE.EXE
+osenv = windows
+winres=640x480x8
+
+//
+// filesystem
+//
+mount[]: vpath = C:\; srcpath = $(ifsdeltapath); writable = true;
+mount[]: vpath = $(rootpath); srcpath = $(ifsinstallpath)
+
+//
+// dummy game description; 
+//
+game[pc-de-030902]:
+    name = German
+    anchorfile = JUNGLE.EXE
+    file[]: crc = 1559fb62; size =        44; name = AUTORUN.INF
+    file[]: crc = 266b2ef7; size =    475136; name = COREW32DLL.DLL
+    file[]: crc = ee864f94; size =    135680; name = DSETUP.DLL
+    file[]: crc = 6b137912; size =     64512; name = DSETUP16.DLL
+    file[]: crc = cf811d99; size =     57344; name = DSETUP32.DLL
+    file[]: crc = cf304a54; size =     81920; name = GFXDIRX.DLL
+    file[]: crc = 530c55e1; size =    294912; name = JUNGLE.EXE
+    file[]: crc = 2cdab694; size =      2238; name = JUNGLE.ICO
+    file[]: crc = 55e093a0; size =       773; name = MACHINE.CNF
+    file[]: crc = 51ae04f0; size = 149604352; name = RESOURCE.RES
+    file[]: crc = 5f9e3087; size =   2064384; name = SETUP.EXE
+    file[]: crc = 02fd4789; size =     69632; name = SFXDIRX.DLL
+    file[]: crc = a840b8e6; size =     96256; name = SMACKW32.DLL
+    file[]: crc = c67a6743; size =      1543; name = CONFIG\INTROPLUGIN.CNF
+    file[]: crc = cec82f9d; size =      8125; name = CONFIG\KOPTERPLUGIN.CNF
+    file[]: crc = 8bcb8852; size =      7180; name = CONFIG\LIANPLUGIN.CNF
+    file[]: crc = dab10f94; size =       827; name = CONFIG\LOADERPLUGIN.CNF
+    file[]: crc = 26866cae; size =      1535; name = CONFIG\MEMORYPLUGIN.CNF
+    file[]: crc = 167e1cd2; size =      3935; name = CONFIG\MENUPLUGIN.CNF
+    file[]: crc = c8b9bc9d; size =      3843; name = CONFIG\MONKEYPLUGIN.CNF
+    file[]: crc = a0d604d8; size =      2865; name = CONFIG\OUTROPLUGIN.CNF
+    file[]: crc = 4345b4bc; size =     15968; name = CONFIG\PLATFORMPLUGIN.CNF
+    file[]: crc = ebd8719b; size =      3211; name = CONFIG\WHACKPLUGIN.CNF
+    file[]: crc = e5eb5c59; size =   5414740; name = MOVIE\INTRO\ITEMEDIA.SMK
+    file[]: crc = d1e1cfdb; size =  28583488; name = MOVIE\INTRO\SCENE1.SMK
+    file[]: crc = cd248168; size =   6200184; name = MOVIE\INTRO\SCENE2.SMK
+    file[]: crc = 774305fe; size =    233880; name = MOVIE\KOPTER\CAVESTALAKIT1.SMK
+    file[]: crc = 968b0c2a; size =    462956; name = MOVIE\KOPTER\CAVESTALAKIT2.SMK
+    file[]: crc = 57e0822b; size =    100552; name = MOVIE\KOPTER\CAVESTONE.SMK
+    file[]: crc = 76a788cf; size =  10715152; name = MOVIE\KOPTER\EASYCAVE.SMK
+    file[]: crc = 1d1b8ab5; size =  10975840; name = MOVIE\KOPTER\EASYINCA.SMK
+    file[]: crc = aa6f181a; size =  13386868; name = MOVIE\KOPTER\EASYRIVER1.SMK
+    file[]: crc = fdb9b865; size =  13343972; name = MOVIE\KOPTER\EASYRIVER2.SMK
+    file[]: crc = 19c635a9; size =  10676040; name = MOVIE\KOPTER\HARDCAVE.SMK
+    file[]: crc = 384ef604; size =  10961048; name = MOVIE\KOPTER\HARDINCA.SMK
+    file[]: crc = 0b5007b8; size =  13280384; name = MOVIE\KOPTER\HARDRIVER1.SMK
+    file[]: crc = d7257a94; size =  13177104; name = MOVIE\KOPTER\HARDRIVER2.SMK
+    file[]: crc = 50c57f1d; size =     17460; name = MOVIE\KOPTER\HUGOCAVE.SMK
+    file[]: crc = 493d7d6b; size =     20288; name = MOVIE\KOPTER\HUGOINCA.SMK
+    file[]: crc = 98a1d414; size =     26140; name = MOVIE\KOPTER\HUGOJUNGLE.SMK
+    file[]: crc = 08298233; size =   1041128; name = MOVIE\KOPTER\INCAFIST2.SMK
+    file[]: crc = 166517cd; size =    119480; name = MOVIE\KOPTER\INCAFIST3.SMK
+    file[]: crc = 5eada257; size =   1316544; name = MOVIE\KOPTER\INCAFISTLEFT.SMK
+    file[]: crc = 8d6e91cb; size =   1092324; name = MOVIE\KOPTER\INCAFISTRIGHT.SMK
+    file[]: crc = a73ba56c; size =    250976; name = MOVIE\KOPTER\INCAFLAME.SMK
+    file[]: crc = 285fbbe3; size =    884944; name = MOVIE\KOPTER\INCAFLAMELEFT.SMK
+    file[]: crc = 285fbbe3; size =    884944; name = MOVIE\KOPTER\INCAFLAMERIGHT.SMK
+    file[]: crc = 9b203e0b; size =     27612; name = MOVIE\KOPTER\INCASTONE.SMK
+    file[]: crc = 067d26f9; size =   2329984; name = MOVIE\KOPTER\INTRO1.SMK
+    file[]: crc = 073ef4d8; size =   1416700; name = MOVIE\KOPTER\INTRO2.SMK
+    file[]: crc = 734c14c0; size =   4971048; name = MOVIE\KOPTER\INTRO3.SMK
+    file[]: crc = 280bf6fe; size =   1793464; name = MOVIE\KOPTER\INTRO4.SMK
+    file[]: crc = f8a083d2; size =     53612; name = MOVIE\KOPTER\JUNGLESTONE.SMK
+    file[]: crc = b105634a; size =    812196; name = MOVIE\KOPTER\MONKEYSTICKLEFT1.SMK
+    file[]: crc = 0ed4c782; size =   2053000; name = MOVIE\KOPTER\MONKEYSTICKLEFT2.SMK
+    file[]: crc = 9dce3718; size =    841816; name = MOVIE\KOPTER\MONKEYSTICKRIGHT1.SMK
+    file[]: crc = 2d259f1d; size =   2075040; name = MOVIE\KOPTER\MONKEYSTICKRIGHT2.SMK
+    file[]: crc = 0100f7f8; size =    674948; name = MOVIE\KOPTER\MONKEYSWING1.SMK
+    file[]: crc = 9660a3d7; size =    177664; name = MOVIE\KOPTER\MONKEYSWING2.SMK
+    file[]: crc = e3ff2b6f; size =   1058552; name = MOVIE\KOPTER\NOFUELINCA1.SMK
+    file[]: crc = 36bb5901; size =   1282624; name = MOVIE\KOPTER\NOFUELINCA2.SMK
+    file[]: crc = d4706861; size =    251772; name = MOVIE\KOPTER\NOFUELINCA3.SMK
+    file[]: crc = b481e6fc; size =   1083684; name = MOVIE\KOPTER\NOFUELJUNGLE1.SMK
+    file[]: crc = e7f26874; size =   1351692; name = MOVIE\KOPTER\NOFUELJUNGLE2.SMK
+    file[]: crc = e6fc2686; size =    275892; name = MOVIE\KOPTER\NOFUELJUNGLE3.SMK
+    file[]: crc = df11db15; size =    880136; name = MOVIE\KOPTER\NOFUELTUNNEL1.SMK
+    file[]: crc = 0ca22400; size =   1137892; name = MOVIE\KOPTER\NOFUELTUNNEL2.SMK
+    file[]: crc = aa4838cb; size =    239996; name = MOVIE\KOPTER\NOFUELTUNNEL3.SMK
+    file[]: crc = 4137378a; size =   1774764; name = MOVIE\KOPTER\OUTRO.SMK
+    file[]: crc = 91b0f7d4; size =    525676; name = MOVIE\KOPTER\TREE1.SMK
+    file[]: crc = 852360cf; size =   4958124; name = MOVIE\KOPTER\TREE2.SMK
+    file[]: crc = dd60a410; size =    533072; name = MOVIE\KOPTER\TURNCAVELEFT.SMK
+    file[]: crc = 56d0d46c; size =    533408; name = MOVIE\KOPTER\TURNCAVERIGHT.SMK
+    file[]: crc = aa275ca6; size =    739936; name = MOVIE\KOPTER\TURNINCALEFT.SMK
+    file[]: crc = 31db56a1; size =    738620; name = MOVIE\KOPTER\TURNINCARIGHT.SMK
+    file[]: crc = f2cb768c; size =    592332; name = MOVIE\KOPTER\TURNJUNGLELEFT.SMK
+    file[]: crc = cfe3ea62; size =    594168; name = MOVIE\KOPTER\TURNJUNGLERIGHT.SMK
+    file[]: crc = 394f3c6f; size =    969368; name = MOVIE\KOPTER\WATERFALL1.SMK
+    file[]: crc = e60f99aa; size =    167964; name = MOVIE\KOPTER\WATERFALL2.SMK
+    file[]: crc = 4204e33a; size =  67042612; name = MOVIE\LIANA\BACK.SMK
+    file[]: crc = 9e50e91b; size =   1916676; name = MOVIE\LIANA\BLINDH.SMK
+    file[]: crc = 5604bd92; size =   1916596; name = MOVIE\LIANA\BLINDV.SMK
+    file[]: crc = d41a5be2; size =    642888; name = MOVIE\LIANA\ELEDIE.SMK
+    file[]: crc = 48fec29c; size =    135772; name = MOVIE\LIANA\INTRO1.SMK
+    file[]: crc = cb2d1f0d; size =    176340; name = MOVIE\LIANA\INTRO3.SMK
+    file[]: crc = 5baae928; size =     94956; name = MOVIE\LIANA\INTRO4.SMK
+    file[]: crc = 3c15aec1; size =    128060; name = MOVIE\LIANA\LEODIE1.SMK
+    file[]: crc = b5eb99dd; size =    146104; name = MOVIE\LIANA\LEODIE2.SMK
+    file[]: crc = fe97ee0d; size =   2624184; name = MOVIE\LIANA\LEODIE3.SMK
+    file[]: crc = f199b5d4; size =    185416; name = MOVIE\LIANA\LEODIE5.SMK
+    file[]: crc = 66a617a7; size =    713456; name = MOVIE\LIANA\OUTRO1.SMK
+    file[]: crc = 5dba0258; size =    416976; name = MOVIE\LIANA\OUTRO2.SMK
+    file[]: crc = 2bef13a8; size =    254348; name = MOVIE\LIANA\OUTRO3.SMK
+    file[]: crc = 0d4760fb; size =    266004; name = MOVIE\LIANA\PLANTDIE.SMK
+    file[]: crc = 23c49d50; size =    501792; name = MOVIE\LIANA\SWINGLEFT.SMK
+    file[]: crc = a4d9451b; size =    501692; name = MOVIE\LIANA\SWINGRIGHT.SMK
+    file[]: crc = c07c1b77; size =    548772; name = MOVIE\MONKEY\GRABCENTER.SMK
+    file[]: crc = 4d774eb5; size =    519956; name = MOVIE\MONKEY\GRABCORNER.SMK
+    file[]: crc = 535ac304; size =    523880; name = MOVIE\MONKEY\GRABSIDE.SMK
+    file[]: crc = c24edf52; size =    850532; name = MOVIE\MONKEY\KISS.SMK
+    file[]: crc = 353890f0; size =    992396; name = MOVIE\MONKEY\SINK.SMK
+    file[]: crc = 70ccfbb7; size =    493020; name = MOVIE\MONKEY\STAGE1.SMK
+    file[]: crc = 3c3d3d74; size =    480976; name = MOVIE\MONKEY\STAGE2.SMK
+    file[]: crc = aaf94a45; size =    479248; name = MOVIE\MONKEY\STAGE3.SMK
+    file[]: crc = 78f21f58; size =    777864; name = MOVIE\MONKEY\SWING.SMK
+    file[]: crc = dbdff810; size =   1333484; name = MOVIE\MONKEY\WALK.SMK
+    file[]: crc = b6402858; size =    147856; name = MOVIE\OUTRO\640_APE_BAD.SMK
+    file[]: crc = 9c376a5f; size =    141504; name = MOVIE\OUTRO\640_APE_GOOD.SMK
+    file[]: crc = 9521bba5; size =    285480; name = MOVIE\OUTRO\640_APE_JUMP.SMK
+    file[]: crc = b973dcc0; size =   9425528; name = MOVIE\OUTRO\640_BEACH.SMK
+    file[]: crc = e5a6ed8e; size =   1463164; name = MOVIE\OUTRO\640_CAGEFALL.SMK
+    file[]: crc = 7d2ed168; size =    151924; name = MOVIE\OUTRO\640_CAT_BAD.SMK
+    file[]: crc = f056819e; size =    144932; name = MOVIE\OUTRO\640_CAT_GOOD.SMK
+    file[]: crc = 5fced5e5; size =    282184; name = MOVIE\OUTRO\640_CAT_JUMP.SMK
+    file[]: crc = dfb94d2d; size =   4816040; name = MOVIE\OUTRO\640_OUTRO1.SMK
+    file[]: crc = 4e0dc86a; size =   1413276; name = MOVIE\OUTRO\640_OUTRO2.SMK
+    file[]: crc = bddd2458; size =   1532632; name = MOVIE\OUTRO\640_OUTRO3_1.SMK
+    file[]: crc = 8c82db16; size =    681816; name = MOVIE\OUTRO\640_OUTRO5.SMK
+    file[]: crc = 548f7664; size =    394024; name = MOVIE\OUTRO\640_REACH_HANDLE.SMK
+    file[]: crc = ea5b0dac; size =    132620; name = MOVIE\OUTRO\640_SNAKE_BAD.SMK
+    file[]: crc = af6f346d; size =    126208; name = MOVIE\OUTRO\640_SNAKE_GOOD.SMK
+    file[]: crc = f794f9cd; size =    279736; name = MOVIE\OUTRO\640_SNAKE_JUMP.SMK
+    file[]: crc = 0b38351f; size =    625504; name = MOVIE\OUTRO\640_WALK_APE.SMK
+    file[]: crc = 35e82be0; size =    857680; name = MOVIE\OUTRO\640_WALK_SNAKE.SMK
+    file[]: crc = 5d1152e3; size =    663844; name = MOVIE\OUTRO\640_WALK_TIGER.SMK
+    file[]: crc = 26c465ce; size =    998864; name = MOVIE\OUTRO\HUGOFLY.SMK
+
+end
+
+end
