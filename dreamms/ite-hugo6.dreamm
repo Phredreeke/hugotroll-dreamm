@@ -1,0 +1,50 @@
+desc[ite-hugo6]:
+
+name = Hugo 6
+icon = ite-hugo6.png
+machine = pc
+rootpath = C:\
+launch = $(rootpath)\Hugo6.exe
+osenv = windows
+winres=640x480x8
+
+//
+// filesystem
+//
+mount[]: vpath = C:\; srcpath = $(ifsdeltapath); writable = true;
+mount[]: vpath = $(rootpath); srcpath = $(ifsinstallpath)
+
+//
+// Portuguese version 
+//
+game[pc-pt]:
+    name = Portuguese
+    anchorfile = Hugo6.exe
+    file[]: crc = fdad7924; size =        52; name = Autorun.inf
+    file[]: crc = 8d016b7f; size = 689884868; name = data.big
+    file[]: crc = bea18e17; size =       114; name = debuglog.reg
+    file[]: crc = ee864f94; size =    135680; name = dsetup.dll
+    file[]: crc = 6b137912; size =     64512; name = dsetup16.dll
+    file[]: crc = cf811d99; size =     57344; name = dsetup32.dll
+    file[]: crc = 0e47a77d; size =    542720; name = Hugo6.exe
+    file[]: crc = 3bc46a3b; size =    355840; name = HugoAutorun.exe
+    file[]: crc = 795a23ff; size =     21504; name = InstallW.exe
+    file[]: crc = 82d472be; size =       756; name = machine.cnf
+    file[]: crc = 0d7e96ed; size =     85691; name = mapfile.zip
+    file[]: crc = 865c3395; size =       129; name = config\AutoRun.cnf
+    file[]: crc = 847babac; size =      2238; name = config\hugo.ico
+    file[]: crc = 949906ce; size =      2956; name = config\KeyPlugin.cnf
+    file[]: crc = 1c2a7eaf; size =      1382; name = config\LoaderPlugin.cnf
+    file[]: crc = b32ae7c7; size =      3607; name = config\MenuPlugin.cnf
+    file[]: crc = f602989f; size =      3608; name = config\MinetrackPlugin.cnf
+    file[]: crc = 4ee21b22; size =      8464; name = config\MoorPlugin.cnf
+    file[]: crc = 9aad685c; size =      8787; name = config\RiverPlugin.cnf
+    file[]: crc = a62d4c42; size =      1417; name = config\RopeIntroPlugin.cnf
+    file[]: crc = 1cd437ac; size =      2612; name = config\RopeOutroPlugin.cnf
+    file[]: crc = cfa053c4; size =     15608; name = config\StonesPlugin.cnf
+    file[]: crc = 6dbf932f; size =      5446; name = config\WitchPlugin.cnf
+
+
+end
+
+end
