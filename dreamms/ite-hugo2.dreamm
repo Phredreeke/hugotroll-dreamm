@@ -1,0 +1,49 @@
+desc[ite-hugoxl]:
+
+name = Hugo 2
+icon = ite-hugo2.png
+machine = pc
+rootpath = C:\
+launch = $(rootpath)\Hugo.exe
+osenv = windows
+winres=640x480x8
+
+//
+// filesystem
+//
+mount[]: vpath = C:\; srcpath = $(ifsdeltapath); writable = true;
+mount[]: vpath = $(rootpath); srcpath = $(ifsinstallpath)
+
+//
+// German version 
+//
+game[pc-pt]:
+    name = Portuguese
+    anchorfile = Hugo.exe
+    file[]: crc = cef7e1eb; size =        50; name = Autorun.inf
+    file[]: crc = e94ca9ce; size = 673465964; name = data.big
+    file[]: crc = bea18e17; size =       114; name = debuglog.reg
+    file[]: crc = 4cc7a621; size =    127488; name = dsetup.dll
+    file[]: crc = d3851129; size =     63056; name = dsetup16.dll
+    file[]: crc = 03cf7973; size =     41984; name = dsetup32.dll
+    file[]: crc = 7921d61c; size =    526848; name = Hugo.exe
+    file[]: crc = eefab085; size =    355840; name = HugoAutorun.exe
+    file[]: crc = 795a23ff; size =     21504; name = Launch.exe
+    file[]: crc = e04cc930; size =       748; name = machine.cnf
+    file[]: crc = 306281f0; size =     92822; name = mapfile.zip
+    file[]: crc = 75123bad; size =       137; name = config\autorun.cnf
+    file[]: crc = 4f6453d4; size =      6869; name = config\ForestPlugin.cnf
+    file[]: crc = 847babac; size =      2238; name = config\hugo.ico
+    file[]: crc = 47bd94d0; size =      2927; name = config\KeyPlugin.cnf
+    file[]: crc = 77c22813; size =      1333; name = config\LoaderPlugin.cnf
+    file[]: crc = 93ce2393; size =      3449; name = config\MenuPlugin.cnf
+    file[]: crc = 75de0170; size =      6461; name = config\MountainPlugin.cnf
+    file[]: crc = 6e8296c7; size =      7958; name = config\PlanePlugin.cnf
+    file[]: crc = bcd46b7c; size =      1387; name = config\RopeIntroPlugin.cnf
+    file[]: crc = 4ff5584e; size =      2583; name = config\RopeOutroPlugin.cnf
+    file[]: crc = 69c39849; size =      7504; name = config\TrainPlugin.cnf
+    file[]: crc = c92fc8f8; size =      5412; name = config\WitchPlugin.cnf
+
+end
+
+end
