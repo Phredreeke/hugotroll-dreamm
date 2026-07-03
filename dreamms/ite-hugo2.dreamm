@@ -114,4 +114,37 @@ game[pc-dk]:
 
 end
 
+//
+// Spanish version 
+//
+game[pc-es]:
+    name = Spanish (Argentina)
+    anchorfile = Hugo.exe
+    file[]: crc = c40524df; size =        50; name = Autorun.inf
+    file[]: crc = 03d7ca6f; size = 665975093; name = data.big
+    file[]: crc = bea18e17; size =       114; name = debuglog.reg
+    file[]: crc = 4cc7a621; size =    127488; name = dsetup.dll
+    file[]: crc = d3851129; size =     63056; name = dsetup16.dll
+    file[]: crc = 03cf7973; size =     41984; name = dsetup32.dll
+    file[]: crc = febfcd4c; size =    623104; name = hugo.exe
+    file[]: crc = d94ef249; size =    355840; name = HugoAutorun.exe
+    file[]: crc = 795a23ff; size =     21504; name = Launch.exe
+    file[]: crc = e04cc930; size =       748; name = machine.cnf
+    file[]: crc = 3028a791; size =    100885; name = mapfile.zip
+    file[]: crc = 326cd3eb; size =       777; name = config\AutoRun.cnf
+    file[]: crc = b5927ffe; size =      6868; name = config\ForestPlugin.cnf
+    file[]: crc = 847babac; size =      2238; name = config\hugo.ico
+    file[]: crc = 3cf89f24; size =      2926; name = config\KeyPlugin.cnf
+    file[]: crc = 9b567198; size =      1331; name = config\LoaderPlugin.cnf
+    file[]: crc = 08c8f527; size =      3397; name = config\MenuPlugin.cnf
+    file[]: crc = aca96a4c; size =      6460; name = config\MountainPlugin.cnf
+    file[]: crc = a9b303d2; size =      7957; name = config\PlanePlugin.cnf
+    file[]: crc = bcd46b7c; size =      1387; name = config\RopeIntroPlugin.cnf
+    file[]: crc = 544c92b7; size =      2582; name = config\RopeOutroPlugin.cnf
+    file[]: crc = 2d2b0a1c; size =      7503; name = config\TrainPlugin.cnf
+    file[]: crc = 6b32c99b; size =      5416; name = config\WitchPlugin.cnf
+
+
+end
+
 end

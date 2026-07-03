@@ -40,4 +40,58 @@ game[pc-se-960124]:
 
 end
 
+
+//
+// Spanish DOS version
+//
+game[pc-es]:
+    name = Spanish DOS
+    anchorfile = HUGO.EXE
+    file[]: crc = 403ef66b; size =  82473609; name = 4HUGO.DAT
+    file[]: crc = 3430b8d8; size =     43564; name = CHECKRAM.EXE
+    file[]: crc = cb214447; size =    265420; name = DOS4GW.EXE
+    file[]: crc = ee471f34; size =       229; name = DSIK.TXT
+    file[]: crc = 0b950123; size =    432170; name = HUGO.EXE
+    file[]: crc = f60a1493; size =       766; name = HUGO.OCI
+    file[]: crc = c738a41b; size =       995; name = HUGOW95.WIN
+    file[]: crc = baba6478; size =       545; name = HUGOWIN.WIN
+    file[]: crc = 0d3f2303; size =     42218; name = INSTALL.EXE
+    file[]: crc = 9241dc05; size =     70096; name = INSTALLW.EXE
+    file[]: crc = 511a6aa9; size =       212; name = README.TXT
+    file[]: crc = d8ae0705; size =    156383; name = SNDSETUP.EXE
+    file[]: crc = bf32ea05; size =       766; name = SNDSETUP.OCI
+    file[]: crc = 368471f2; size =       545; name = SNDSETUP.PIF
+    file[]: crc = 144dee79; size =    152336; name = RESOURCE\BOKSHITL.RAS
+    file[]: crc = 08a5b941; size =    152459; name = RESOURCE\BOKSHITR.RAS
+    file[]: crc = 49964f05; size =     64553; name = RESOURCE\BOKSWALL.RAS
+    file[]: crc = 480e3c01; size =   3252147; name = RESOURCE\DIEBEAV.RAS
+    file[]: crc = bbbdbce2; size =   1858913; name = RESOURCE\DIEBEAV2.RAS
+    file[]: crc = 609d4b60; size =    275587; name = RESOURCE\DIECRAP1.RAS
+    file[]: crc = fe02fcfb; size =     78489; name = RESOURCE\DIECRAP2.RAS
+    file[]: crc = 6d668e7c; size =    121084; name = RESOURCE\DIEFALL.RAS
+    file[]: crc = 63098b8d; size =    341605; name = RESOURCE\DIESTONE.RAS
+    file[]: crc = 642be9d2; size =    141787; name = RESOURCE\ENDSEQ.RAS
+    file[]: crc = e649df94; size =     92523; name = RESOURCE\GITTER.RAS
+    file[]: crc = f7e7a27e; size =    425476; name = RESOURCE\H_BLOP.RAS
+    file[]: crc = 356a2e77; size =   1141312; name = RESOURCE\H_SYNC.RAS
+    file[]: crc = a5bcacc2; size =     88330; name = RESOURCE\HUGOFALD.RAS
+    file[]: crc = 7c26f0ba; size =    229690; name = RESOURCE\HUGOFALL.RAS
+    file[]: crc = 96a73e01; size =    228552; name = RESOURCE\HUGOFALR.RAS
+    file[]: crc = 930ad93b; size =     96374; name = RESOURCE\INCSEQ.RAS
+    file[]: crc = 94b0c751; size =   1007204; name = RESOURCE\INTRO.RAS
+    file[]: crc = 691b02f0; size =    117098; name = RESOURCE\INTROSCU.RAS
+    file[]: crc = 3ba7311d; size =    333442; name = RESOURCE\SCYLIA.RAS
+    file[]: crc = 49b08d18; size =   3002669; name = RESOURCE\SLEFT.RAS
+    file[]: crc = 5ea80c7e; size =   2973837; name = RESOURCE\SRIGHT.RAS
+    file[]: crc = 5cdb0844; size =    215300; name = RESOURCE\STONEHIT.RAS
+    file[]: crc = 037c4a4e; size =     50043; name = RESOURCE\STONEWAL.RAS
+    file[]: crc = 6e20e65d; size =   1441772; name = RESOURCE\SVUP_L.RAS
+    file[]: crc = e0049129; size =    632724; name = RESOURCE\WATER1.RAS
+    file[]: crc = e94700f4; size =    494846; name = RESOURCE\WATER2.RAS
+    file[]: crc = e46b691a; size =    318877; name = RESOURCE\WATER3.RAS
+    file[]: crc = 40a8f99f; size =   1150798; name = RESOURCE\WATERFA1.RAS
+
+
+end
+
 end
