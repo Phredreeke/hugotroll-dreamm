@@ -5,11 +5,11 @@ icon = ite-hugo5.png
 machine = pc
 rootpath = C:\
 launch = $(rootpath)\HUGO.EXE
-osenv = dos
+osenv = windows 98
 fixdivover = true
 mips = $(MIPS_P100)
 ramkb = 16384
-audiohw = sb16
+
 videohw = svga
 
 //
@@ -17,6 +17,30 @@ videohw = svga
 //
 mount[]: vpath = C:\; srcpath = $(ifsdeltapath); writable = true;
 mount[]: vpath = $(rootpath); srcpath = $(ifsinstallpath)
+
+script[registry]: code = winregistry_import_file("C:\\DREAMM.REG")
+// note that variables are expanded in the dynamicfile below:
+REGVER = Retail
+dynamicfile[]:
+   path = C:\DREAMM.REG
+   contents = [[[$(CRLF)
+      REGEDIT4
+      [HKEY_LOCAL_MACHINE\Software]
+      
+      [HKEY_LOCAL_MACHINE\Software\Hugo97]
+      "CDDriveLetter"="C:"
+   ]]]
+end
+//
+// Windows version
+//
+VEROPTIONS = true
+config[veroptions]:
+    condition = $(VEROPTIONS)
+    title = Version
+    option[dos]: name = DOS; audiohw = sb16; osenv = dos
+    option[win]: name = Windows 98; launch=$(rootpath)\HUGOW.EXE; priority = 1
+end
 
 //
 // Swedish DOS version
