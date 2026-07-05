@@ -11,7 +11,7 @@ Not to be confused with the Hugo series by Gray Design Associates. This is VERY 
 |Hugo 5|🇦🇷🇩🇪🇸🇪|Windows works. DOS launches with config file, bugged sound|
 |Hugo 6|🇩🇪🇵🇹|works|
 |Hugo Jungle Island|🇩🇪|Launches, doesn't read mouse input|
-|Hugo XL|🇩🇪🇫🇮|Mostly working|
+|Hugo XL|🇩🇪🇫🇮|Mostly working with graphical glitches|
 
 # Trying to straighten out the most confused naming scheme
 
