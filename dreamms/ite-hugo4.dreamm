@@ -19,6 +19,15 @@ mount[]: vpath = C:\; srcpath = $(ifsdeltapath); writable = true;
 mount[]: vpath = $(rootpath); srcpath = $(ifsinstallpath)
 
 //
+// Setup
+//
+configutil[]:
+    name = Sound setup
+    launch = $(rootpath)\SNDSETUP.EXE
+    condition = file_exists("$(rootpath)\SNDSETUP.EXE")
+end
+
+//
 // Swedish DOS version
 //
 game[pc-se-970428]:
@@ -36,7 +45,7 @@ game[pc-se-970428]:
     file[]: crc = ea854f31; size =     72432; name = INSTALLW.EXE
     file[]: crc = 178a719c; size =  10463241; name = PROFILE.ZAN
     file[]: crc = c300a78b; size =        77; name = README.TXT
-    file[]: crc = e5f0b3e8; size =    120948; name = SNDSETUP.DAT
+    file[]: crc = e5f0b3e8; size =    120948; name = SNDSETUP.EXE
     file[]: crc = bf32ea05; size =       766; name = SNDSETUP.OCI
     file[]: crc = 368471f2; size =       545; name = SNDSETUP.PIF
     file[]: crc = 49cabcd8; size =    103872; name = WPROF.EXE

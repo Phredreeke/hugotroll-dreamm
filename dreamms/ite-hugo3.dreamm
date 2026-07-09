@@ -22,12 +22,10 @@ mount[]: vpath = $(rootpath); srcpath = $(ifsinstallpath)
 //
 // Setup
 //
-VEROPTIONS = false
-config[veroptions]:
-    condition = $(VEROPTIONS)
-    title = Version
-    option[dos]: name = Game; priority = 1
-    option[win]: name = Sound setup; launch=$(rootpath)\SNDSETUP.EXE; 
+configutil[]:
+    name = Sound setup
+    launch = $(rootpath)\SNDSETUP.EXE
+    condition = file_exists("$(rootpath)\SNDSETUP.EXE")
 end
 
 

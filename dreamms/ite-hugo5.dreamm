@@ -9,8 +9,8 @@ osenv = windows 98
 fixdivover = true
 mips = $(MIPS_P100)
 ramkb = 16384
-
 videohw = svga
+INSTALLER = true
 
 //
 // filesystem
@@ -19,8 +19,6 @@ mount[]: vpath = C:\; srcpath = $(ifsdeltapath); writable = true;
 mount[]: vpath = $(rootpath); srcpath = $(ifsinstallpath)
 
 script[registry]: code = winregistry_import_file("C:\\DREAMM.REG")
-// note that variables are expanded in the dynamicfile below:
-REGVER = Retail
 dynamicfile[]:
    path = C:\DREAMM.REG
    contents = [[[$(CRLF)
@@ -29,8 +27,17 @@ dynamicfile[]:
       
       [HKEY_LOCAL_MACHINE\Software\Hugo97]
       "CDDriveLetter"="C:"
+      [HKEY_USERS\S-1-5-21-1220945662-1563985344-839522115-500]
+
+      [HKEY_USERS\S-1-5-21-1220945662-1563985344-839522115-500\Software]
+      
+      [HKEY_USERS\S-1-5-21-1220945662-1563985344-839522115-500\Software\Classes]
+      
+      [HKEY_USERS\S-1-5-21-1220945662-1563985344-839522115-500\Software\Classes\Hugo97]
+      "CDDriveLetter"="C:"
    ]]]
 end
+
 //
 // Windows version
 //
@@ -42,11 +49,18 @@ config[veroptions]:
     option[win]: name = Windows 98; launch=$(rootpath)\HUGOW.EXE; priority = 1
 end
 
+// to simplify getting regedit keys from new variants
+configutil[]:
+    name = Windows Installer
+    launch = $(rootpath)\INSTALLW.EXE
+    condition = file_exists("$(rootpath)\INSTALLW.EXE") && file_exists("$(rootpath)\_SETUP.DLL") 
+end
+
 //
-// Swedish DOS version
+// Swedish version
 //
 game[pc-se-980318]:
-    name = Swedish DOS
+    name = Swedish
     anchorfile = HUGO.EXE
     file[]: crc = 3430b8d8; size =     43564; name = CHECKRAM.EXE
     file[]: crc = a802da90; size =       120; name = DATA.TAG
@@ -70,5 +84,72 @@ game[pc-se-980318]:
     file[]: crc = 0fc692f2; size =    156411; name = SNDSETUP.DAT
 
 end
+
+
+//
+// German version
+//
+game[pc-de-970923]:
+    name = German
+    anchorfile = HUGO.EXE
+    file[]: crc = a4e3d7a1; size =        59; name = AUTORUN.INF
+    file[]: crc = 3430b8d8; size =     43564; name = CHECKRAM.EXE
+    file[]: crc = 35e43452; size =        84; name = DATA.TAG
+    file[]: crc = 647442a8; size =      2705; name = DATA1.CAB
+    file[]: crc = cb214447; size =    265420; name = DOS4GW.EXE
+    file[]: crc = c90f35dc; size =       228; name = DSIK.TXT
+    file[]: crc = 211734b1; size = 126658181; name = HUGO.DAT
+    file[]: crc = bfa96540; size =    429152; name = HUGO.EXE
+    file[]: crc = f60a1493; size =       766; name = HUGO.ICO
+    file[]: crc = 2be3d222; size =    326144; name = HUGOW.EXE
+    file[]: crc = 13ee710b; size =    114996; name = INSTALL.EXE
+    file[]: crc = 22f20e13; size =       967; name = INSTALL.PIF
+    file[]: crc = a22b1e28; size =     59392; name = INSTALLW.EXE
+    file[]: crc = 13813353; size =      3626; name = LANG.DAT
+    file[]: crc = 1e4c2b55; size =       353; name = LAYOUT.BIN
+    file[]: crc = f9edc7a9; size =       417; name = OS.DAT
+    file[]: crc = b89a0c4c; size =        79; name = README.TXT
+    file[]: crc = 86621fb2; size =    230456; name = SETUP.BMP
+    file[]: crc = 6a698dd3; size =        46; name = SETUP.INI
+    file[]: crc = 922dfff7; size =     56762; name = SETUP.INS
+    file[]: crc = 52771d18; size =        47; name = SETUP.LID
+    file[]: crc = b45bcd18; size =    126862; name = SNDSETUP.DAT
+
+
+end
+
+
+
+//
+// Argentinian version
+//
+game[pc-es-980930]:
+    name = Spanish (Argentina)
+    anchorfile = HUGO.EXE
+    file[]: crc = 3430b8d8; size =     43564; name = CHECKRAM.EXE
+    file[]: crc = a802da90; size =       120; name = DATA.TAG
+    file[]: crc = 5653128a; size =      3073; name = data1.cab
+    file[]: crc = cb214447; size =    265420; name = DOS4GW.EXE
+    file[]: crc = c90f35dc; size =       228; name = DSIK.TXT
+    file[]: crc = 8f197220; size =       348; name = hugo.cfg
+    file[]: crc = 6030483a; size = 686779158; name = hugo.dat
+    file[]: crc = 42bbebe3; size =    427216; name = hugo.exe
+    file[]: crc = f60a1493; size =       766; name = HUGO.ICO
+    file[]: crc = b68db006; size =    125440; name = hugoautorun.exe
+    file[]: crc = c993e904; size =    333824; name = hugow.exe
+    file[]: crc = 07def3ce; size =    154402; name = install.exe
+    file[]: crc = 62937092; size =     60416; name = installw.exe
+    file[]: crc = a22e9a7e; size =      4525; name = lang.dat
+    file[]: crc = e8991b4f; size =       353; name = layout.bin
+    file[]: crc = f9edc7a9; size =       417; name = os.dat
+    file[]: crc = 1c412fcd; size =        82; name = README.TXT
+    file[]: crc = 86621fb2; size =    230456; name = setup.bmp
+    file[]: crc = 9e7f2987; size =        62; name = SETUP.INI
+    file[]: crc = d63fc374; size =     57596; name = setup.ins
+    file[]: crc = 59ea3bae; size =        49; name = setup.lid
+    file[]: crc = a2fd083b; size =    156449; name = sndsetup.dat
+
+end
+
 
 end
