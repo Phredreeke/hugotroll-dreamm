@@ -11,13 +11,16 @@ mips = $(MIPS_P100)
 ramkb = 16384
 audiohw = sb16
 videohw = svga
-MAKECFG = false
+
+
+$(include cfg-hugo3.inc)
 
 //
 // filesystem
 //
 mount[]: vpath = C:\; srcpath = $(ifsdeltapath); writable = true;
 mount[]: vpath = $(rootpath); srcpath = $(ifsinstallpath)
+
 
 //
 // Setup
@@ -31,22 +34,12 @@ end
 
 
 
-script[makecfg]:
-    condition = MAKECFG
-    code = [[[$(CRLF)
-    if (!file_exists("$$(rootpath)\\4HUGO.CFG")) 
-    { 
-    file_save("$$(rootpath)\\4HUGO.CFG", "HEX:87 8D 9E 9D 8A E0 95 EC ED EA EB E8 C7 D8 D9 DA DB DC DD DE F1 FE FF E7 E3 E4 D5 D6 D7 A8 A9 AA AB AC AD AE AF A0 A1 A2 57 A5 A5 A6 EB F9 EB E9 9B F7 93 9E F2 9E 9F 9C B3 B4 B5 B6 B7 88 89 8A A5 A2 A3 BA BF B0 81 82 83 84 85 86 87 98 99 9A 9B 9C 9D 9E 0F 91 91 92 C1 D1 DB D3 B7 2A 47 44 45 42 43 40 6F 60 61 62 63 64 65 66 49 56 57 49 4B 4C 7D 7E 7F 70 71 72 73 74 75 76 77 48 49 4A 67 4D 4D 4E 1B 0F 13 00 06 0A 65 04 69 76 77 74 5B 5C 5D 5E 5F 50 51 52 7D 7A 7B 64 67 18 29 2A 2B 2C 2D 2E 2F 20 21 22 23 24 25 26 EF 38 39 3A 68 68 74 79 1F 7A 1F 1C 1D 1A 1B 18 37 08 09 0A 0B 0C 0D 0E 21 2E 2F 33 33 34 05 06 07 18 19 1A 1B 1C 1D 1E 1F 10 11 12 77 14 15 16 81 8D 86 81 8D E0 87 EC ED EA EB E8 C7 D8 D9 DA DB DC DD DE F1 FE FF E7 E3 E4 D5 D6 D7 A8 A9 AA AB AC AD AE AF A0 A1 A2 57 A5 A5 A6 E9 F1 FC F6 E8 9C F6 90 9F FD 9F 9C B3 B4 B5 B6 B7 88 89 8A A5 A2 A3 BA BF B0 81 82 83 84 85 86 87 98 99 9A 9B 9C 9D 9E 0F 91 91 92 D2 DA D1 D3 C5 3B 49 27 45 42 43 40 6F 60 61 62 63 64 65 66 49 56 57 49 4B 4C 7D 7E 7F 70 71 72 73 74 75 76 77 48 49 4A 67 4D 4D 4E 1B 0F 13 00 06 0A 65 04 69 76 77 74 5B 5C 5D 5E 5F 50 51 52 7D 7A 7B 64 67 18 29 2A 2B 2C 2D 2E 2F 20 21 22 23 24 25 26 EF 38 39 3A 68 68 74 79 1F 7A 1F 1C 1D 1A 1B 18 37 08 09 0A 0B 0C 0D 0E 21 2E 2F 33 33 34 05 06 07 18 19 1A 1B 1C 1D 1E 1F 10 11 12 77 14 15 16 81 8D 86 81 8D E0 87 EC ED EA EB E8 C7 D8 D9 DA DB DC DD DE F1 FE FF E7 E3 E4 D5 D6 D7 A8 A9 AA AB AC AD AE AF A0 A1 A2 57 A5 A5 A6 F5 FD F7 FF 9B FE 93 90 91 9E 9F 9C B3 B4 B5 B6 B7 88 89 8A A5 A2 A3 BA BF B0 81 82 83 84 85 86 87 98 99 9A 9B 9C 9D 9E 0F 91 91 92 C7 DB C7 D4 D2 26 49 28 45 42 43 40 6F 60 61 62 63 64 65 66 49 56 57 49 4B 4C 7D 7E 7F 70 71 72 73 74 75 76 77 48 49 4A 67 4D 4D 4E 03 01 14 11 17 64 15 68 67 16 77 74 5B 5C 5D 5E 5F 50 51 52 7D 7A 7B 64 67 18 29 2A 2B 2C 2D 2E 2F 20 21 22 23 24 25 26 EF 38 39 3A 70 75 70 1E 79 1E 1F 1C 1D 1A 1B 18 37 08 09 0A 0B 0C 0D 0E 21 2E 2F 33 33 34 05 06 07 18 19 1A 1B 1C 1D 1E 1F 10 11 12 77 14 15 16 87 8D 9E 9D 8A E0 95 EC ED EA EB E8 C7 D8 D9 DA DB DC DD DE F1 FE FF E7 E3 E4 D5 D6 D7 A8 A9 AA AB AC AD AE AF A0 A1 A2 57 A5 A5 A6 E6 F6 FD FF E9 EF 93 90 91 9E 9F 9C B3 B4 B5 B6 B7 88 89 8A A5 A2 A3 BA BF B0 81 82 83 84 85 86 87 98 99 9A 9B 9C 9D 9E 0F 91 91 92 DD DD D0 DA C4 48 22 44 4B 21 43 40 6F 60 61 62 63 64 65 66 49 56 57 49 4B 4C 7D 7E 7F 70 71 72 73 74 75 76 77 48 49 4A 67 4D 4D 4E 05 05 12 12 06 16 65 0A 69 76 77 74 5B 5C 5D 5E 5F 50 51 52 7D 7A 7B 64 67 18 29 2A 2B 2C 2D 2E 2F 20 21 22 23 24 25 26 EF 38 39 3A 76 73 6F 6A 7A 7E 11 7A 1D 1A 1B 18 37 08 09 0A 0B 0C 0D 0E 21 2E 2F 33 33 34 05 06 07 18 19 1A 1B 1C 1D 1E 1F 10 11 12 77 14 15 16 87 8D 9E 9D 8A E0 95 EC ED EA EB E8 C7 D8 D9 DA DB DC DD DE F1 FE FF E7 E3 E4 D5 D6 D7 A8 A9 AA AB AC AD AE AF A0 A1 A2 57 A5 A5 A6 EB F9 EB E9 9B F7 93 9E F2 9E 9F 9C B3 B4 B5 B6 B7 88 89 8A A5 A2 A3 BA BF B0 81 82 83 84 85 86 87 98 99 9A 9B 9C 9D 9E 0F 91 91 92 C1 D1 DB D3 B7 2A 47 44 45 42 43 40 6F 60 61 62 63 64 65 66 49 56 57 49 4B 4C 7D 7E 7F 70 71 72 73 74 75 76 77 48 49 4A 67 4D 4D 4E 1B 0F 13 00 06 0A 65 04 69 76 77 74 5B 5C 5D 5E 5F 50 51 52 7D 7A 7B 64 67 18 29 2A 2B 2C 2D 2E 2F 20 21 22 23 24 25 26 EF 38 39 3A 68 68 74 79 1F 7A 1F 1C 1D 1A 1B 18 37 08 09 0A 0B 0C 0D 0E 21 2E 2F 33 33 34 05 06 07 18 19 1A 1B 1C 1D 1E 1F 10 11 12 77 14 15 16 81 8D 86 81 8D E0 87 EC ED EA EB E8 C7 D8 D9 DA DB DC DD DE F1 FE FF E7 E3 E4 D5 D6 D7 A8 A9 AA AB AC AD AE AF A0 A1 A2 57 A5 A5 A6 E9 F1 FC F6 E8 9C F6 90 9F FD 9F 9C B3 B4 B5 B6 B7 88 89 8A A5 A2 A3 BA BF B0 81 82 83 84 85 86 87 98 99 9A 9B 9C 9D 9E 0F 91 91 92 D2 DA D1 D3 C5 3B 49 27 45 42 43 40 6F 60 61 62 63 64 65 66 49 56 57 49 4B 4C 7D 7E 7F 70 71 72 73 74 75 76 77 48 49 4A 67 4D 4D 4E 1B 0F 13 00 06 0A 65 04 69 76 77 74 5B 5C 5D 5E 5F 50 51 52 7D 7A 7B 64 67 18 29 2A 2B 2C 2D 2E 2F 20 21 22 23 24 25 26 EF 38 39 3A 68 68 74 79 1F 7A 1F 1C 1D 1A 1B 18 37 08 09 0A 0B 0C 0D 0E 21 2E 2F 33 33 34 05 06 07 18 19 1A 1B 1C 1D 1E 1F 10 11 12 77 14 15 16 81 8D 86 81 8D E0 87 EC ED EA EB E8 C7 D8 D9 DA DB DC DD DE F1 FE FF E7 E3 E4 D5 D6 D7 A8 A9 AA AB AC AD AE AF A0 A1 A2 57 A5 A5 A6 F5 FD F7 FF 9B FE 93 90 91 9E 9F 9C B3 B4 B5 B6 B7 88 89 8A A5 A2 A3 BA BF B0 81 82 83 84 85 86 87 98 99 9A 9B 9C 9D 9E 0F 91 91 92 C7 DB C7 D4 D2 26 49 28 45 42 43 40 6F 60 61 62 63 64 65 66 49 56 57 49 4B 4C 7D 7E 7F 70 71 72 73 74 75 76 77 48 49 4A 67 4D 4D 4E 03 01 14 11 17 64 15 68 67 16 77 74 5B 5C 5D 5E 5F 50 51 52 7D 7A 7B 64 67 18 29 2A 2B 2C 2D 2E 2F 20 21 22 23 24 25 26 EF 38 39 3A 70 75 70 1E 79 1E 1F 1C 1D 1A 1B 18 37 08 09 0A 0B 0C 0D 0E 21 2E 2F 33 33 34 05 06 07 18 19 1A 1B 1C 1D 1E 1F 10 11 12 77 14 15 16 87 8D 9E 9D 8A E0 95 EC ED EA EB E8 C7 D8 D9 DA DB DC DD DE F1 FE FF E7 E3 E4 D5 D6 D7 A8 A9 AA AB AC AD AE AF A0 A1 A2 57 A5 A5 A6 E6 F6 FD FF E9 EF 93 90 91 9E 9F 9C B3 B4 B5 B6 B7 88 89 8A A5 A2 A3 BA BF B0 81 82 83 84 85 86 87 98 99 9A 9B 9C 9D 9E 0F 91 91 92 DD DD D0 DA C4 48 22 44 4B 21 43 40 6F 60 61 62 63 64 65 66 49 56 57 49 4B 4C 7D 7E 7F 70 71 72 73 74 75 76 77 48 49 4A 67 4D 4D 4E 05 05 12 12 06 16 65 0A 69 76 77 74 5B 5C 5D 5E 5F 50 51 52 7D 7A 7B 64 67 18 29 2A 2B 2C 2D 2E 2F 20 21 22 23 24 25 26 EF 38 39 3A 76 73 6F 6A 7A 7E 11 7A 1D 1A 1B 18 37 08 09 0A 0B 0C 0D 0E 21 2E 2F 33 33 34 05 06 07 18 19 1A 1B 1C 1D 1E 1F 10 11 12 77 14 15 16 44 02 00 02 00 10 02 02 02 02 53 6F 75 6E 64 20 42 6C 61 73 74 65 72 20 31 36 2F 41 57 45 33 32 00 00 00 00 00 00 00 00 03 20 02 07 01 05");
-    }
-    ]]]
-end
 //
 // Swedish DOS version
 //
 game[pc-se-960124]:
     name = Swedish DOS
     anchorfile = HUGO.EXE
-    MAKECFG = true
     file[]: crc = 29f2099e; size = 642373564; name = 4HUGO.DAT
     file[]: crc = 9486bf0e; size =     26048; name = CHECKRAM.EXE
     file[]: crc = cb214447; size =    265420; name = DOS4GW.EXE
@@ -149,11 +142,10 @@ end
 game[pc-he]:
     name = Hebrew DOS
     anchorfile = HUGO.EXE
-    VEROPTIONS = true
     file[]: crc = 37083a1f; size =  66265215; name = 4HUGO.DAT
     file[]: crc = 9486bf0e; size =     26048; name = CHECKRAM.EXE
     file[]: crc = cb214447; size =    265420; name = DOS4GW.EXE
-    file[]: crc = c3c8a561; size =      1954; name = go.bat
+    file[]: crc = c3c8a561; size =      1954; name = go.bat; optional = true
     file[]: crc = 8e6bddfc; size =    437055; name = HUGO.EXE
     file[]: crc = f60a1493; size =       766; name = HUGO.OCI
     file[]: crc = 4c6da97a; size =      3620; name = README.TXT
@@ -162,5 +154,60 @@ game[pc-he]:
     file[]: crc = bf32ea05; size =       766; name = SNDSETUP.OCI
 
 end
+
+
+//
+// Croatian DOS version
+//
+game[pc-hr-980712]:
+    name = Croatian DOS
+    anchorfile = HUGO.EXE
+    file[]: crc = ed2aeb45; size = 698172669; name = 4HUGO.DAT
+    file[]: crc = 3430b8d8; size =     43564; name = CHECKRAM.EXE
+    file[]: crc = cb214447; size =    265420; name = DOS4GW.EXE
+    file[]: crc = ee471f34; size =       229; name = DSIK.TXT
+    file[]: crc = 99f18fa0; size =    594244; name = hugo.exe
+    file[]: crc = f60a1493; size =       766; name = HUGO.OCI
+    file[]: crc = c738a41b; size =       995; name = HUGOW95.WIN
+    file[]: crc = baba6478; size =       545; name = HUGOWIN.WIN
+    file[]: crc = 1a4685e4; size =     67824; name = Install.exe
+    file[]: crc = a5a0b6df; size =     69920; name = INSTALLW.EXE
+    file[]: crc = d36220e2; size =       212; name = README.TXT
+    file[]: crc = cc68dfbd; size =    156301; name = Sndsetup.EXE
+    file[]: crc = bf32ea05; size =       766; name = SNDSETUP.OCI
+    file[]: crc = 368471f2; size =       545; name = SNDSETUP.PIF
+    file[]: crc = 144dee79; size =    152336; name = RESOURCE\BOKSHITL.RAS
+    file[]: crc = 08a5b941; size =    152459; name = RESOURCE\BOKSHITR.RAS
+    file[]: crc = 49964f05; size =     64553; name = RESOURCE\BOKSWALL.RAS
+    file[]: crc = 480e3c01; size =   3252147; name = RESOURCE\DIEBEAV.RAS
+    file[]: crc = bbbdbce2; size =   1858913; name = RESOURCE\DIEBEAV2.RAS
+    file[]: crc = 609d4b60; size =    275587; name = RESOURCE\DIECRAP1.RAS
+    file[]: crc = fe02fcfb; size =     78489; name = RESOURCE\DIECRAP2.RAS
+    file[]: crc = 6d668e7c; size =    121084; name = RESOURCE\DIEFALL.RAS
+    file[]: crc = 63098b8d; size =    341605; name = RESOURCE\DIESTONE.RAS
+    file[]: crc = 642be9d2; size =    141787; name = RESOURCE\ENDSEQ.RAS
+    file[]: crc = e649df94; size =     92523; name = RESOURCE\GITTER.RAS
+    file[]: crc = f7e7a27e; size =    425476; name = RESOURCE\H_BLOP.RAS
+    file[]: crc = 356a2e77; size =   1141312; name = RESOURCE\H_SYNC.RAS
+    file[]: crc = a5bcacc2; size =     88330; name = RESOURCE\HUGOFALD.RAS
+    file[]: crc = 7c26f0ba; size =    229690; name = RESOURCE\HUGOFALL.RAS
+    file[]: crc = 96a73e01; size =    228552; name = RESOURCE\HUGOFALR.RAS
+    file[]: crc = 930ad93b; size =     96374; name = RESOURCE\INCSEQ.RAS
+    file[]: crc = 94b0c751; size =   1007204; name = RESOURCE\INTRO.RAS
+    file[]: crc = 691b02f0; size =    117098; name = RESOURCE\INTROSCU.RAS
+    file[]: crc = 3ba7311d; size =    333442; name = RESOURCE\SCYLIA.RAS
+    file[]: crc = 49b08d18; size =   3002669; name = RESOURCE\SLEFT.RAS
+    file[]: crc = 5ea80c7e; size =   2973837; name = RESOURCE\SRIGHT.RAS
+    file[]: crc = 5cdb0844; size =    215300; name = RESOURCE\STONEHIT.RAS
+    file[]: crc = 037c4a4e; size =     50043; name = RESOURCE\STONEWAL.RAS
+    file[]: crc = 6e20e65d; size =   1441772; name = RESOURCE\SVUP_L.RAS
+    file[]: crc = e0049129; size =    632724; name = RESOURCE\WATER1.RAS
+    file[]: crc = e94700f4; size =    494846; name = RESOURCE\WATER2.RAS
+    file[]: crc = e46b691a; size =    318877; name = RESOURCE\WATER3.RAS
+    file[]: crc = 40a8f99f; size =   1150798; name = RESOURCE\WATERFA1.RAS
+
+
+end
+
 
 end
