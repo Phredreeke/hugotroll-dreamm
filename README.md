@@ -6,10 +6,10 @@ Not to be confused with the Hugo series by Gray Design Associates. This is VERY 
 |Game|Language|Status|
 | --- | --- | --- |
 |Hugo 2 (Windows)|🇦🇷🇩🇪🇩🇰🇵🇹|🇦🇷🇩🇰🇵🇹 works, 🇩🇪 hangs after intro video|
-|Hugo 2 (DOS)|🇩🇪🇸🇪|works, but plays PC speaker sound effects regardless of audio hardware|
-|Hugo 3|🇦🇷🇩🇪🇮🇱🇸🇪|Launches with config file, doesn't read key input|
-|Hugo 4|🇸🇪|Launches, doesn't read key input|
-|Hugo 5|🇦🇷🇩🇪🇸🇪|Windows works. DOS launches with config file, bugged sound|
+|Hugo 2 (DOS)|🇩🇪🇩🇰🇸🇪|works, but plays PC speaker sound effects regardless of audio hardware, copy protection not automated|
+|Hugo 3 (DOS)|🇦🇷🇩🇪🇩🇰🇭🇷🇮🇱🇸🇪|Launches, automated config file creation, doesn't read key input|
+|Hugo 4 (DOS)|🇸🇪|Launches, doesn't read key input|
+|Hugo 5|🇦🇷🇩🇪🇸🇪|Windows works. DOS has bugged inputs|
 |Hugo 6|🇩🇪🇵🇹|works|
 |Hugo Jungle Island|🇩🇪|Launches, doesn't read mouse input|
 |Hugo XL|🇩🇪🇫🇮|Mostly working with graphical glitches|
