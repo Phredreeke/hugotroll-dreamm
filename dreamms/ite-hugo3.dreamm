@@ -139,17 +139,15 @@ end
 //
 // Hebrew DOS version
 //
-game[pc-he]:
+game[pc-he-970610]:
     name = Hebrew DOS
     anchorfile = HUGO.EXE
     file[]: crc = 37083a1f; size =  66265215; name = 4HUGO.DAT
     file[]: crc = 9486bf0e; size =     26048; name = CHECKRAM.EXE
     file[]: crc = cb214447; size =    265420; name = DOS4GW.EXE
-    file[]: crc = c3c8a561; size =      1954; name = go.bat; optional = true
     file[]: crc = 8e6bddfc; size =    437055; name = HUGO.EXE
     file[]: crc = f60a1493; size =       766; name = HUGO.OCI
     file[]: crc = 4c6da97a; size =      3620; name = README.TXT
-    file[]: crc = 7251d14b; size =     70922; name = SNDSETUP.DAT
     file[]: crc = 7251d14b; size =     70922; name = SNDSETUP.EXE
     file[]: crc = bf32ea05; size =       766; name = SNDSETUP.OCI
 
@@ -209,5 +207,28 @@ game[pc-hr-980712]:
 
 end
 
+//
+// Danish DOS version
+//
+game[pc-dk-951116]:
+    name = Danish DOS
+    anchorfile = HUGO.EXE
+    file[]: crc = 28160c74; size = 642008947; name = 4HUGO.DAT
+    file[]: crc = 9486bf0e; size =     26048; name = CHECKRAM.EXE
+    file[]: crc = cb214447; size =    265420; name = DOS4GW.EXE
+    file[]: crc = 4575728e; size =    441107; name = HUGO.EXE
+    file[]: crc = f60a1493; size =       766; name = HUGO.OCI
+    file[]: crc = f166b343; size =       995; name = HUGOW95.WIN
+    file[]: crc = b79e73e2; size =       545; name = HUGOWIN.WIN
+    file[]: crc = 98dace72; size =     20368; name = INSTALL.EXE
+    file[]: crc = 567ecdd4; size =     60992; name = INSTALLW.EXE
+    file[]: crc = c3992579; size =      3415; name = README.TXT
+    file[]: crc = 1f0e34ac; size =     21068; name = SNDSETUP.EXE
+    file[]: crc = bf32ea05; size =       766; name = SNDSETUP.OCI
+    file[]: crc = 368471f2; size =       545; name = SNDSETUP.PIF
+
+
+
+end
 
 end
