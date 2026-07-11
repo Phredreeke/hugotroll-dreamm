@@ -18,7 +18,10 @@ INSTALLER = true
 mount[]: vpath = C:\; srcpath = $(ifsdeltapath); writable = true;
 mount[]: vpath = $(rootpath); srcpath = $(ifsinstallpath)
 
-script[registry]: code = winregistry_import_file("C:\\DREAMM.REG")
+$(include cfg-hugo5.inc)
+
+script[registry]: code = if (is_windows()) {winregistry_import_file("C:\\DREAMM.REG")}
+
 dynamicfile[]:
    path = C:\DREAMM.REG
    contents = [[[$(CRLF)
@@ -39,14 +42,28 @@ dynamicfile[]:
 end
 
 //
+// warnings
+//
+INCOMPATIBLE = true
+warning[incompatible]:
+    condition = $(INCOMPATIBLE)
+    text = The DOS version has erroneous key inputs, use the Windows version (4.0x35)
+end
+INCOMPATIBLE2 = false
+warning[incompatible2]:
+    condition = $(INCOMPATIBLE2)
+    text = The DOS version has erroneous key inputs (4.0x35)
+end
+
+//
 // Windows version
 //
 VEROPTIONS = true
 config[veroptions]:
     condition = $(VEROPTIONS)
     title = Version
-    option[dos]: name = DOS; audiohw = sb16; osenv = dos
-    option[win]: name = Windows 98; launch=$(rootpath)\HUGOW.EXE; priority = 1
+    option[dos]: name = DOS; audiohw = sb16; osenv = dos; 
+    option[win]: name = Windows 98; launch=$(rootpath)\HUGOW.EXE; priority = 1;
 end
 
 // to simplify getting regedit keys from new variants
@@ -151,5 +168,32 @@ game[pc-es-980930]:
 
 end
 
+//
+// Hebrew version
+//
+game[pc-he-980905]:
+    name = Hebrew DOS
+    anchorfile = HUGO.EXE
+    VEROPTIONS = FALSE
+    INCOMPATIBLE = false
+    INCOMPATIBLE2 = true
+    audiohw = sb16
+    osenv = dos
+    file[]: crc = 3430b8d8; size =     43564; name = CHECKRAM.EXE
+    file[]: crc = fa58bc5e; size =       131; name = DATA.TAG
+    file[]: crc = 2bd6cff1; size =     27504; name = DOS4GW.EXE
+    file[]: crc = c90f35dc; size =       228; name = DSIK.TXT
+    file[]: crc = 4d3297c7; size = 700508142; name = hugo.dat
+    file[]: crc = 7cb29069; size =    426704; name = hugo.exe
+    file[]: crc = a22e9a7e; size =      4525; name = lang.dat
+    file[]: crc = e8991b4f; size =       353; name = layout.bin
+    file[]: crc = f9edc7a9; size =       417; name = os.dat
+    file[]: crc = 2ac83b2b; size =        82; name = README.TXT
+    file[]: crc = 3637907d; size =        49; name = setup.lid
+    file[]: crc = 7546d58e; size =    156137; name = Sndsetup.dat
+    file[]: crc = 7546d58e; size =    156137; name = SNDSETUP.EXE
+
+
+end
 
 end

@@ -19,6 +19,15 @@ mount[]: vpath = C:\; srcpath = $(ifsdeltapath); writable = true;
 mount[]: vpath = $(rootpath); srcpath = $(ifsinstallpath)
 
 //
+// warnings
+//
+INCOMPATIBLE = true
+warning[incompatible]:
+    condition = $(INCOMPATIBLE)
+    text = This game is not currently playable due to missing key inputs (4.0x35)
+end
+
+//
 // Setup
 //
 configutil[]:

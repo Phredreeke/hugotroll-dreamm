@@ -15,7 +15,16 @@ mount[]: vpath = C:\; srcpath = $(ifsdeltapath); writable = true;
 mount[]: vpath = $(rootpath); srcpath = $(ifsinstallpath)
 
 //
-// dummy game description; 
+// warnings
+//
+INCOMPATIBLE = false
+warning[incompatible]:
+    condition = $(INCOMPATIBLE)
+    text = This game is currently unplayable due to missing mouse input (4.0x35)
+end
+
+//
+// German version
 //
 game[pc-de-030902]:
     name = German

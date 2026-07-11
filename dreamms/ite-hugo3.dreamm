@@ -31,6 +31,14 @@ configutil[]:
     condition = file_exists("$(rootpath)\SNDSETUP.EXE")
 end
 
+//
+// warnings
+//
+INCOMPATIBLE = true
+warning[incompatible]:
+    condition = $(INCOMPATIBLE)
+    text = This game is not currently playable due to missing key inputs (4.0x35)
+end
 
 
 
