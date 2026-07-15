@@ -30,7 +30,16 @@ It's actually **worse** than this, most of the boxes/jewelcases I own don't have
 |Hugo Jungle Island|Hugo Classic #5|Monkey Hunt, Follow the Monkey, Secret of the Inca Pyramid, Hugocopter, Vine Climbing, Memory|
 |Hugo Jungle Island 2|Hugo Classic #6|Monkey Duel, Obstacle Course, Beetle Battle, Mahjong, Ostrich Race, Volcano Ascent|
 
-In the case of Hugo 2, the original DOS/Amiga release has the player play two scenarios in a row before the final encounter with Scylla. In the Hugo Classic #1 release the player just have to play one scenario.
+In the case of Hugo 2, the original DOS/Amiga release has the player play two scenarios in a row before the final encounter with Scylla. In the Hugo Classic #1 release the player just have to play one scenario. The Re-Release column is correct for German, Danish and Finnish releases. it's not correct for Swedish releases...
+
+# The Classic conundrum
+
+|Game|Germany|Sweden|
+| --- | --- | --- |
+|Hugo Classic #1|Hugo 2|Magic rollercoaster|
+|Hugo Classic #2|Hugo 4|"Birthday Party"|
+|Hugo Classic #3|Hugo 5|Smakkaball|
+|Hugo Classic #4|Hugo 6 Wild River|Runamukka|
 
 # But wait, there's more!
 
