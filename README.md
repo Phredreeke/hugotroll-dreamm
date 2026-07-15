@@ -36,7 +36,7 @@ In the case of Hugo 2, the original DOS/Amiga release has the player play two sc
 
 |Game|Germany|Sweden|
 | --- | --- | --- |
-|Hugo Classic #1|Hugo 2|Magic rollercoaster|
+|Hugo Classic #1|Hugo 2|The Bewitched rollercoaster|
 |Hugo Classic #2|Hugo 4|"Birthday Party"|
 |Hugo Classic #3|Hugo 5|Smakkaball|
 |Hugo Classic #4|Hugo 6 Wild River|Runamukka|
