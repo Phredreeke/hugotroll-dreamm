@@ -10,7 +10,6 @@ fixdivover = true
 mips = $(MIPS_P100)
 ramkb = 16384
 videohw = svga
-INSTALLER = true
 
 //
 // filesystem
@@ -53,6 +52,11 @@ INCOMPATIBLE2 = false
 warning[incompatible2]:
     condition = $(INCOMPATIBLE2)
     text = The DOS version has erroneous key inputs (4.0x35)
+end
+INCOMPATIBLE3 = false
+warning[incompatible3]:
+    condition = $(INCOMPATIBLE3)
+    text = The DOS version has erroneous key inputs (4.0x35) The intro to the rope ending scene gets corrupted in Windows version (not a DREAMM bug)
 end
 
 //
@@ -165,6 +169,39 @@ game[pc-es-980930]:
     file[]: crc = d63fc374; size =     57596; name = setup.ins
     file[]: crc = 59ea3bae; size =        49; name = setup.lid
     file[]: crc = a2fd083b; size =    156449; name = sndsetup.dat
+
+end
+
+//
+// Portuguese version
+//
+game[pc-pt-990615]:
+    name = Portuguese
+    anchorfile = HUGO.EXE
+    INCOMPATIBLE = false
+    INCOMPATIBLE3 = true
+    file[]: crc = 3430b8d8; size =     43564; name = CHECKRAM.EXE
+    file[]: crc = a802da90; size =       120; name = DATA.TAG
+    file[]: crc = b69fe2e3; size =      3076; name = DATA1.CAB
+    file[]: crc = cb214447; size =    265420; name = DOS4GW.EXE
+    file[]: crc = c90f35dc; size =       228; name = DSIK.TXT
+    file[]: crc = 4bc9bf92; size = 678408328; name = HUGO.DAT
+    file[]: crc = 83e57af6; size =    425936; name = HUGO.EXE
+    file[]: crc = f60a1493; size =       766; name = HUGO.ICO
+    file[]: crc = 776dd78a; size =       967; name = HUGO.PIF; optional = true
+    file[]: crc = db1e21f7; size =    331776; name = HUGOW.EXE
+    file[]: crc = 37ed237d; size =    154174; name = INSTALL.EXE
+    file[]: crc = e739e367; size =       967; name = INSTALL.PIF
+    file[]: crc = f5324e10; size =     59904; name = INSTALLW.EXE
+    file[]: crc = a22e9a7e; size =      4525; name = LANG.DAT
+    file[]: crc = e8991b4f; size =       353; name = LAYOUT.BIN
+    file[]: crc = f9edc7a9; size =       417; name = OS.DAT
+    file[]: crc = 86621fb2; size =    230456; name = SETUP.BMP
+    file[]: crc = 62937092; size =     60416; name = SETUP.EXE
+    file[]: crc = 79343f65; size =        62; name = SETUP.INI
+    file[]: crc = d63fc374; size =     57596; name = SETUP.INS
+    file[]: crc = 2b3ffc31; size =        60; name = SETUP.LID
+    file[]: crc = 057ce6b6; size =    156333; name = SNDSETUP.DAT
 
 end
 
