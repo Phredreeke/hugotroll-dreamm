@@ -1,0 +1,6 @@
+pack[hugotroll]:
+    name = Hugo (ITE)
+    author = Phredreeke
+    link = https://github.com/Phredreeke/hugotroll-dreamm
+    minversion = 4.0x35
+end
