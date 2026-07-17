@@ -12,6 +12,8 @@ ramkb = 16384
 audiohw = sb16
 videohw = svga
 
+$(include cfg-hugo4.inc)
+
 //
 // filesystem
 //
