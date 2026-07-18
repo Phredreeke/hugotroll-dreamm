@@ -123,7 +123,7 @@ end
 // German DOS version
 //
 game[pc-de-951113]:
-    name = German DOS
+    name = German DOS 95-11-13
     anchorfile = HUGO.EXE
     file[]: crc = 745210b9; size = 577019412; name = 4HUGO.DAT
     file[]: crc = 9486bf0e; size =     26048; name = CHECKRAM.EXE
@@ -143,6 +143,33 @@ game[pc-de-951113]:
 
 
 end
+
+
+//
+// German DOS version (Tresor TV)
+//
+game[pc-de-960311]:
+    name = German DOS 96-03-11
+    anchorfile = HUGO.EXE
+    file[]: crc = 488802fd; size = 578020845; name = 4HUGO.DAT
+    file[]: crc = 9486bf0e; size =     26048; name = CHECKRAM.EXE
+    file[]: crc = cb214447; size =    265420; name = DOS4GW.EXE
+    file[]: crc = bfbbe07d; size =    419779; name = HUGO.EXE
+    file[]: crc = f60a1493; size =       766; name = HUGO.OCI
+    file[]: crc = ab2f5485; size =   7173864; name = HUGOFAST.AVI
+    file[]: crc = aee4e861; size =   4797734; name = HUGONORM.AVI
+    file[]: crc = f166b343; size =       995; name = HUGOW95.WIN
+    file[]: crc = b79e73e2; size =       545; name = HUGOWIN.WIN
+    file[]: crc = b0862e91; size =     29892; name = INSTALL.EXE
+    file[]: crc = 4536c1bb; size =     68704; name = INSTALLW.EXE
+    file[]: crc = e2ab3c8c; size =      4593; name = README.TXT
+    file[]: crc = 932fa3c4; size =     71066; name = SNDSETUP.EXE
+    file[]: crc = bf32ea05; size =       766; name = SNDSETUP.OCI
+    file[]: crc = 368471f2; size =       545; name = SNDSETUP.PIF
+
+
+end
+
 
 //
 // Hebrew DOS version
