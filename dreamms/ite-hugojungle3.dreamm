@@ -1,0 +1,130 @@
+desc[ite-hugojungle3]:
+
+name = Hugo Jungle Island 3
+icon = ite-hugojungle3.png
+machine = pc
+rootpath = C:\
+launch = $(rootpath)\Jungle3.exe
+osenv = windows
+winres=640x480x8
+
+//
+// filesystem
+//
+mount[]: vpath = C:\; srcpath = $(ifsdeltapath); writable = true;
+mount[]: vpath = $(rootpath); srcpath = $(ifsinstallpath)
+
+//
+// warnings
+//
+INCOMPATIBLE = false
+warning[incompatible]:
+    condition = $(INCOMPATIBLE)
+    text = This game is currently unplayable due to missing mouse input (4.0x35)
+end
+
+//
+// Polish version
+//
+game[pc-pl-040517]:
+    name = Polish
+    anchorfile = Jungle3.exe
+    file[]: crc = 6906b244; size =        46; name = autorun.inf
+    file[]: crc = c549491a; size =    125952; name = BinkPlay.exe
+    file[]: crc = 6696be85; size =    286208; name = BINKW32.DLL
+    file[]: crc = e686869a; size =        31; name = cdcode.key
+    file[]: crc = d0a106d1; size =     22819; name = CDCOPS.DLL
+    file[]: crc = 8101a93e; size =     90112; name = CoreNetwork.dll
+    file[]: crc = 3da2a36f; size =    512000; name = CoreW32DLL.dll
+    file[]: crc = ee864f94; size =    135680; name = DSETUP.DLL
+    file[]: crc = 6b137912; size =     64512; name = DSETUP16.DLL
+    file[]: crc = cf811d99; size =     57344; name = DSETUP32.DLL
+    file[]: crc = 39e0ef59; size =     98304; name = gfxdirx.dll
+    file[]: crc = 2cdab694; size =      2238; name = Jungle.ico
+    file[]: crc = 9d53c9d6; size =    338944; name = Jungle3.exe
+    file[]: crc = 4a2e707c; size =    173164; name = Jungle3.QZ_
+    file[]: crc = a5ac0557; size =    352256; name = Jungle3.W_X
+    file[]: crc = c62ee491; size =       944; name = Machine.cnf
+    file[]: crc = e047b0e2; size =   2174976; name = setup.exe
+    file[]: crc = e8b13dbb; size =     53248; name = Sfx32DirX.dll
+    file[]: crc = 6db0c96b; size =     13913; name = Config\AntWarzPlugin.cnf
+    file[]: crc = de62d3e1; size =     11942; name = Config\BeetlePluginHi.cnf
+    file[]: crc = 465f10f1; size =      4098; name = Config\DamPlugin.cnf
+    file[]: crc = d291f511; size =     13461; name = Config\DiamondFeverPlugin.cnf
+    file[]: crc = 39b21eb0; size =       598; name = Config\IntroPlugin.cnf
+    file[]: crc = 26a9da79; size =      1044; name = Config\LoaderPlugin.cnf
+    file[]: crc = 73add30d; size =      2649; name = Config\MemoryPlugin.cnf
+    file[]: crc = 9e4f98c8; size =      6358; name = Config\MenuPlugin.cnf
+    file[]: crc = c95254cd; size =      5401; name = Config\MummyPlugin.cnf
+    file[]: crc = f69b1ffa; size =      3835; name = Config\MusikPlugin.cnf
+    file[]: crc = 7f2fcf2a; size =       643; name = Config\TrailerPlugin.cnf
+    file[]: crc = 985b7197; size = 341989376; name = Data\bigfile\bigfile.res
+    file[]: crc = a333dd1c; size = 104857600; name = Data\bigfile\data.pac
+    file[]: crc = 67bb4bb6; size =      4760; name = Data\bigfile\DiamondFever\Levels\level1.txt
+    file[]: crc = 9d40cba0; size =   6159788; name = Data\Streams\ITETrailer.bik
+    file[]: crc = 2fecb6ec; size =   2071932; name = Data\Streams\Media.bik
+    file[]: crc = 9de22eb9; size =    199840; name = Data\Streams\Beetle\1-2.bik
+    file[]: crc = fc5cea60; size =    223520; name = Data\Streams\Beetle\1-3.bik
+    file[]: crc = 842bdc25; size =    254012; name = Data\Streams\Beetle\1-4.bik
+    file[]: crc = 17fd9a93; size =    283964; name = Data\Streams\Beetle\1-5.bik
+    file[]: crc = e51f2b05; size =    194660; name = Data\Streams\Beetle\2-1.bik
+    file[]: crc = 62692dfd; size =    204844; name = Data\Streams\Beetle\2-3.bik
+    file[]: crc = b2ff1f5b; size =    223376; name = Data\Streams\Beetle\2-4.bik
+    file[]: crc = 76c411b5; size =    253452; name = Data\Streams\Beetle\2-5.bik
+    file[]: crc = 29099228; size =    225536; name = Data\Streams\Beetle\3-1.bik
+    file[]: crc = 776e35d8; size =    228856; name = Data\Streams\Beetle\3-2.bik
+    file[]: crc = eae5737d; size =    203356; name = Data\Streams\Beetle\3-4.bik
+    file[]: crc = e5328c02; size =    224424; name = Data\Streams\Beetle\3-5.bik
+    file[]: crc = 081b8a54; size =    254720; name = Data\Streams\Beetle\4-1.bik
+    file[]: crc = 2ef1c59f; size =    223896; name = Data\Streams\Beetle\4-2.bik
+    file[]: crc = 305d1898; size =    193940; name = Data\Streams\Beetle\4-3.bik
+    file[]: crc = d1240f15; size =    193728; name = Data\Streams\Beetle\4-5.bik
+    file[]: crc = 2f3a0243; size =    283464; name = Data\Streams\Beetle\5-1.bik
+    file[]: crc = 54dc70d1; size =    252140; name = Data\Streams\Beetle\5-2.bik
+    file[]: crc = e31d3a38; size =    233672; name = Data\Streams\Beetle\5-3.bik
+    file[]: crc = 66e8afb0; size =    202796; name = Data\Streams\Beetle\5-4.bik
+    file[]: crc = 2974901e; size =   1960552; name = Data\Streams\Beetle\ants_vs_mosquito.bik
+    file[]: crc = 20f55671; size =   2244480; name = Data\Streams\Beetle\ants_vs_sumo.bik
+    file[]: crc = fd833782; size =   3002532; name = Data\Streams\Beetle\BoardFight.bik
+    file[]: crc = af49f8bd; size =   3001132; name = Data\Streams\Beetle\HighScore_Outro.bik
+    file[]: crc = 595e79c5; size =   2531004; name = Data\Streams\Beetle\Intro.bik
+    file[]: crc = 7df7453b; size =    226844; name = Data\Streams\Beetle\LowScore_Outro.bik
+    file[]: crc = 6eae8811; size =   3738104; name = Data\Streams\Beetle\mosquito_vs_nerd.bik
+    file[]: crc = 293d7ce5; size =   1849384; name = Data\Streams\Beetle\mosquito_vs_snail.bik
+    file[]: crc = 426d92bf; size =   1296488; name = Data\Streams\Beetle\nerd_vs_ants.bik
+    file[]: crc = 259bbc53; size =   1380776; name = Data\Streams\Beetle\nerd_vs_sumo.bik
+    file[]: crc = 08d7796f; size =   1251484; name = Data\Streams\Beetle\Reveal_Bg.bik
+    file[]: crc = 97cf9bde; size =    147872; name = Data\Streams\Beetle\Setup_Bg.bik
+    file[]: crc = 6d8ac800; size =   1596540; name = Data\Streams\Beetle\snail_vs_ants.bik
+    file[]: crc = 30fc6e30; size =   1223676; name = Data\Streams\Beetle\snail_vs_nerd.bik
+    file[]: crc = e3221df0; size =   3445632; name = Data\Streams\Beetle\sumo_vs_mosquito.bik
+    file[]: crc = b41f8105; size =   2359028; name = Data\Streams\Beetle\sumo_vs_snail.bik
+    file[]: crc = 9efc71b4; size =    589392; name = Data\Streams\DiamondFever\cut_boulder_large.bik
+    file[]: crc = 747214cb; size =    648836; name = Data\Streams\DiamondFever\cut_boulder_small.bik
+    file[]: crc = 2e988a75; size =   2346376; name = Data\Streams\DiamondFever\cut_fernando_die.bik
+    file[]: crc = d65a44c9; size =   1343692; name = Data\Streams\DiamondFever\cut_hole.bik
+    file[]: crc = c77e1a38; size =     12072; name = Data\Streams\DiamondFever\cut_hugotalk.bik
+    file[]: crc = 428d45cf; size =    179924; name = Data\Streams\DiamondFever\cut_intro_sc1.bik
+    file[]: crc = 9567a0a7; size =    218124; name = Data\Streams\DiamondFever\cut_intro_sc2.bik
+    file[]: crc = d53d54f8; size =    525620; name = Data\Streams\DiamondFever\cut_intro_sc3.bik
+    file[]: crc = f0b4d8f4; size =     79196; name = Data\Streams\DiamondFever\cut_intro_sc4.bik
+    file[]: crc = 70d84dd1; size =    212620; name = Data\Streams\DiamondFever\cut_intro_sc5.bik
+    file[]: crc = 32539078; size =    816532; name = Data\Streams\DiamondFever\cut_intro_sc5out.bik
+    file[]: crc = bbd4153d; size =    125572; name = Data\Streams\DiamondFever\cut_outro_sc1.bik
+    file[]: crc = d31e032d; size =   3630676; name = Data\Streams\DiamondFever\cut_outro_sc2.bik
+    file[]: crc = 546b920c; size =   1492316; name = Data\Streams\DiamondFever\cut_plant1.bik
+    file[]: crc = 4ab867c6; size =    142268; name = Data\Streams\DiamondFever\cut_plant2.bik
+    file[]: crc = e4dfa711; size =   1565704; name = Data\Streams\DiamondFever\cut_soldier.bik
+    file[]: crc = c63cbf21; size =   2214204; name = Data\Streams\DiamondFever\cut_spider.bik
+    file[]: crc = 9e33877d; size =   1609596; name = Data\Streams\DiamondFever\cut_steps.bik
+    file[]: crc = ac6ec5ae; size =    212144; name = Data\Streams\DiamondFever\cut_steps_sync.bik
+    file[]: crc = 6adf984e; size =   3181380; name = Data\Streams\DiamondFever\cut_water.bik
+    file[]: crc = 01ce7159; size =   2371060; name = Data\Streams\DiamondFever\cut_water_sync.bik
+    file[]: crc = e70496e2; size =  18007400; name = Data\Streams\DiamondFever\level.bik
+    file[]: crc = 48a1fd14; size =  31931140; name = Movie\Bukkazoom_INT.bik
+    file[]: crc = 39768d8d; size =   4737548; name = Movie\Runamukka_INT.bik
+    file[]: crc = 65726457; size =  15345024; name = Movie\Smakkaball_INT.bik
+
+end
+
+end
