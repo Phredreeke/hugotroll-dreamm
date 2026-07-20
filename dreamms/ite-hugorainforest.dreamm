@@ -1,0 +1,126 @@
+desc[ite-hugorainforest]:
+
+name = Hugo Rainforest
+icon = ite-hugorainforest.png
+machine = pc
+rootpath = C:\
+launch = $(rootpath)\Hugo.exe
+osenv = windows
+winres=640x480x8
+
+//
+// filesystem
+//
+mount[]: vpath = C:\; srcpath = $(ifsdeltapath); writable = true;
+mount[]: vpath = $(rootpath); srcpath = $(ifsinstallpath)
+
+//
+// warnings
+//
+INCOMPATIBLE = false
+warning[incompatible]:
+    condition = $(INCOMPATIBLE)
+    text = This game is currently unplayable (4.0x35)
+end
+
+//
+// 
+//
+game[pc]:
+    name = Multilanguage
+    anchorfile = Hugo.exe
+    file[]: crc = 6d0d8c13; size =    512000; name = CoreW32DLL.dll
+    file[]: crc = b4cf6383; size =     40208; name = dsetup.dll
+    file[]: crc = 6b137912; size =     64512; name = dsetup16.dll
+    file[]: crc = cf811d99; size =     57344; name = dsetup32.dll
+    file[]: crc = 0e00fd84; size =     86016; name = gfxdirx.dll
+    file[]: crc = 4e6857a0; size =    172106; name = gfxdirxd.dll
+    file[]: crc = 37ccfb34; size =    294912; name = Hugo.exe
+    file[]: crc = 323495ba; size =    380928; name = HugoLanguageSelector.exe
+    file[]: crc = ead77ebe; size =    311296; name = Launch.exe
+    file[]: crc = 489de7ea; size =      1128; name = Machinedk.cnf
+    file[]: crc = bd03194a; size =      1127; name = Machinefi.cnf
+    file[]: crc = 7c97eace; size =      1133; name = Machineno.cnf
+    file[]: crc = c4fcf0dd; size =      1127; name = Machinese.cnf
+    file[]: crc = 41ef586b; size =      1129; name = Machineuk.cnf
+    file[]: crc = b5c787d1; size =     53248; name = Sfx32DirX.dll
+    file[]: crc = 84a37cf9; size =     69632; name = SfxDirX.dll
+    file[]: crc = cc83a2d6; size = 288843776; name = BigFile\BigFile.res
+    file[]: crc = 50cbe3b1; size =        70; name = Config\FileSystems.cnf
+    file[]: crc = 28de4767; size =      2238; name = Config\hugo.ico
+    file[]: crc = 0ee9fdda; size =       177; name = Configdk\AutoRundk.cnf
+    file[]: crc = 4f35830d; size =      5554; name = Configdk\BoltPlugin.cnf
+    file[]: crc = 57e8ea97; size =      3038; name = Configdk\KeyPlugin.cnf
+    file[]: crc = e63acef1; size =      9184; name = Configdk\LianPlugin.cnf
+    file[]: crc = 1a3453c6; size =      1969; name = Configdk\LoaderPlugin.cnf
+    file[]: crc = 7f479fc6; size =      2825; name = Configdk\MemoryGamePlugin.cnf
+    file[]: crc = 9b25732b; size =      4626; name = Configdk\MenuPlugin.cnf
+    file[]: crc = 50363a30; size =      1570; name = Configdk\RopeIntroPlugin.cnf
+    file[]: crc = f5735596; size =      2741; name = Configdk\RopeOutroPlugin.cnf
+    file[]: crc = c2c26e05; size =      6314; name = Configdk\SwampPlugin.cnf
+    file[]: crc = c2731cb2; size =       984; name = Configdk\UnisetPlugin.cnf
+    file[]: crc = 2c2368a3; size =      2728; name = Configdk\WaterfallPlugin.cnf
+    file[]: crc = ef3a6e7a; size =       181; name = Configfi\AutoRunfi.cnf
+    file[]: crc = 46b63c6a; size =      5554; name = Configfi\BoltPlugin.cnf
+    file[]: crc = 57e8ea97; size =      3038; name = Configfi\KeyPlugin.cnf
+    file[]: crc = 63392f7f; size =      9188; name = Configfi\LianPlugin.cnf
+    file[]: crc = 58f28a18; size =      1971; name = Configfi\LoaderPlugin.cnf
+    file[]: crc = e6892f5b; size =      2825; name = Configfi\MemoryGamePlugin.cnf
+    file[]: crc = 0af5bbe2; size =      4678; name = Configfi\MenuPlugin.cnf
+    file[]: crc = 9de6d38b; size =      1570; name = Configfi\RopeIntroPlugin.cnf
+    file[]: crc = 9cc8ab72; size =      2741; name = Configfi\RopeOutroPlugin.cnf
+    file[]: crc = cebaecb2; size =      6314; name = Configfi\SwampPlugin.cnf
+    file[]: crc = c2731cb2; size =       984; name = Configfi\UnisetPlugin.cnf
+    file[]: crc = db09932a; size =      2728; name = Configfi\WaterfallPlugin.cnf
+    file[]: crc = f4c985ed; size =       195; name = Configno\AutoRunno.cnf
+    file[]: crc = 7b2b2f87; size =      5554; name = Configno\BoltPlugin.cnf
+    file[]: crc = 57e8ea97; size =      3038; name = Configno\KeyPlugin.cnf
+    file[]: crc = dfe3a9dc; size =      9191; name = Configno\LianPlugin.cnf
+    file[]: crc = 3a82f5d1; size =      1965; name = Configno\LoaderPlugin.cnf
+    file[]: crc = 9ab00266; size =      2825; name = Configno\MemoryGamePlugin.cnf
+    file[]: crc = a466ac74; size =      4612; name = Configno\MenuPlugin.cnf
+    file[]: crc = 135f1567; size =      1570; name = Configno\RopeIntroPlugin.cnf
+    file[]: crc = ea038a17; size =      2741; name = Configno\RopeOutroPlugin.cnf
+    file[]: crc = 39c7676e; size =      6314; name = Configno\SwampPlugin.cnf
+    file[]: crc = c2731cb2; size =       984; name = Configno\UnisetPlugin.cnf
+    file[]: crc = fef00482; size =      2728; name = Configno\WaterfallPlugin.cnf
+    file[]: crc = cd22f238; size =       183; name = Configse\AutoRunse.cnf
+    file[]: crc = 22b3d93e; size =      5554; name = Configse\BoltPlugin.cnf
+    file[]: crc = 57e8ea97; size =      3038; name = Configse\KeyPlugin.cnf
+    file[]: crc = 8ac69aae; size =        36; name = Configse\Launch.txt
+    file[]: crc = 60e53903; size =      9188; name = Configse\LianPlugin.cnf
+    file[]: crc = c198bbc8; size =      1958; name = Configse\LoaderPlugin.cnf
+    file[]: crc = 384d4004; size =      2825; name = Configse\MemoryGamePlugin.cnf
+    file[]: crc = f571f103; size =      4601; name = Configse\MenuPlugin.cnf
+    file[]: crc = 958058af; size =      1570; name = Configse\RopeIntroPlugin.cnf
+    file[]: crc = 1ab9f552; size =      2741; name = Configse\RopeOutroPlugin.cnf
+    file[]: crc = 8513e98b; size =      6314; name = Configse\SwampPlugin.cnf
+    file[]: crc = c2731cb2; size =       984; name = Configse\UnisetPlugin.cnf
+    file[]: crc = 0d162e48; size =      2728; name = Configse\WaterfallPlugin.cnf
+    file[]: crc = 98aa09dd; size =       176; name = configuk\AutoRundk.cnf
+    file[]: crc = 2cf54bbb; size =      5554; name = configuk\BoltPlugin.cnf
+    file[]: crc = 57e8ea97; size =      3038; name = configuk\KeyPlugin.cnf
+    file[]: crc = ba388d4b; size =      9187; name = configuk\LianPlugin.cnf
+    file[]: crc = 142a111a; size =      1967; name = configuk\LoaderPlugin.cnf
+    file[]: crc = c3297e77; size =      2825; name = configuk\MemoryGamePlugin.cnf
+    file[]: crc = a4151a86; size =      4594; name = configuk\MenuPlugin.cnf
+    file[]: crc = 112034fb; size =      1570; name = configuk\RopeIntroPlugin.cnf
+    file[]: crc = ea793c95; size =      2741; name = configuk\RopeOutroPlugin.cnf
+    file[]: crc = 48cf3fde; size =      6314; name = configuk\SwampPlugin.cnf
+    file[]: crc = c2731cb2; size =       984; name = configuk\UnisetPlugin.cnf
+    file[]: crc = abeeb89a; size =      2728; name = configuk\WaterfallPlugin.cnf
+    file[]: crc = 981728ee; size =     17485; name = Manuals\Dk.rtf
+    file[]: crc = a094e43d; size =      5642; name = Manuals\Dk.txt
+    file[]: crc = 0fa5e38d; size =     21836; name = Manuals\Fi.rtf
+    file[]: crc = 60186096; size =      6288; name = Manuals\Fi.txt
+    file[]: crc = 16c23101; size =     17026; name = Manuals\No.rtf
+    file[]: crc = 4b0ed49c; size =      5677; name = Manuals\No.txt
+    file[]: crc = 81bfe41e; size =     16391; name = Manuals\Se.rtf
+    file[]: crc = e14e6c26; size =      5474; name = Manuals\Se.txt
+    file[]: crc = 688b08fb; size =     13128; name = Manuals\Uk.rtf
+    file[]: crc = 019401d3; size =      5761; name = Manuals\Uk.txt
+    file[]: crc = e537a61e; size =   1886958; name = WebChoiceTV\wctv_102.exe
+
+end
+
+end

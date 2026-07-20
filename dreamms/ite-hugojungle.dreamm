@@ -158,4 +158,169 @@ game[pc-de-030902]:
 
 end
 
+
+//
+// Polish version
+//
+game[pc-pl-demo]:
+    name = Polish - Follow the Monkey Demo
+    anchorfile = JUNGLE.EXE
+    file[]: crc = 3da2a36f; size =    512000; name = CoreW32DLL.dll
+    file[]: crc = 39e0ef59; size =     98304; name = gfxdirx.dll
+    file[]: crc = a6bfa9c7; size =     35840; name = Jungle.exe
+    file[]: crc = 1558ef12; size =       768; name = Machine.cnf
+    file[]: crc = be6a91a4; size =  10973184; name = Resource.res
+    file[]: crc = e8b13dbb; size =     53248; name = Sfx32DirX.dll
+    file[]: crc = dd9b4833; size =     69632; name = SfxDirX.dll
+    file[]: crc = 401d82f0; size =    142024; name = Smacke16.dll
+    file[]: crc = f78c5960; size =    129024; name = Smackw32.dll
+    file[]: crc = 90b7d3a9; size =       821; name = Config\LoaderPlugin.cnf
+    file[]: crc = a97e823c; size =      3837; name = Config\MonkeyPlugin.cnf
+    file[]: crc = c07c1b77; size =    548772; name = Movie\Monkey\GrabCenter.smk
+    file[]: crc = 4d774eb5; size =    519956; name = Movie\Monkey\GrabCorner.smk
+    file[]: crc = 535ac304; size =    523880; name = Movie\Monkey\GrabSide.smk
+    file[]: crc = c24edf52; size =    850532; name = Movie\Monkey\Kiss.smk
+    file[]: crc = 353890f0; size =    992396; name = Movie\Monkey\Sink.smk
+    file[]: crc = 70ccfbb7; size =    493020; name = Movie\Monkey\Stage1.smk
+    file[]: crc = 3c3d3d74; size =    480976; name = Movie\Monkey\Stage2.smk
+    file[]: crc = aaf94a45; size =    479248; name = Movie\Monkey\Stage3.smk
+    file[]: crc = 78f21f58; size =    777864; name = Movie\Monkey\Swing.smk
+    file[]: crc = dbdff810; size =   1333484; name = Movie\Monkey\Walk.smk
+
+end
+
+//
+// Swedish version
+//
+game[pc-se]:
+    name = Swedish
+    anchorfile = JUNGLE.EXE
+    file[]: crc = 266b2ef7; size =    475136; name = CoreW32DLL.dll
+    file[]: crc = ee864f94; size =    135680; name = DSETUP.DLL
+    file[]: crc = 6b137912; size =     64512; name = DSETUP16.DLL
+    file[]: crc = cf811d99; size =     57344; name = DSETUP32.DLL
+    file[]: crc = cf304a54; size =     81920; name = gfxdirx.dll
+    file[]: crc = 3a36fdf7; size =    294912; name = Jungle.exe
+    file[]: crc = 2cdab694; size =      2238; name = Jungle.ico
+    file[]: crc = ba1a7b20; size =       767; name = Machine.cnf
+    file[]: crc = 94cd0cb1; size = 374180864; name = RESOURCE.RES
+    file[]: crc = c2017ea8; size =     24576; name = Setup.exe
+    file[]: crc = 02fd4789; size =     69632; name = SfxDirX.dll
+    file[]: crc = a840b8e6; size =     96256; name = SMACKW32.DLL
+    file[]: crc = c67a6743; size =      1543; name = Config\IntroPlugin.cnf
+    file[]: crc = f53584e0; size =      8143; name = Config\KopterPlugin.cnf
+    file[]: crc = 3359c826; size =      7179; name = Config\LianPlugin.cnf
+    file[]: crc = e322d9e9; size =       830; name = Config\LoaderPlugin.cnf
+    file[]: crc = 26866cae; size =      1535; name = Config\MemoryPlugin.cnf
+    file[]: crc = 14b0835a; size =      3891; name = Config\MenuPlugin.cnf
+    file[]: crc = 28846d4e; size =      3842; name = Config\MonkeyPlugin.cnf
+    file[]: crc = d086292b; size =      2865; name = Config\OutroPlugin.cnf
+    file[]: crc = 74fc6385; size =     15968; name = Config\PlatformPlugin.cnf
+    file[]: crc = 902ed4b9; size =      3210; name = Config\WhackPlugin.cnf
+    file[]: crc = e5eb5c59; size =   5414740; name = Movie\Intro\itemedia.smk
+    file[]: crc = d1e1cfdb; size =  28583488; name = Movie\Intro\Scene1.smk
+    file[]: crc = cd248168; size =   6200184; name = Movie\Intro\Scene2.smk
+    file[]: crc = 774305fe; size =    233880; name = Movie\Kopter\CaveStalakit1.smk
+    file[]: crc = 968b0c2a; size =    462956; name = Movie\Kopter\CaveStalakit2.smk
+    file[]: crc = 57e0822b; size =    100552; name = Movie\Kopter\CaveStone.smk
+    file[]: crc = 76a788cf; size =  10715152; name = Movie\Kopter\EasyCave.smk
+    file[]: crc = 1d1b8ab5; size =  10975840; name = Movie\Kopter\EasyInca.smk
+    file[]: crc = aa6f181a; size =  13386868; name = Movie\Kopter\EasyRiver1.smk
+    file[]: crc = fdb9b865; size =  13343972; name = Movie\Kopter\EasyRiver2.smk
+    file[]: crc = 19c635a9; size =  10676040; name = Movie\Kopter\HardCave.smk
+    file[]: crc = 384ef604; size =  10961048; name = Movie\Kopter\HardInca.smk
+    file[]: crc = 0b5007b8; size =  13280384; name = Movie\Kopter\HardRiver1.smk
+    file[]: crc = d7257a94; size =  13177104; name = Movie\Kopter\HardRiver2.smk
+    file[]: crc = 50c57f1d; size =     17460; name = Movie\Kopter\HugoCave.smk
+    file[]: crc = 493d7d6b; size =     20288; name = Movie\Kopter\HugoInca.smk
+    file[]: crc = 98a1d414; size =     26140; name = Movie\Kopter\HugoJungle.smk
+    file[]: crc = 08298233; size =   1041128; name = Movie\Kopter\IncaFist2.smk
+    file[]: crc = 166517cd; size =    119480; name = Movie\Kopter\IncaFist3.smk
+    file[]: crc = 5eada257; size =   1316544; name = Movie\Kopter\IncaFistLeft.smk
+    file[]: crc = 8d6e91cb; size =   1092324; name = Movie\Kopter\IncaFistRight.smk
+    file[]: crc = a73ba56c; size =    250976; name = Movie\Kopter\IncaFlame.smk
+    file[]: crc = 285fbbe3; size =    884944; name = Movie\Kopter\IncaFlameLeft.smk
+    file[]: crc = 285fbbe3; size =    884944; name = Movie\Kopter\IncaFlameRight.smk
+    file[]: crc = 9b203e0b; size =     27612; name = Movie\Kopter\IncaStone.smk
+    file[]: crc = 067d26f9; size =   2329984; name = Movie\Kopter\Intro1.smk
+    file[]: crc = 073ef4d8; size =   1416700; name = Movie\Kopter\Intro2.smk
+    file[]: crc = 734c14c0; size =   4971048; name = Movie\Kopter\Intro3.smk
+    file[]: crc = 280bf6fe; size =   1793464; name = Movie\Kopter\Intro4.smk
+    file[]: crc = f8a083d2; size =     53612; name = Movie\Kopter\JungleStone.smk
+    file[]: crc = b105634a; size =    812196; name = Movie\Kopter\MonkeyStickLeft1.smk
+    file[]: crc = 0ed4c782; size =   2053000; name = Movie\Kopter\MonkeyStickLeft2.smk
+    file[]: crc = 9dce3718; size =    841816; name = Movie\Kopter\MonkeyStickRight1.smk
+    file[]: crc = 2d259f1d; size =   2075040; name = Movie\Kopter\MonkeyStickRight2.smk
+    file[]: crc = 0100f7f8; size =    674948; name = Movie\Kopter\MonkeySwing1.smk
+    file[]: crc = 9660a3d7; size =    177664; name = Movie\Kopter\MonkeySwing2.smk
+    file[]: crc = e3ff2b6f; size =   1058552; name = Movie\Kopter\NoFuelInca1.smk
+    file[]: crc = 36bb5901; size =   1282624; name = Movie\Kopter\NoFuelInca2.smk
+    file[]: crc = d4706861; size =    251772; name = Movie\Kopter\NoFuelInca3.smk
+    file[]: crc = b481e6fc; size =   1083684; name = Movie\Kopter\NoFuelJungle1.smk
+    file[]: crc = e7f26874; size =   1351692; name = Movie\Kopter\NoFuelJungle2.smk
+    file[]: crc = e6fc2686; size =    275892; name = Movie\Kopter\NoFuelJungle3.smk
+    file[]: crc = df11db15; size =    880136; name = Movie\Kopter\NoFuelTunnel1.smk
+    file[]: crc = 0ca22400; size =   1137892; name = Movie\Kopter\NoFuelTunnel2.smk
+    file[]: crc = aa4838cb; size =    239996; name = Movie\Kopter\NoFuelTunnel3.smk
+    file[]: crc = 4137378a; size =   1774764; name = Movie\Kopter\Outro.smk
+    file[]: crc = 91b0f7d4; size =    525676; name = Movie\Kopter\Tree1.smk
+    file[]: crc = 852360cf; size =   4958124; name = Movie\Kopter\Tree2.smk
+    file[]: crc = dd60a410; size =    533072; name = Movie\Kopter\TurnCaveLeft.smk
+    file[]: crc = 56d0d46c; size =    533408; name = Movie\Kopter\TurnCaveRight.smk
+    file[]: crc = aa275ca6; size =    739936; name = Movie\Kopter\TurnIncaLeft.smk
+    file[]: crc = 31db56a1; size =    738620; name = Movie\Kopter\TurnIncaRight.smk
+    file[]: crc = f2cb768c; size =    592332; name = Movie\Kopter\TurnJungleLeft.smk
+    file[]: crc = cfe3ea62; size =    594168; name = Movie\Kopter\TurnJungleRight.smk
+    file[]: crc = 394f3c6f; size =    969368; name = Movie\Kopter\WaterFall1.smk
+    file[]: crc = e60f99aa; size =    167964; name = Movie\Kopter\WaterFall2.smk
+    file[]: crc = dcf8179b; size =  67042612; name = Movie\Liana\Back.smk
+    file[]: crc = 9e50e91b; size =   1916676; name = Movie\Liana\BlindH.smk
+    file[]: crc = 5604bd92; size =   1916596; name = Movie\Liana\BlindV.smk
+    file[]: crc = d41a5be2; size =    642888; name = Movie\Liana\EleDie.smk
+    file[]: crc = 48fec29c; size =    135772; name = Movie\Liana\intro1.smk
+    file[]: crc = cb2d1f0d; size =    176340; name = Movie\Liana\intro3.smk
+    file[]: crc = 5baae928; size =     94956; name = Movie\Liana\intro4.smk
+    file[]: crc = 3c15aec1; size =    128060; name = Movie\Liana\LeoDie1.smk
+    file[]: crc = b5eb99dd; size =    146104; name = Movie\Liana\LeoDie2.smk
+    file[]: crc = fe97ee0d; size =   2624184; name = Movie\Liana\LeoDie3.smk
+    file[]: crc = f199b5d4; size =    185416; name = Movie\Liana\LeoDie5.smk
+    file[]: crc = 66a617a7; size =    713456; name = Movie\Liana\Outro1.smk
+    file[]: crc = 5dba0258; size =    416976; name = Movie\Liana\Outro2.smk
+    file[]: crc = 2bef13a8; size =    254348; name = Movie\Liana\Outro3.smk
+    file[]: crc = 0d4760fb; size =    266004; name = Movie\Liana\PlantDie.smk
+    file[]: crc = 23c49d50; size =    501792; name = Movie\Liana\SwingLeft.smk
+    file[]: crc = a4d9451b; size =    501692; name = Movie\Liana\SwingRight.smk
+    file[]: crc = c07c1b77; size =    548772; name = Movie\Monkey\GrabCenter.smk
+    file[]: crc = 4d774eb5; size =    519956; name = Movie\Monkey\GrabCorner.smk
+    file[]: crc = 535ac304; size =    523880; name = Movie\Monkey\GrabSide.smk
+    file[]: crc = c24edf52; size =    850532; name = Movie\Monkey\Kiss.smk
+    file[]: crc = 353890f0; size =    992396; name = Movie\Monkey\Sink.smk
+    file[]: crc = 70ccfbb7; size =    493020; name = Movie\Monkey\Stage1.smk
+    file[]: crc = 3c3d3d74; size =    480976; name = Movie\Monkey\Stage2.smk
+    file[]: crc = aaf94a45; size =    479248; name = Movie\Monkey\Stage3.smk
+    file[]: crc = 78f21f58; size =    777864; name = Movie\Monkey\Swing.smk
+    file[]: crc = dbdff810; size =   1333484; name = Movie\Monkey\Walk.smk
+    file[]: crc = b6402858; size =    147856; name = Movie\Outro\640_Ape_bad.smk
+    file[]: crc = 9c376a5f; size =    141504; name = Movie\Outro\640_Ape_good.smk
+    file[]: crc = 9521bba5; size =    285480; name = Movie\Outro\640_Ape_jump.smk
+    file[]: crc = b973dcc0; size =   9425528; name = Movie\Outro\640_Beach.smk
+    file[]: crc = e5a6ed8e; size =   1463164; name = Movie\Outro\640_CageFall.smk
+    file[]: crc = 7d2ed168; size =    151924; name = Movie\Outro\640_Cat_bad.smk
+    file[]: crc = f056819e; size =    144932; name = Movie\Outro\640_Cat_good.smk
+    file[]: crc = 5fced5e5; size =    282184; name = Movie\Outro\640_Cat_jump.smk
+    file[]: crc = dfb94d2d; size =   4816040; name = Movie\Outro\640_Outro1.smk
+    file[]: crc = 4e0dc86a; size =   1413276; name = Movie\Outro\640_Outro2.smk
+    file[]: crc = bddd2458; size =   1532632; name = Movie\Outro\640_Outro3_1.smk
+    file[]: crc = 8c82db16; size =    681816; name = Movie\Outro\640_Outro5.smk
+    file[]: crc = 548f7664; size =    394024; name = Movie\Outro\640_reach_handle.smk
+    file[]: crc = ea5b0dac; size =    132620; name = Movie\Outro\640_Snake_bad.smk
+    file[]: crc = af6f346d; size =    126208; name = Movie\Outro\640_Snake_good.smk
+    file[]: crc = f794f9cd; size =    279736; name = Movie\Outro\640_Snake_jump.smk
+    file[]: crc = 0b38351f; size =    625504; name = Movie\Outro\640_Walk_Ape.smk
+    file[]: crc = 35e82be0; size =    857680; name = Movie\Outro\640_Walk_Snake.smk
+    file[]: crc = 5d1152e3; size =    663844; name = Movie\Outro\640_Walk_Tiger.smk
+    file[]: crc = 26c465ce; size =    998864; name = Movie\Outro\HugoFly.smk
+
+end
+
 end
