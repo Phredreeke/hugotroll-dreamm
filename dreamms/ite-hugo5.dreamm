@@ -17,28 +17,9 @@ videohw = svga
 mount[]: vpath = C:\; srcpath = $(ifsdeltapath); writable = true;
 mount[]: vpath = $(rootpath); srcpath = $(ifsinstallpath)
 
+
 $(include cfg-hugo5.inc)
 
-script[registry]: code = if (is_windows()) {winregistry_import_file("C:\\DREAMM.REG")}
-
-dynamicfile[]:
-   path = C:\DREAMM.REG
-   contents = [[[$(CRLF)
-      REGEDIT4
-      [HKEY_LOCAL_MACHINE\Software]
-      
-      [HKEY_LOCAL_MACHINE\Software\Hugo97]
-      "CDDriveLetter"="C:"
-      [HKEY_USERS\S-1-5-21-1220945662-1563985344-839522115-500]
-
-      [HKEY_USERS\S-1-5-21-1220945662-1563985344-839522115-500\Software]
-      
-      [HKEY_USERS\S-1-5-21-1220945662-1563985344-839522115-500\Software\Classes]
-      
-      [HKEY_USERS\S-1-5-21-1220945662-1563985344-839522115-500\Software\Classes\Hugo97]
-      "CDDriveLetter"="C:"
-   ]]]
-end
 
 //
 // warnings
