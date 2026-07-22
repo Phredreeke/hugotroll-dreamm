@@ -214,4 +214,65 @@ game[pc-he-980905]:
 
 end
 
+//
+// Russian version
+//
+game[pc-ru]:
+    name = Russian
+    anchorfile = HUGO.EXE
+    VEROPTIONS = FALSE
+    file[]: crc = b11caf05; size =     88064; name = _IsRes.dll
+    file[]: crc = a2eb0797; size =     16384; name = _ISUser.dll
+    file[]: crc = 0d7a400f; size =    385968; name = _Setup.dll
+    file[]: crc = 03c5cb86; size =     65503; name = corecomp.ini
+    file[]: crc = 3da2a36f; size =    512000; name = CoreW32DLL.dll
+    file[]: crc = 00000000; size =         0; name = data1.cab
+    file[]: crc = 00000000; size =         0; name = data1.hdr
+    file[]: crc = 15e1a72d; size =      1168; name = default.pal
+    file[]: crc = eae06784; size =        86; name = DIFxData.ini
+    file[]: crc = cad3d8d8; size =     10672; name = dotnetinstaller.exe
+    file[]: crc = ee864f94; size =    135680; name = DSETUP.DLL
+    file[]: crc = 6b137912; size =     64512; name = DSETUP16.DLL
+    file[]: crc = cf811d99; size =     57344; name = DSETUP32.DLL
+    file[]: crc = a1f5342e; size =       133; name = ereg.url
+    file[]: crc = f8833805; size =        39; name = FontData.ini
+    file[]: crc = 39e0ef59; size =     98304; name = gfxdirx.dll
+    file[]: crc = f3f3e628; size =    319488; name = hugo.exe
+    file[]: crc = 4874e0c0; size =    246192; name = ISBEW64.exe
+    file[]: crc = 4874e0c0; size =    120240; name = ISBEW64.exe
+    file[]: crc = 93a340eb; size =    208304; name = isrt.dll
+    file[]: crc = 6573ac2e; size =    492032; name = ISSetup.dll
+    file[]: crc = 00000000; size =         0; name = layout.bin
+    file[]: crc = 5f2d2502; size =      5795; name = License.txt
+    file[]: crc = 9fdda5fa; size =       917; name = Machine.cnf
+    file[]: crc = 24428d95; size =      6030; name = nd.ico
+    file[]: crc = 13933686; size =        43; name = nd.url
+    file[]: crc = f3ee7069; size =    455600; name = setup.exe
+    file[]: crc = d7fee8ab; size =       422; name = setup.ini
+    file[]: crc = 05cc9224; size =    241204; name = setup.inx
+    file[]: crc = 05cc9224; size =    241204; name = setup.inx
+    file[]: crc = e8b13dbb; size =     53248; name = Sfx32DirX.dll
+    file[]: crc = dd9b4833; size =     69632; name = SfxDirX.dll
+    file[]: crc = 13cb5314; size =      8715; name = StringTable-0019-Russian.ips
+    file[]: crc = 0c9601ab; size =      2621; name = support.txt
+    file[]: crc = d772cd09; size = 117964800; name = Bigfile\data.res
+    file[]: crc = 34691d25; size =       174; name = config\AutoRun.cnf
+    file[]: crc = 5241b210; size =      5606; name = config\BoltPlugin.cnf
+    file[]: crc = 5a55a860; size =      6743; name = config\CliffHangerPlugin.cnf
+    file[]: crc = 109f982a; size =       730; name = config\ErrMsg.txt
+    file[]: crc = 35845843; size =        87; name = config\FileSystems.cnf
+    file[]: crc = 9e024cfc; size =      3638; name = config\hugo.ico
+    file[]: crc = b1855d8f; size =      3102; name = config\KeyPlugin.cnf
+    file[]: crc = 7d9cbead; size =        37; name = config\Launch.txt
+    file[]: crc = 4ba67a65; size =      2062; name = config\LoaderPlugin.cnf
+    file[]: crc = 585c8f92; size =      9876; name = config\LogBridgePlugin.cnf
+    file[]: crc = 8014ade2; size =      4740; name = config\MenuPlugin.cnf
+    file[]: crc = 9ebd5b2e; size =      4486; name = config\ParachutePlugin.cnf
+    file[]: crc = b65b3a52; size =      1517; name = config\RopeIntroPlugin.cnf
+    file[]: crc = 9961e083; size =      2800; name = config\RopeOutroPlugin.cnf
+    file[]: crc = f04d8880; size =      6216; name = config\SledgePlugin.cnf
+
+
+end
+
 end
