@@ -1,0 +1,48 @@
+desc[ite-hugolabyrinth]:
+
+name = Hugo Labyrinth
+icon = ite-hugolabyrinth.png
+machine = pc
+rootpath = C:\
+launch = $(rootpath)\HUGO.EXE
+osenv = dos
+fixdivover = true
+mips = $(MIPS_386SX_20)
+ramkb = 16384
+audiohw = sb16
+videohw = vga
+
+
+//
+// filesystem
+//
+mount[]: vpath = C:\; srcpath = $(ifsdeltapath); writable = true;
+mount[]: vpath = $(rootpath); srcpath = $(ifsinstallpath)
+
+
+//
+// Video options
+//
+VIDOPTIONS = true
+config[vidoptions]:
+    condition = $(VIDOPTIONS)
+    title = Version
+    option[ega]: name = $(EGA_NAME); videohw = ega; 
+    option[vga]: name = $(VGA_NAME); priority = 1;
+end
+
+
+//
+// English DOS version
+//
+game[pc-940827]:
+    name = English DOS
+    anchorfile = HUGO.EXE
+    file[]: crc = 0539b2dc; size =   1072340; name = HUGO.001
+    file[]: crc = 59b378b3; size =      3160; name = HUGO.DIR
+    file[]: crc = 04281767; size =    102395; name = Hugo.exe
+
+end
+
+
+end
