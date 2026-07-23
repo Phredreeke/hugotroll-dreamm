@@ -37,7 +37,7 @@ end
 fragment[base-dos]:
     osenv = dos
     fixdivover = true
-    mips = $(MIPS_P100)
+    mips = $(MIPS_P75)
     ramkb = 16384
     audiohw = sb16
     videohw = svga
