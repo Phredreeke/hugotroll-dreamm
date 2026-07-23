@@ -40,7 +40,18 @@ fragment[base-dos]:
     mips = $(MIPS_P75)
     ramkb = 16384
     audiohw = sb16
-    videohw = svga
+    videohw = vga
+end
+
+//
+// Video options
+//
+VIDOPTIONS = false
+config[vidoptions]:
+    condition = $(VIDOPTIONS)
+    title = Version
+    option[ega]: name = $(EGA_NAME); videohw = ega; 
+    option[vga]: name = $(VGA_NAME); priority = 1;
 end
 
 //
@@ -409,6 +420,7 @@ game[pc-dk-dos-part1]:
     anchorfile = HUGOII.EXE
     launch = $(rootpath)\HUGOII.EXE
     imports = base-dos
+    VIDOPTIONS = true
     file[]: crc = d73e2c63; size =     20464; name = ALLA.SMP
     file[]: crc = 200c12cd; size =     33201; name = ALLB.SMP
     file[]: crc = dc422683; size =     73312; name = CAVEWALK.ANI
