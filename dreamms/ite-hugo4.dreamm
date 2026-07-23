@@ -5,12 +5,8 @@ icon = ite-hugo4.png
 machine = pc
 rootpath = C:\
 launch = $(rootpath)\HUGO.EXE
-osenv = dos
-fixdivover = true
-mips = $(MIPS_P100)
-ramkb = 16384
-audiohw = sb16
-videohw = svga
+osenv = windows
+winres=640x480x8
 
 $(include cfg-hugo4.inc)
 
@@ -29,6 +25,15 @@ warning[incompatible]:
     text = This game is not currently playable due to missing key inputs (4.0x35)
 end
 
+fragment[base-dos]:
+    osenv = dos
+    fixdivover = true
+    mips = $(MIPS_P100)
+    ramkb = 16384
+    audiohw = sb16
+    videohw = svga
+end
+
 //
 // Setup
 //
@@ -42,8 +47,9 @@ end
 // Swedish DOS version
 //
 game[pc-se-970428]:
-    name = Swedish DOS
+    name = Swedish DOS 1997-04-28
     anchorfile = HUGO.EXE
+    imports = base-dos
     file[]: crc = 9539c06c; size =     32846; name = CHECKRAM.EXE
     file[]: crc = cb214447; size =    265420; name = DOS4GW.EXE
     file[]: crc = ee471f34; size =       229; name = DSIK.TXT
@@ -183,6 +189,504 @@ game[pc-se-970428]:
     file[]: crc = 6a13f389; size =   1501208; name = RESOURCE\SNOW\TURN.ZAN
     file[]: crc = 214f2af5; size =    109174; name = RESOURCE\SNOW\WRONG1.RAS
     file[]: crc = ad0d7a04; size =    122980; name = RESOURCE\SNOW\WRONG2.RAS
+
+end
+
+
+//
+// Finnish DOS version
+//
+game[pc-fi-971028]:
+    name = Finnish DOS 1997-10-28
+    anchorfile = HUGO.EXE
+    imports = base-dos
+    file[]: crc = 9539c06c; size =     32846; name = CHECKRAM.EXE
+    file[]: crc = cb214447; size =    265420; name = DOS4GW.EXE
+    file[]: crc = ee471f34; size =       229; name = DSIK.TXT
+    file[]: crc = cb6a8da0; size =  85794689; name = HUGO.DAT
+    file[]: crc = faa33f69; size =    514308; name = HUGO.EXE
+    file[]: crc = f60a1493; size =       766; name = HUGO.OCI
+    file[]: crc = c738a41b; size =       995; name = HUGOW95.WIN
+    file[]: crc = baba6478; size =       545; name = HUGOWIN.WIN
+    file[]: crc = 3cec3c19; size =    142012; name = INSTALL.EXE
+    file[]: crc = 44af7042; size =     72240; name = INSTALLW.EXE
+    file[]: crc = 178a719c; size =  10463241; name = PROFILE.ZAN
+    file[]: crc = 478d12fb; size =        77; name = README.TXT
+    file[]: crc = 600e3627; size =    126750; name = SNDSETUP.EXE
+    file[]: crc = bf32ea05; size =       766; name = SNDSETUP.OCI
+    file[]: crc = 368471f2; size =       545; name = SNDSETUP.PIF
+    file[]: crc = 49cabcd8; size =    103872; name = WPROF.EXE
+    file[]: crc = c337eb3f; size =       967; name = WPROF.PIF
+    file[]: crc = 94b0c751; size =   1007204; name = RESOURCE\INTRO.RAS
+    file[]: crc = 6261d1e8; size =  18474717; name = RESOURCE\BALLOON\BALLOON1.ZAN
+    file[]: crc = 659d8073; size =   1585582; name = RESOURCE\BALLOON\BRAND.RAS
+    file[]: crc = f160eb09; size =    372711; name = RESOURCE\BALLOON\DOE_MARI.RAS
+    file[]: crc = d01ab1b6; size =    184191; name = RESOURCE\BALLOON\INTRO1.RAS
+    file[]: crc = f554f62d; size =    685444; name = RESOURCE\BALLOON\INTRO3.RAS
+    file[]: crc = 9bf193de; size =   3206461; name = RESOURCE\BALLOON\INTRO4.RAS
+    file[]: crc = 1a66b694; size =     33399; name = RESOURCE\BALLOON\INTRO5.RAS
+    file[]: crc = 1c3de28d; size =    240693; name = RESOURCE\BALLOON\INTRO6.RAS
+    file[]: crc = 43136fdd; size =    455555; name = RESOURCE\BALLOON\KO_KAST.RAS
+    file[]: crc = 5cbb95a0; size =   1113619; name = RESOURCE\BALLOON\NIT1.RAS
+    file[]: crc = f5ab3a5c; size =    799897; name = RESOURCE\BALLOON\NIT2.RAS
+    file[]: crc = a6358184; size =    106401; name = RESOURCE\BALLOON\OP2.RAS
+    file[]: crc = 94e4a2ce; size =    126192; name = RESOURCE\BALLOON\OP3.RAS
+    file[]: crc = 192293c9; size =   5507900; name = RESOURCE\BALLOON\P1BD.RAS
+    file[]: crc = 5623f37b; size =    642624; name = RESOURCE\BALLOON\P2HUGOKO.RAS
+    file[]: crc = dda28e7c; size =    339959; name = RESOURCE\BALLOON\P3LL.RAS
+    file[]: crc = 5f467d04; size =     97925; name = RESOURCE\BALLOON\P4HUGOSB.RAS
+    file[]: crc = 32219a82; size =    321618; name = RESOURCE\BALLOON\P5LLC.RAS
+    file[]: crc = 8f0f97c8; size =    641580; name = RESOURCE\BALLOON\P6FNNY.RAS
+    file[]: crc = c09c70ea; size =   1082335; name = RESOURCE\BALLOON\P7HUGOTL.RAS
+    file[]: crc = c1ce39c0; size =    460977; name = RESOURCE\BALLOON\SS.RAS
+    file[]: crc = 6d9b9e62; size =    766210; name = RESOURCE\BALLOON\U1.RAS
+    file[]: crc = 9e4ac3f1; size =    255921; name = RESOURCE\DOLMEN\BLELNED.RA2
+    file[]: crc = 41fa49f2; size =    493971; name = RESOURCE\DOLMEN\BLELNED.RAS
+    file[]: crc = 07a11b72; size =    260832; name = RESOURCE\DOLMEN\BLELNEDR.RA2
+    file[]: crc = 020a74d5; size =    503260; name = RESOURCE\DOLMEN\BLELNEDR.RAS
+    file[]: crc = 0c2ff364; size =    249376; name = RESOURCE\DOLMEN\BLELOP.RA2
+    file[]: crc = dd798503; size =    477758; name = RESOURCE\DOLMEN\BLELOP.RAS
+    file[]: crc = e966ae03; size =    244922; name = RESOURCE\DOLMEN\BLELOPR.RA2
+    file[]: crc = c67dcae7; size =    471313; name = RESOURCE\DOLMEN\BLELOPR.RAS
+    file[]: crc = fd4f8a32; size =   1179754; name = RESOURCE\DOLMEN\DRAG.RA2
+    file[]: crc = 437071be; size =   2107414; name = RESOURCE\DOLMEN\DRAG.RAS
+    file[]: crc = 53ea00a7; size =    142974; name = RESOURCE\DOLMEN\DRAG2.RAS
+    file[]: crc = 1bcc0b76; size =    498511; name = RESOURCE\DOLMEN\DRUK.RAS
+    file[]: crc = 4c0dce64; size =    251829; name = RESOURCE\DOLMEN\ELNED.RA2
+    file[]: crc = a1ed1615; size =    486002; name = RESOURCE\DOLMEN\ELNED.RAS
+    file[]: crc = ac497f7f; size =    253343; name = RESOURCE\DOLMEN\ELNEDR.RA2
+    file[]: crc = 2d3e188b; size =    488428; name = RESOURCE\DOLMEN\ELNEDR.RAS
+    file[]: crc = b506413b; size =    238879; name = RESOURCE\DOLMEN\ELOP.RA2
+    file[]: crc = 2a997adb; size =    457605; name = RESOURCE\DOLMEN\ELOP.RAS
+    file[]: crc = a0921e7a; size =    238747; name = RESOURCE\DOLMEN\ELOPR.RA2
+    file[]: crc = 2eec09f4; size =    459300; name = RESOURCE\DOLMEN\ELOPR.RAS
+    file[]: crc = 3b683e12; size =    395756; name = RESOURCE\DOLMEN\INSIDE1.RAS
+    file[]: crc = bb7857f8; size =    398400; name = RESOURCE\DOLMEN\INSIDE1R.RAS
+    file[]: crc = a465e517; size =    391533; name = RESOURCE\DOLMEN\INSIDE2.RAS
+    file[]: crc = 9131a120; size =    393669; name = RESOURCE\DOLMEN\INSIDE2R.RAS
+    file[]: crc = 620a5be4; size =    398954; name = RESOURCE\DOLMEN\INSIDE3.RAS
+    file[]: crc = 21d21ab0; size =    401615; name = RESOURCE\DOLMEN\INSIDE3R.RAS
+    file[]: crc = 967fdb17; size =    401395; name = RESOURCE\DOLMEN\INSIDE4.RAS
+    file[]: crc = b1123fff; size =    398118; name = RESOURCE\DOLMEN\INSIDE4R.RAS
+    file[]: crc = 0fd34222; size =    397672; name = RESOURCE\DOLMEN\INSIDE5.RAS
+    file[]: crc = 1d347a7c; size =    394842; name = RESOURCE\DOLMEN\INSIDE5R.RAS
+    file[]: crc = 92d8fb88; size =    403912; name = RESOURCE\DOLMEN\INSIDE6.RAS
+    file[]: crc = 3afed7b4; size =    400587; name = RESOURCE\DOLMEN\INSIDE6R.RAS
+    file[]: crc = 4c4c4097; size =    187624; name = RESOURCE\DOLMEN\KRAN.RAS
+    file[]: crc = bd62f368; size =    795038; name = RESOURCE\DOLMEN\M02.RA2
+    file[]: crc = 0329c2f4; size =   1481454; name = RESOURCE\DOLMEN\M02.RAS
+    file[]: crc = dd4e1350; size =    570552; name = RESOURCE\DOLMEN\M4.RA2
+    file[]: crc = efe36811; size =   1008174; name = RESOURCE\DOLMEN\M4.RAS
+    file[]: crc = 6a8c4dc2; size =    553803; name = RESOURCE\DOLMEN\M5.RA2
+    file[]: crc = c80bebc1; size =    982021; name = RESOURCE\DOLMEN\M5.RAS
+    file[]: crc = 7e366af1; size =    533645; name = RESOURCE\DOLMEN\M92.RA2
+    file[]: crc = 7d6a47ce; size =    957359; name = RESOURCE\DOLMEN\M92.RAS
+    file[]: crc = e4c665ee; size =   1000401; name = RESOURCE\DOLMEN\MODUL02.RA2
+    file[]: crc = 903436c7; size =   1804529; name = RESOURCE\DOLMEN\MODUL02.RAS
+    file[]: crc = 6b14e7e2; size =   1001294; name = RESOURCE\DOLMEN\MODUL03.RA2
+    file[]: crc = 75178a94; size =   1802488; name = RESOURCE\DOLMEN\MODUL03.RAS
+    file[]: crc = 29daf302; size =   1041650; name = RESOURCE\DOLMEN\MODUL04.RA2
+    file[]: crc = b34df0a4; size =   1904215; name = RESOURCE\DOLMEN\MODUL04.RAS
+    file[]: crc = f964317f; size =   1028358; name = RESOURCE\DOLMEN\MODUL05.RA2
+    file[]: crc = 1bc18f00; size =   1884488; name = RESOURCE\DOLMEN\MODUL05.RAS
+    file[]: crc = dee2c9f7; size =   1406273; name = RESOURCE\DOLMEN\MODUL06.RA2
+    file[]: crc = 8383a01e; size =   2630168; name = RESOURCE\DOLMEN\MODUL06.RAS
+    file[]: crc = b8d74990; size =   1369981; name = RESOURCE\DOLMEN\MODUL07.RA2
+    file[]: crc = 80629c68; size =   2566782; name = RESOURCE\DOLMEN\MODUL07.RAS
+    file[]: crc = e669556a; size =   1063654; name = RESOURCE\DOLMEN\MODUL08.RA2
+    file[]: crc = 88ddf3ca; size =   1971849; name = RESOURCE\DOLMEN\MODUL08.RAS
+    file[]: crc = d3ebd51b; size =    968796; name = RESOURCE\DOLMEN\MODUL09.RA2
+    file[]: crc = a5e51a24; size =   1792541; name = RESOURCE\DOLMEN\MODUL09.RAS
+    file[]: crc = 7456ca99; size =   1282385; name = RESOURCE\DOLMEN\MODUL10.RA2
+    file[]: crc = 6e20d18f; size =   2414764; name = RESOURCE\DOLMEN\MODUL10.RAS
+    file[]: crc = 5c9fcf8d; size =    288216; name = RESOURCE\DOLMEN\MSPIS02.RA2
+    file[]: crc = fb3b216b; size =    508734; name = RESOURCE\DOLMEN\MSPIS02.RAS
+    file[]: crc = 28ba0ee2; size =    287491; name = RESOURCE\DOLMEN\MSPIS03.RA2
+    file[]: crc = c69f2db2; size =    508275; name = RESOURCE\DOLMEN\MSPIS03.RAS
+    file[]: crc = d2290ff9; size =   1044549; name = RESOURCE\DOLMEN\OUTRO2.RAS
+    file[]: crc = c16a8cf9; size =    328929; name = RESOURCE\DOLMEN\WALLNED.RA2
+    file[]: crc = ec8a2391; size =    644944; name = RESOURCE\DOLMEN\WALLNED.RAS
+    file[]: crc = 202cd7d0; size =    330762; name = RESOURCE\DOLMEN\WALLNEDR.RA2
+    file[]: crc = 2549d691; size =    648663; name = RESOURCE\DOLMEN\WALLNEDR.RAS
+    file[]: crc = 970d65e6; size =    324778; name = RESOURCE\DOLMEN\WALLOP.RA2
+    file[]: crc = eae5db9d; size =    637207; name = RESOURCE\DOLMEN\WALLOP.RAS
+    file[]: crc = 5e3e4cbb; size =    326169; name = RESOURCE\DOLMEN\WALLOPR.RA2
+    file[]: crc = da79db7d; size =    640144; name = RESOURCE\DOLMEN\WALLOPR.RAS
+    file[]: crc = 05432110; size =   1454888; name = RESOURCE\DOLMEN\TEMP\DROPEN.RAS
+    file[]: crc = 9222d9fc; size =   1456385; name = RESOURCE\DOLMEN\TEMP\DROPEN2.RAS
+    file[]: crc = 9c618026; size =   1802299; name = RESOURCE\DOLMEN\TEMP\DRST.RAS
+    file[]: crc = 0a576b7d; size =   1804296; name = RESOURCE\DOLMEN\TEMP\DRST2.RAS
+    file[]: crc = 75178a94; size =   1802488; name = RESOURCE\DOLMEN\TEMP\E_MODUL0.RAS
+    file[]: crc = 6e20d18f; size =   2414764; name = RESOURCE\DOLMEN\TEMP\E_MODUL1.RAS
+    file[]: crc = d01a33c0; size =    904573; name = RESOURCE\DOLMEN\TEMP\E_MODULF.RAS
+    file[]: crc = f908e863; size =   1461475; name = RESOURCE\DOLMEN\TEMP\E_MODULS.RAS
+    file[]: crc = 0a8108cd; size =   1223967; name = RESOURCE\DOLMEN\TEMP\MFLYT08.RAS
+    file[]: crc = 65543bb3; size =    929534; name = RESOURCE\DOLMEN\TEMP\MFLYT10.RAS
+    file[]: crc = d01a33c0; size =    904573; name = RESOURCE\DOLMEN\TEMP\MLFLYT09.RAS
+    file[]: crc = c8de9148; size =  31014465; name = RESOURCE\NIMBUS\BACK.ZAN
+    file[]: crc = da59afd0; size =  20589178; name = RESOURCE\NIMBUS\BACKLOW.ZAN
+    file[]: crc = b80f2a21; size =   1363737; name = RESOURCE\NIMBUS\BEAVER.ZAN
+    file[]: crc = 4b42b521; size =   2132567; name = RESOURCE\NIMBUS\GOAT.ZAN
+    file[]: crc = d5220654; size =    672683; name = RESOURCE\NIMBUS\HOLE.ZAN
+    file[]: crc = 7a155fc5; size =    287996; name = RESOURCE\NIMBUS\INTRO.ZAN
+    file[]: crc = c5eef131; size =    583603; name = RESOURCE\NIMBUS\MAP.ZAN
+    file[]: crc = a14762ca; size =    978933; name = RESOURCE\NIMBUS\NOGAS.ZAN
+    file[]: crc = f9392f70; size =    483637; name = RESOURCE\NIMBUS\STONE.ZAN
+    file[]: crc = 0e7fd146; size =   1035013; name = RESOURCE\SNOW\BAGFRA.RAS
+    file[]: crc = 2a65a8ff; size =    324409; name = RESOURCE\SNOW\DIE_BALL.RAS
+    file[]: crc = dc5d9238; size =    364487; name = RESOURCE\SNOW\DIE_BEAV.RAS
+    file[]: crc = b871dc81; size =   1248880; name = RESOURCE\SNOW\HUGOMODE.RAS
+    file[]: crc = b2350da3; size =    713942; name = RESOURCE\SNOW\HUGOSTOP.RAS
+    file[]: crc = 4f475abf; size =   1145440; name = RESOURCE\SNOW\KURVE.RAS
+    file[]: crc = a4008ad5; size =    558727; name = RESOURCE\SNOW\KURVE.ZAN
+    file[]: crc = 0124f3c8; size =    395506; name = RESOURCE\SNOW\LAVINE.RAS
+    file[]: crc = 639a2d14; size =    695023; name = RESOURCE\SNOW\MAINLOOP.RAS
+    file[]: crc = e2224aca; size =    180878; name = RESOURCE\SNOW\RAMTH.RAS
+    file[]: crc = 112cf19a; size =    189553; name = RESOURCE\SNOW\RAMTV.RAS
+    file[]: crc = 1a33fd6f; size =   2366360; name = RESOURCE\SNOW\SIDEFRA.RAS
+    file[]: crc = 9d7d3172; size =    125863; name = RESOURCE\SNOW\SNESELV.RAS
+    file[]: crc = feaf145a; size =   1193655; name = RESOURCE\SNOW\THEEND.RAS
+    file[]: crc = c6b606ae; size =   2073396; name = RESOURCE\SNOW\TURN.RAS
+    file[]: crc = 6a13f389; size =   1501208; name = RESOURCE\SNOW\TURN.ZAN
+    file[]: crc = 214f2af5; size =    109174; name = RESOURCE\SNOW\WRONG1.RAS
+    file[]: crc = ad0d7a04; size =    122980; name = RESOURCE\SNOW\WRONG2.RAS
+
+end
+
+
+//
+// German DOS version
+//
+game[pc-de-961022]:
+    name = German DOS 1996-10-22
+    anchorfile = HUGO.EXE
+    imports = base-dos
+    file[]: crc = 9539c06c; size =     32846; name = CHECKRAM.EXE
+    file[]: crc = cb214447; size =    265420; name = DOS4GW.EXE
+    file[]: crc = ee471f34; size =       229; name = DSIK.TXT
+    file[]: crc = 54c9648d; size = 438357217; name = HUGO.DAT
+    file[]: crc = 5ed93811; size =    508135; name = hugo.exe
+    file[]: crc = f60a1493; size =       766; name = HUGO.OCI
+    file[]: crc = c738a41b; size =       995; name = HUGOW95.WIN
+    file[]: crc = baba6478; size =       545; name = HUGOWIN.WIN
+    file[]: crc = 78ab34ff; size =    148399; name = INSTALL.EXE
+    file[]: crc = 3c4bd175; size =     72752; name = INSTALLW.EXE
+    file[]: crc = 178a719c; size =  10463241; name = PROFILE.ZAN
+    file[]: crc = d6ee637c; size =        77; name = README.TXT
+    file[]: crc = f03387fc; size =    121064; name = SNDSETUP.EXE
+    file[]: crc = bf32ea05; size =       766; name = SNDSETUP.OCI
+    file[]: crc = 368471f2; size =       545; name = SNDSETUP.PIF
+    file[]: crc = 49cabcd8; size =    103872; name = WPROF.EXE
+    file[]: crc = c337eb3f; size =       967; name = WPROF.PIF
+    file[]: crc = 94b0c751; size =   1007204; name = RESOURCE\INTRO.RAS
+    file[]: crc = 6261d1e8; size =  18474717; name = RESOURCE\BALLOON\BALLOON1.ZAN
+    file[]: crc = 659d8073; size =   1585582; name = RESOURCE\BALLOON\BRAND.RAS
+    file[]: crc = f160eb09; size =    372711; name = RESOURCE\BALLOON\DOE_MARI.RAS
+    file[]: crc = d01ab1b6; size =    184191; name = RESOURCE\BALLOON\INTRO1.RAS
+    file[]: crc = f554f62d; size =    685444; name = RESOURCE\BALLOON\INTRO3.RAS
+    file[]: crc = 9bf193de; size =   3206461; name = RESOURCE\BALLOON\INTRO4.RAS
+    file[]: crc = 1a66b694; size =     33399; name = RESOURCE\BALLOON\INTRO5.RAS
+    file[]: crc = 1c3de28d; size =    240693; name = RESOURCE\BALLOON\INTRO6.RAS
+    file[]: crc = 43136fdd; size =    455555; name = RESOURCE\BALLOON\KO_KAST.RAS
+    file[]: crc = 5cbb95a0; size =   1113619; name = RESOURCE\BALLOON\NIT1.RAS
+    file[]: crc = f5ab3a5c; size =    799897; name = RESOURCE\BALLOON\NIT2.RAS
+    file[]: crc = a6358184; size =    106401; name = RESOURCE\BALLOON\OP2.RAS
+    file[]: crc = 94e4a2ce; size =    126192; name = RESOURCE\BALLOON\OP3.RAS
+    file[]: crc = 192293c9; size =   5507900; name = RESOURCE\BALLOON\P1BD.RAS
+    file[]: crc = 5623f37b; size =    642624; name = RESOURCE\BALLOON\P2HUGOKO.RAS
+    file[]: crc = dda28e7c; size =    339959; name = RESOURCE\BALLOON\P3LL.RAS
+    file[]: crc = 5f467d04; size =     97925; name = RESOURCE\BALLOON\P4HUGOSB.RAS
+    file[]: crc = 32219a82; size =    321618; name = RESOURCE\BALLOON\P5LLC.RAS
+    file[]: crc = 8f0f97c8; size =    641580; name = RESOURCE\BALLOON\P6FNNY.RAS
+    file[]: crc = c09c70ea; size =   1082335; name = RESOURCE\BALLOON\P7HUGOTL.RAS
+    file[]: crc = c1ce39c0; size =    460977; name = RESOURCE\BALLOON\SS.RAS
+    file[]: crc = 6d9b9e62; size =    766210; name = RESOURCE\BALLOON\U1.RAS
+    file[]: crc = 9e4ac3f1; size =    255921; name = RESOURCE\DOLMEN\BLELNED.RA2
+    file[]: crc = 41fa49f2; size =    493971; name = RESOURCE\DOLMEN\BLELNED.RAS
+    file[]: crc = 07a11b72; size =    260832; name = RESOURCE\DOLMEN\BLELNEDR.RA2
+    file[]: crc = 020a74d5; size =    503260; name = RESOURCE\DOLMEN\BLELNEDR.RAS
+    file[]: crc = 0c2ff364; size =    249376; name = RESOURCE\DOLMEN\BLELOP.RA2
+    file[]: crc = dd798503; size =    477758; name = RESOURCE\DOLMEN\BLELOP.RAS
+    file[]: crc = e966ae03; size =    244922; name = RESOURCE\DOLMEN\BLELOPR.RA2
+    file[]: crc = c67dcae7; size =    471313; name = RESOURCE\DOLMEN\BLELOPR.RAS
+    file[]: crc = fd4f8a32; size =   1179754; name = RESOURCE\DOLMEN\DRAG.RA2
+    file[]: crc = 437071be; size =   2107414; name = RESOURCE\DOLMEN\DRAG.RAS
+    file[]: crc = 53ea00a7; size =    142974; name = RESOURCE\DOLMEN\DRAG2.RAS
+    file[]: crc = 1bcc0b76; size =    498511; name = RESOURCE\DOLMEN\DRUK.RAS
+    file[]: crc = 4c0dce64; size =    251829; name = RESOURCE\DOLMEN\ELNED.RA2
+    file[]: crc = a1ed1615; size =    486002; name = RESOURCE\DOLMEN\ELNED.RAS
+    file[]: crc = ac497f7f; size =    253343; name = RESOURCE\DOLMEN\ELNEDR.RA2
+    file[]: crc = 2d3e188b; size =    488428; name = RESOURCE\DOLMEN\ELNEDR.RAS
+    file[]: crc = b506413b; size =    238879; name = RESOURCE\DOLMEN\ELOP.RA2
+    file[]: crc = 2a997adb; size =    457605; name = RESOURCE\DOLMEN\ELOP.RAS
+    file[]: crc = a0921e7a; size =    238747; name = RESOURCE\DOLMEN\ELOPR.RA2
+    file[]: crc = 2eec09f4; size =    459300; name = RESOURCE\DOLMEN\ELOPR.RAS
+    file[]: crc = 3b683e12; size =    395756; name = RESOURCE\DOLMEN\INSIDE1.RAS
+    file[]: crc = bb7857f8; size =    398400; name = RESOURCE\DOLMEN\INSIDE1R.RAS
+    file[]: crc = a465e517; size =    391533; name = RESOURCE\DOLMEN\INSIDE2.RAS
+    file[]: crc = 9131a120; size =    393669; name = RESOURCE\DOLMEN\INSIDE2R.RAS
+    file[]: crc = 620a5be4; size =    398954; name = RESOURCE\DOLMEN\INSIDE3.RAS
+    file[]: crc = 21d21ab0; size =    401615; name = RESOURCE\DOLMEN\INSIDE3R.RAS
+    file[]: crc = 967fdb17; size =    401395; name = RESOURCE\DOLMEN\INSIDE4.RAS
+    file[]: crc = b1123fff; size =    398118; name = RESOURCE\DOLMEN\INSIDE4R.RAS
+    file[]: crc = 0fd34222; size =    397672; name = RESOURCE\DOLMEN\INSIDE5.RAS
+    file[]: crc = 1d347a7c; size =    394842; name = RESOURCE\DOLMEN\INSIDE5R.RAS
+    file[]: crc = 92d8fb88; size =    403912; name = RESOURCE\DOLMEN\INSIDE6.RAS
+    file[]: crc = 3afed7b4; size =    400587; name = RESOURCE\DOLMEN\INSIDE6R.RAS
+    file[]: crc = 4c4c4097; size =    187624; name = RESOURCE\DOLMEN\KRAN.RAS
+    file[]: crc = bd62f368; size =    795038; name = RESOURCE\DOLMEN\M02.RA2
+    file[]: crc = 0329c2f4; size =   1481454; name = RESOURCE\DOLMEN\M02.RAS
+    file[]: crc = dd4e1350; size =    570552; name = RESOURCE\DOLMEN\M4.RA2
+    file[]: crc = efe36811; size =   1008174; name = RESOURCE\DOLMEN\M4.RAS
+    file[]: crc = 6a8c4dc2; size =    553803; name = RESOURCE\DOLMEN\M5.RA2
+    file[]: crc = c80bebc1; size =    982021; name = RESOURCE\DOLMEN\M5.RAS
+    file[]: crc = 7e366af1; size =    533645; name = RESOURCE\DOLMEN\M92.RA2
+    file[]: crc = 7d6a47ce; size =    957359; name = RESOURCE\DOLMEN\M92.RAS
+    file[]: crc = e4c665ee; size =   1000401; name = RESOURCE\DOLMEN\MODUL02.RA2
+    file[]: crc = 903436c7; size =   1804529; name = RESOURCE\DOLMEN\MODUL02.RAS
+    file[]: crc = 6b14e7e2; size =   1001294; name = RESOURCE\DOLMEN\MODUL03.RA2
+    file[]: crc = 75178a94; size =   1802488; name = RESOURCE\DOLMEN\MODUL03.RAS
+    file[]: crc = 29daf302; size =   1041650; name = RESOURCE\DOLMEN\MODUL04.RA2
+    file[]: crc = b34df0a4; size =   1904215; name = RESOURCE\DOLMEN\MODUL04.RAS
+    file[]: crc = f964317f; size =   1028358; name = RESOURCE\DOLMEN\MODUL05.RA2
+    file[]: crc = 1bc18f00; size =   1884488; name = RESOURCE\DOLMEN\MODUL05.RAS
+    file[]: crc = dee2c9f7; size =   1406273; name = RESOURCE\DOLMEN\MODUL06.RA2
+    file[]: crc = 8383a01e; size =   2630168; name = RESOURCE\DOLMEN\MODUL06.RAS
+    file[]: crc = b8d74990; size =   1369981; name = RESOURCE\DOLMEN\MODUL07.RA2
+    file[]: crc = 80629c68; size =   2566782; name = RESOURCE\DOLMEN\MODUL07.RAS
+    file[]: crc = e669556a; size =   1063654; name = RESOURCE\DOLMEN\MODUL08.RA2
+    file[]: crc = 88ddf3ca; size =   1971849; name = RESOURCE\DOLMEN\MODUL08.RAS
+    file[]: crc = d3ebd51b; size =    968796; name = RESOURCE\DOLMEN\MODUL09.RA2
+    file[]: crc = a5e51a24; size =   1792541; name = RESOURCE\DOLMEN\MODUL09.RAS
+    file[]: crc = 7456ca99; size =   1282385; name = RESOURCE\DOLMEN\MODUL10.RA2
+    file[]: crc = 6e20d18f; size =   2414764; name = RESOURCE\DOLMEN\MODUL10.RAS
+    file[]: crc = 5c9fcf8d; size =    288216; name = RESOURCE\DOLMEN\MSPIS02.RA2
+    file[]: crc = fb3b216b; size =    508734; name = RESOURCE\DOLMEN\MSPIS02.RAS
+    file[]: crc = 28ba0ee2; size =    287491; name = RESOURCE\DOLMEN\MSPIS03.RA2
+    file[]: crc = c69f2db2; size =    508275; name = RESOURCE\DOLMEN\MSPIS03.RAS
+    file[]: crc = d2290ff9; size =   1044549; name = RESOURCE\DOLMEN\OUTRO2.RAS
+    file[]: crc = c16a8cf9; size =    328929; name = RESOURCE\DOLMEN\WALLNED.RA2
+    file[]: crc = ec8a2391; size =    644944; name = RESOURCE\DOLMEN\WALLNED.RAS
+    file[]: crc = 202cd7d0; size =    330762; name = RESOURCE\DOLMEN\WALLNEDR.RA2
+    file[]: crc = 2549d691; size =    648663; name = RESOURCE\DOLMEN\WALLNEDR.RAS
+    file[]: crc = 970d65e6; size =    324778; name = RESOURCE\DOLMEN\WALLOP.RA2
+    file[]: crc = eae5db9d; size =    637207; name = RESOURCE\DOLMEN\WALLOP.RAS
+    file[]: crc = 5e3e4cbb; size =    326169; name = RESOURCE\DOLMEN\WALLOPR.RA2
+    file[]: crc = da79db7d; size =    640144; name = RESOURCE\DOLMEN\WALLOPR.RAS
+    file[]: crc = c8de9148; size =  31014465; name = RESOURCE\NIMBUS\BACK.ZAN
+    file[]: crc = da59afd0; size =  20589178; name = RESOURCE\NIMBUS\BACKLOW.ZAN
+    file[]: crc = b80f2a21; size =   1363737; name = RESOURCE\NIMBUS\BEAVER.ZAN
+    file[]: crc = 4b42b521; size =   2132567; name = RESOURCE\NIMBUS\GOAT.ZAN
+    file[]: crc = d5220654; size =    672683; name = RESOURCE\NIMBUS\HOLE.ZAN
+    file[]: crc = 7a155fc5; size =    287996; name = RESOURCE\NIMBUS\INTRO.ZAN
+    file[]: crc = c5eef131; size =    583603; name = RESOURCE\NIMBUS\MAP.ZAN
+    file[]: crc = a14762ca; size =    978933; name = RESOURCE\NIMBUS\NOGAS.ZAN
+    file[]: crc = f9392f70; size =    483637; name = RESOURCE\NIMBUS\STONE.ZAN
+    file[]: crc = 0e7fd146; size =   1035013; name = RESOURCE\SNOW\BAGFRA.RAS
+    file[]: crc = 2a65a8ff; size =    324409; name = RESOURCE\SNOW\DIE_BALL.RAS
+    file[]: crc = dc5d9238; size =    364487; name = RESOURCE\SNOW\DIE_BEAV.RAS
+    file[]: crc = b871dc81; size =   1248880; name = RESOURCE\SNOW\HUGOMODE.RAS
+    file[]: crc = b2350da3; size =    713942; name = RESOURCE\SNOW\HUGOSTOP.RAS
+    file[]: crc = 4f475abf; size =   1145440; name = RESOURCE\SNOW\KURVE.RAS
+    file[]: crc = a4008ad5; size =    558727; name = RESOURCE\SNOW\KURVE.ZAN
+    file[]: crc = 0124f3c8; size =    395506; name = RESOURCE\SNOW\LAVINE.RAS
+    file[]: crc = 639a2d14; size =    695023; name = RESOURCE\SNOW\MAINLOOP.RAS
+    file[]: crc = e2224aca; size =    180878; name = RESOURCE\SNOW\RAMTH.RAS
+    file[]: crc = 112cf19a; size =    189553; name = RESOURCE\SNOW\RAMTV.RAS
+    file[]: crc = 1a33fd6f; size =   2366360; name = RESOURCE\SNOW\SIDEFRA.RAS
+    file[]: crc = 9d7d3172; size =    125863; name = RESOURCE\SNOW\SNESELV.RAS
+    file[]: crc = feaf145a; size =   1193655; name = RESOURCE\SNOW\THEEND.RAS
+    file[]: crc = c6b606ae; size =   2073396; name = RESOURCE\SNOW\TURN.RAS
+    file[]: crc = 6a13f389; size =   1501208; name = RESOURCE\SNOW\TURN.ZAN
+    file[]: crc = 214f2af5; size =    109174; name = RESOURCE\SNOW\WRONG1.RAS
+    file[]: crc = ad0d7a04; size =    122980; name = RESOURCE\SNOW\WRONG2.RAS
+
+end
+
+//
+// German Windows version
+//
+game[pc-de-win]:
+    name = German Windows 1999-11-24
+    anchorfile = HUGO.EXE
+    file[]: crc = 8f691799; size =        50; name = Autorun.inf
+    file[]: crc = 6d0d8c13; size =    512000; name = CoreW32DLL.dll
+    file[]: crc = ee864f94; size =    135680; name = DSETUP.DLL
+    file[]: crc = 6b137912; size =     64512; name = DSETUP16.DLL
+    file[]: crc = cf811d99; size =     57344; name = DSETUP32.DLL
+    file[]: crc = 0e00fd84; size =     86016; name = gfxdirx.dll
+    file[]: crc = 14dfbe3f; size =    389120; name = Hugo.exe
+    file[]: crc = 3b3ef14d; size =    311296; name = Launch.exe
+    file[]: crc = 3929bc53; size =       964; name = Machine.cnf
+    file[]: crc = b5c787d1; size =     53248; name = Sfx32DirX.dll
+    file[]: crc = 84a37cf9; size =     69632; name = SfxDirX.dll
+    file[]: crc = 80682141; size = 288999424; name = BigFile\data.res
+    file[]: crc = f569dddb; size =       183; name = Config\AutoRun.cnf
+    file[]: crc = e9ddec94; size =      9169; name = Config\BalloonPlugin.cnf
+    file[]: crc = b1357775; size =      5523; name = Config\BoltPlugin.cnf
+    file[]: crc = 24f751ea; size =      9602; name = Config\DolmenPlugin.cnf
+    file[]: crc = 2a3b7b23; size =       975; name = Config\ErrMsg.txt
+    file[]: crc = 5f22be21; size =        93; name = Config\FileSystems.cnf
+    file[]: crc = 28de4767; size =      2238; name = Config\hugo.ico
+    file[]: crc = 57e8ea97; size =      3038; name = Config\KeyPlugin.cnf
+    file[]: crc = 7d9cbead; size =        37; name = Config\Launch.txt
+    file[]: crc = cb60fdf6; size =      1966; name = Config\LoaderPlugin.cnf
+    file[]: crc = 06e4d31e; size =      4976; name = Config\MenuPlugin.cnf
+    file[]: crc = 2630b8b5; size =      7497; name = Config\NimbusPlugin.cnf
+    file[]: crc = b65b3a52; size =      1517; name = Config\RopeIntroPlugin.cnf
+    file[]: crc = 143e7783; size =      2740; name = Config\RopeOutroPlugin.cnf
+    file[]: crc = 3394c9d5; size =      9161; name = Config\SnowboardPlugin.cnf
+
+end
+
+
+//
+// Spanish DOS version
+//
+game[pc-es-971028]:
+    name = Spanish DOS 1997-10-28
+    anchorfile = HUGO.EXE
+    imports = base-dos
+    file[]: crc = 9539c06c; size =     32846; name = CHECKRAM.EXE
+    file[]: crc = 5cc34b0f; size =    265396; name = DOS4GW.EXE
+    file[]: crc = ee471f34; size =       229; name = DSIK.TXT
+    file[]: crc = 4a8557f2; size = 526337958; name = HUGO.DAT
+    file[]: crc = 543e201e; size =    710405; name = HUGO.EXE
+    file[]: crc = f60a1493; size =       766; name = HUGO.OCI
+    file[]: crc = f166b343; size =       995; name = HUGOW95.WIN
+    file[]: crc = 85abeaf0; size =       545; name = HUGOWIN.WIN
+    file[]: crc = 97c3eb80; size =    184889; name = INSTALL.EXE
+    file[]: crc = 73d57e0f; size =     72624; name = INSTALLW.EXE
+    file[]: crc = 178a719c; size =  10463241; name = PROFILE.ZAN
+    file[]: crc = d6ee637c; size =        77; name = README.TXT
+    file[]: crc = ae6bf18b; size =    156420; name = SNDSETUP.EXE
+    file[]: crc = bf32ea05; size =       766; name = SNDSETUP.OCI
+    file[]: crc = 368471f2; size =       545; name = SNDSETUP.PIF
+    file[]: crc = 7855f3ee; size =    129150; name = WPROF.EXE
+    file[]: crc = 994abe26; size =       967; name = WPROF.PIF
+    file[]: crc = 94b0c751; size =   1007204; name = RESOURCE\INTRO.RAS
+    file[]: crc = 6261d1e8; size =  18474717; name = RESOURCE\BALLOON\BALLOON1.ZAN
+    file[]: crc = 659d8073; size =   1585582; name = RESOURCE\BALLOON\BRAND.RAS
+    file[]: crc = f160eb09; size =    372711; name = RESOURCE\BALLOON\DOE_MARI.RAS
+    file[]: crc = d01ab1b6; size =    184191; name = RESOURCE\BALLOON\INTRO1.RAS
+    file[]: crc = f554f62d; size =    685444; name = RESOURCE\BALLOON\INTRO3.RAS
+    file[]: crc = 9bf193de; size =   3206461; name = RESOURCE\BALLOON\INTRO4.RAS
+    file[]: crc = 1a66b694; size =     33399; name = RESOURCE\BALLOON\INTRO5.RAS
+    file[]: crc = 1c3de28d; size =    240693; name = RESOURCE\BALLOON\INTRO6.RAS
+    file[]: crc = 43136fdd; size =    455555; name = RESOURCE\BALLOON\KO_KAST.RAS
+    file[]: crc = 5cbb95a0; size =   1113619; name = RESOURCE\BALLOON\NIT1.RAS
+    file[]: crc = f5ab3a5c; size =    799897; name = RESOURCE\BALLOON\NIT2.RAS
+    file[]: crc = a6358184; size =    106401; name = RESOURCE\BALLOON\OP2.RAS
+    file[]: crc = 94e4a2ce; size =    126192; name = RESOURCE\BALLOON\OP3.RAS
+    file[]: crc = 192293c9; size =   5507900; name = RESOURCE\BALLOON\P1BD.RAS
+    file[]: crc = 5623f37b; size =    642624; name = RESOURCE\BALLOON\P2HUGOKO.RAS
+    file[]: crc = dda28e7c; size =    339959; name = RESOURCE\BALLOON\P3LL.RAS
+    file[]: crc = 5f467d04; size =     97925; name = RESOURCE\BALLOON\P4HUGOSB.RAS
+    file[]: crc = 32219a82; size =    321618; name = RESOURCE\BALLOON\P5LLC.RAS
+    file[]: crc = 8f0f97c8; size =    641580; name = RESOURCE\BALLOON\P6FNNY.RAS
+    file[]: crc = c09c70ea; size =   1082335; name = RESOURCE\BALLOON\P7HUGOTL.RAS
+    file[]: crc = c1ce39c0; size =    460977; name = RESOURCE\BALLOON\SS.RAS
+    file[]: crc = 6d9b9e62; size =    766210; name = RESOURCE\BALLOON\U1.RAS
+    file[]: crc = 9e4ac3f1; size =    255921; name = RESOURCE\DOLMEN\BLELNED.RA2
+    file[]: crc = 41fa49f2; size =    493971; name = RESOURCE\DOLMEN\BLELNED.RAS
+    file[]: crc = 07a11b72; size =    260832; name = RESOURCE\DOLMEN\BLELNEDR.RA2
+    file[]: crc = 020a74d5; size =    503260; name = RESOURCE\DOLMEN\BLELNEDR.RAS
+    file[]: crc = 0c2ff364; size =    249376; name = RESOURCE\DOLMEN\BLELOP.RA2
+    file[]: crc = dd798503; size =    477758; name = RESOURCE\DOLMEN\BLELOP.RAS
+    file[]: crc = e966ae03; size =    244922; name = RESOURCE\DOLMEN\BLELOPR.RA2
+    file[]: crc = c67dcae7; size =    471313; name = RESOURCE\DOLMEN\BLELOPR.RAS
+    file[]: crc = fd4f8a32; size =   1179754; name = RESOURCE\DOLMEN\DRAG.RA2
+    file[]: crc = 437071be; size =   2107414; name = RESOURCE\DOLMEN\DRAG.RAS
+    file[]: crc = 53ea00a7; size =    142974; name = RESOURCE\DOLMEN\DRAG2.RAS
+    file[]: crc = 1bcc0b76; size =    498511; name = RESOURCE\DOLMEN\DRUK.RAS
+    file[]: crc = 4c0dce64; size =    251829; name = RESOURCE\DOLMEN\ELNED.RA2
+    file[]: crc = a1ed1615; size =    486002; name = RESOURCE\DOLMEN\ELNED.RAS
+    file[]: crc = ac497f7f; size =    253343; name = RESOURCE\DOLMEN\ELNEDR.RA2
+    file[]: crc = 2d3e188b; size =    488428; name = RESOURCE\DOLMEN\ELNEDR.RAS
+    file[]: crc = b506413b; size =    238879; name = RESOURCE\DOLMEN\ELOP.RA2
+    file[]: crc = 2a997adb; size =    457605; name = RESOURCE\DOLMEN\ELOP.RAS
+    file[]: crc = a0921e7a; size =    238747; name = RESOURCE\DOLMEN\ELOPR.RA2
+    file[]: crc = 2eec09f4; size =    459300; name = RESOURCE\DOLMEN\ELOPR.RAS
+    file[]: crc = 3b683e12; size =    395756; name = RESOURCE\DOLMEN\INSIDE1.RAS
+    file[]: crc = bb7857f8; size =    398400; name = RESOURCE\DOLMEN\INSIDE1R.RAS
+    file[]: crc = a465e517; size =    391533; name = RESOURCE\DOLMEN\INSIDE2.RAS
+    file[]: crc = 9131a120; size =    393669; name = RESOURCE\DOLMEN\INSIDE2R.RAS
+    file[]: crc = 620a5be4; size =    398954; name = RESOURCE\DOLMEN\INSIDE3.RAS
+    file[]: crc = 21d21ab0; size =    401615; name = RESOURCE\DOLMEN\INSIDE3R.RAS
+    file[]: crc = 967fdb17; size =    401395; name = RESOURCE\DOLMEN\INSIDE4.RAS
+    file[]: crc = b1123fff; size =    398118; name = RESOURCE\DOLMEN\INSIDE4R.RAS
+    file[]: crc = 0fd34222; size =    397672; name = RESOURCE\DOLMEN\INSIDE5.RAS
+    file[]: crc = 1d347a7c; size =    394842; name = RESOURCE\DOLMEN\INSIDE5R.RAS
+    file[]: crc = 92d8fb88; size =    403912; name = RESOURCE\DOLMEN\INSIDE6.RAS
+    file[]: crc = 3afed7b4; size =    400587; name = RESOURCE\DOLMEN\INSIDE6R.RAS
+    file[]: crc = 4c4c4097; size =    187624; name = RESOURCE\DOLMEN\KRAN.RAS
+    file[]: crc = bd62f368; size =    795038; name = RESOURCE\DOLMEN\M02.RA2
+    file[]: crc = 0329c2f4; size =   1481454; name = RESOURCE\DOLMEN\M02.RAS
+    file[]: crc = dd4e1350; size =    570552; name = RESOURCE\DOLMEN\M4.RA2
+    file[]: crc = efe36811; size =   1008174; name = RESOURCE\DOLMEN\M4.RAS
+    file[]: crc = 6a8c4dc2; size =    553803; name = RESOURCE\DOLMEN\M5.RA2
+    file[]: crc = c80bebc1; size =    982021; name = RESOURCE\DOLMEN\M5.RAS
+    file[]: crc = 7e366af1; size =    533645; name = RESOURCE\DOLMEN\M92.RA2
+    file[]: crc = 7d6a47ce; size =    957359; name = RESOURCE\DOLMEN\M92.RAS
+    file[]: crc = e4c665ee; size =   1000401; name = RESOURCE\DOLMEN\MODUL02.RA2
+    file[]: crc = 903436c7; size =   1804529; name = RESOURCE\DOLMEN\MODUL02.RAS
+    file[]: crc = 6b14e7e2; size =   1001294; name = RESOURCE\DOLMEN\MODUL03.RA2
+    file[]: crc = 75178a94; size =   1802488; name = RESOURCE\DOLMEN\MODUL03.RAS
+    file[]: crc = 29daf302; size =   1041650; name = RESOURCE\DOLMEN\MODUL04.RA2
+    file[]: crc = b34df0a4; size =   1904215; name = RESOURCE\DOLMEN\MODUL04.RAS
+    file[]: crc = f964317f; size =   1028358; name = RESOURCE\DOLMEN\MODUL05.RA2
+    file[]: crc = 1bc18f00; size =   1884488; name = RESOURCE\DOLMEN\MODUL05.RAS
+    file[]: crc = dee2c9f7; size =   1406273; name = RESOURCE\DOLMEN\MODUL06.RA2
+    file[]: crc = 8383a01e; size =   2630168; name = RESOURCE\DOLMEN\MODUL06.RAS
+    file[]: crc = b8d74990; size =   1369981; name = RESOURCE\DOLMEN\MODUL07.RA2
+    file[]: crc = 80629c68; size =   2566782; name = RESOURCE\DOLMEN\MODUL07.RAS
+    file[]: crc = e669556a; size =   1063654; name = RESOURCE\DOLMEN\MODUL08.RA2
+    file[]: crc = 88ddf3ca; size =   1971849; name = RESOURCE\DOLMEN\MODUL08.RAS
+    file[]: crc = d3ebd51b; size =    968796; name = RESOURCE\DOLMEN\MODUL09.RA2
+    file[]: crc = a5e51a24; size =   1792541; name = RESOURCE\DOLMEN\MODUL09.RAS
+    file[]: crc = 7456ca99; size =   1282385; name = RESOURCE\DOLMEN\MODUL10.RA2
+    file[]: crc = 6e20d18f; size =   2414764; name = RESOURCE\DOLMEN\MODUL10.RAS
+    file[]: crc = 5c9fcf8d; size =    288216; name = RESOURCE\DOLMEN\MSPIS02.RA2
+    file[]: crc = fb3b216b; size =    508734; name = RESOURCE\DOLMEN\MSPIS02.RAS
+    file[]: crc = 28ba0ee2; size =    287491; name = RESOURCE\DOLMEN\MSPIS03.RA2
+    file[]: crc = c69f2db2; size =    508275; name = RESOURCE\DOLMEN\MSPIS03.RAS
+    file[]: crc = d2290ff9; size =   1044549; name = RESOURCE\DOLMEN\OUTRO2.RAS
+    file[]: crc = c16a8cf9; size =    328929; name = RESOURCE\DOLMEN\WALLNED.RA2
+    file[]: crc = ec8a2391; size =    644944; name = RESOURCE\DOLMEN\WALLNED.RAS
+    file[]: crc = 202cd7d0; size =    330762; name = RESOURCE\DOLMEN\WALLNEDR.RA2
+    file[]: crc = 2549d691; size =    648663; name = RESOURCE\DOLMEN\WALLNEDR.RAS
+    file[]: crc = 970d65e6; size =    324778; name = RESOURCE\DOLMEN\WALLOP.RA2
+    file[]: crc = eae5db9d; size =    637207; name = RESOURCE\DOLMEN\WALLOP.RAS
+    file[]: crc = 5e3e4cbb; size =    326169; name = RESOURCE\DOLMEN\WALLOPR.RA2
+    file[]: crc = da79db7d; size =    640144; name = RESOURCE\DOLMEN\WALLOPR.RAS
+    file[]: crc = c8de9148; size =  31014465; name = RESOURCE\NIMBUS\BACK.ZAN
+    file[]: crc = da59afd0; size =  20589178; name = RESOURCE\NIMBUS\BACKLOW.ZAN
+    file[]: crc = b80f2a21; size =   1363737; name = RESOURCE\NIMBUS\BEAVER.ZAN
+    file[]: crc = 4b42b521; size =   2132567; name = RESOURCE\NIMBUS\GOAT.ZAN
+    file[]: crc = d5220654; size =    672683; name = RESOURCE\NIMBUS\HOLE.ZAN
+    file[]: crc = 7a155fc5; size =    287996; name = RESOURCE\NIMBUS\INTRO.ZAN
+    file[]: crc = c5eef131; size =    583603; name = RESOURCE\NIMBUS\MAP.ZAN
+    file[]: crc = a14762ca; size =    978933; name = RESOURCE\NIMBUS\NOGAS.ZAN
+    file[]: crc = f9392f70; size =    483637; name = RESOURCE\NIMBUS\STONE.ZAN
+    file[]: crc = 0e7fd146; size =   1035013; name = RESOURCE\SNOW\BAGFRA.RAS
+    file[]: crc = 2a65a8ff; size =    324409; name = RESOURCE\SNOW\DIE_BALL.RAS
+    file[]: crc = dc5d9238; size =    364487; name = RESOURCE\SNOW\DIE_BEAV.RAS
+    file[]: crc = b871dc81; size =   1248880; name = RESOURCE\SNOW\HUGOMODE.RAS
+    file[]: crc = b2350da3; size =    713942; name = RESOURCE\SNOW\HUGOSTOP.RAS
+    file[]: crc = 4f475abf; size =   1145440; name = RESOURCE\SNOW\KURVE.RAS
+    file[]: crc = a4008ad5; size =    558727; name = RESOURCE\SNOW\KURVE.ZAN
+    file[]: crc = 0124f3c8; size =    395506; name = RESOURCE\SNOW\LAVINE.RAS
+    file[]: crc = 639a2d14; size =    695023; name = RESOURCE\SNOW\MAINLOOP.RAS
+    file[]: crc = e2224aca; size =    180878; name = RESOURCE\SNOW\RAMTH.RAS
+    file[]: crc = 112cf19a; size =    189553; name = RESOURCE\SNOW\RAMTV.RAS
+    file[]: crc = 1a33fd6f; size =   2366360; name = RESOURCE\SNOW\SIDEFRA.RAS
+    file[]: crc = 9d7d3172; size =    125863; name = RESOURCE\SNOW\SNESELV.RAS
+    file[]: crc = feaf145a; size =   1193655; name = RESOURCE\SNOW\THEEND.RAS
+    file[]: crc = c6b606ae; size =   2073396; name = RESOURCE\SNOW\TURN.RAS
+    file[]: crc = 6a13f389; size =   1501208; name = RESOURCE\SNOW\TURN.ZAN
+    file[]: crc = 214f2af5; size =    109174; name = RESOURCE\SNOW\WRONG1.RAS
+    file[]: crc = ad0d7a04; size =    122980; name = RESOURCE\SNOW\WRONG2.RAS
+
 
 end
 
