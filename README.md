@@ -7,7 +7,7 @@ Not to be confused with the Hugo series by Gray Design Associates. This is VERY 
 | --- | --- | --- |
 |Hugo 2 (Windows)|🇦🇷🇩🇪🇩🇰🇵🇹|🇦🇷🇩🇰🇵🇹 works, 🇩🇪 hangs after intro video|
 |Hugo 2 (DOS)|🇩🇪🇩🇰🇸🇪|works, copy protection not automated|
-|Hugo 3 (DOS)|🇦🇷🇩🇪🇩🇰🇭🇷🇮🇱🇸🇪|Works as of 4.0x37|
+|Hugo 3 (DOS)|🇦🇷🇩🇪🇩🇰🇫🇮🇭🇷🇮🇱🇸🇪|Works as of 4.0x37|
 |Hugo 4 (DOS)|🇦🇷🇩🇪🇫🇮🇮🇱🇸🇪|Works as of 4.0x37|
 |Hugo 5|🇦🇷🇩🇪🇮🇱🇵🇹🇸🇪|Windows works. DOS has bugged inputs|
 |Hugo 6|🇩🇪🇮🇱🇳🇴🇵🇹|🇩🇪🇮🇱🇵🇹 works, 🇳🇴 hangs after intro video|
