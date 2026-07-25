@@ -6,6 +6,7 @@ machine = pc
 rootpath = C:\
 launch = $(rootpath)\hugo.exe
 osenv = windows
+mips = 300
 winres=640x480x8
 
 //
