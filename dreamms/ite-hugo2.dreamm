@@ -20,7 +20,13 @@ mount[]: vpath = $(rootpath); srcpath = $(ifsinstallpath)
 INCOMPATIBLE = false
 warning[incompatible]:
     condition = $(INCOMPATIBLE)
-    text = This version does not work in tested DREAMM version (4.0x35)
+    text = This version does not work in tested DREAMM version (4.0x38)
+end
+
+CPNOTE = false
+warning[incompatiblecpnote]:
+    condition = $(CPNOTE)
+    text = Copy protection solving is currently unimplemented for this game
 end
 
 //
@@ -127,7 +133,7 @@ end
 // Danish version 
 //
 game[pc-dk-win]:
-    name = Danish
+    name = Danish Windows version
     anchorfile = Hugo.exe
     file[]: crc = cef7e1eb; size =        50; name = Autorun.inf
     file[]: crc = af38be3e; size = 672006291; name = data.big
@@ -198,6 +204,7 @@ game[pc-se-dos]:
     anchorfile = Hugo.exe
     imports = base-dos
     CRACKCFG = file_exists("$(rootpath)\HUGOcr.EXE")
+    CPNOTE = true
     file[]: crc = a646565b; size =    122406; name = BRANCH.ANI
     file[]: crc = dc422683; size =     73312; name = CAVEWALK.ANI
     file[]: crc = c60dfae8; size =    180872; name = CLIMB.ANI
@@ -421,6 +428,7 @@ game[pc-dk-dos-part1]:
     launch = $(rootpath)\HUGOII.EXE
     imports = base-dos
     VIDOPTIONS = true
+    CPNOTE = true
     file[]: crc = d73e2c63; size =     20464; name = ALLA.SMP
     file[]: crc = 200c12cd; size =     33201; name = ALLB.SMP
     file[]: crc = dc422683; size =     73312; name = CAVEWALK.ANI
@@ -537,6 +545,116 @@ game[pc-dk-dos]:
     file[]: crc = 9f4ee5e0; size =     23007; name = THEEND.EXE  // replaces 04f01812/18750
     file[]: crc = dd55d390; size =     34455; name = THEENDA.SMP  // replaces 0b47128b/29037
     file[]: crc = 6390d0a0; size =     45425; name = TRAIN.EXE  // replaces 0c8baa0b/35008
+
+
+end
+
+
+//
+// Spanish DOS version 
+//
+game[pc-es-dos]:
+    name = Spanish DOS
+    anchorfile = Hugo.exe
+    imports = base-dos
+    file[]: crc = d73e2c63; size =     20464; name = ALLA.SMP
+    file[]: crc = 583aa22b; size =     98292; name = ARJ.EXE
+    file[]: crc = a646565b; size =    122406; name = BRANCH.ANI
+    file[]: crc = dc422683; size =     73312; name = CAVEWALK.ANI
+    file[]: crc = d811c568; size =    180872; name = CLIMB.ANI
+    file[]: crc = 4c8255e2; size =    214324; name = CRASH.ANI
+    file[]: crc = 5ce67022; size =     95938; name = CROW.ANI
+    file[]: crc = c6c03fbc; size =      2296; name = DECRUNCH.EXE
+    file[]: crc = 4cc8c656; size =         4; name = DIRINFO
+    file[]: crc = 23125c82; size =    272330; name = DONEA.ANI
+    file[]: crc = c4b7704e; size =    236410; name = DONEB.ANI
+    file[]: crc = 870d0086; size =    234953; name = DYNAMITA.ANI
+    file[]: crc = 3cedcf9b; size =     35065; name = DYNAMITB.ANI
+    file[]: crc = 061ee088; size =     46336; name = DYNAMITC.ANI
+    file[]: crc = 4c868f35; size =    169541; name = FINAL.ANI
+    file[]: crc = cc2b962d; size =    286928; name = FLASHA.ANI
+    file[]: crc = 77a26a7c; size =     71717; name = FLASHB.ANI
+    file[]: crc = 6ed8eb90; size =     97782; name = FLASHC.ANI
+    file[]: crc = f80e170f; size =    173460; name = FLYA.ANI
+    file[]: crc = 113549a2; size =     70109; name = FLYB.ANI
+    file[]: crc = e2b066b7; size =     70384; name = FLYC.ANI
+    file[]: crc = 8b1d152e; size =     75066; name = FLYD.ANI
+    file[]: crc = 0a4d8ae1; size =     36544; name = FOOT.ANI
+    file[]: crc = 1b509646; size =    338788; name = FORREST.001
+    file[]: crc = 63cbdb63; size =      2032; name = FORREST.DIR
+    file[]: crc = 671b0f17; size =     32532; name = FORREST.EXE
+    file[]: crc = ee2227fb; size =     44612; name = FORRESTA.SMP
+    file[]: crc = 1691691a; size =     32972; name = FORRESTB.SMP
+    file[]: crc = 72af34cf; size =     58784; name = FORRESTC.SMP
+    file[]: crc = f8283f8a; size =     37132; name = FORRESTD.SMP
+    file[]: crc = cfc8ff79; size =     63271; name = FORRESTE.SMP
+    file[]: crc = fbe5a101; size =     36958; name = FORRESTF.SMP
+    file[]: crc = 7f3beb24; size =     34830; name = FORRESTG.SMP
+    file[]: crc = 92804d35; size =    114945; name = FREE.ANI
+    file[]: crc = 2d996afa; size =    528534; name = FUELA.ANI
+    file[]: crc = d4252dfe; size =    147914; name = FUELB.ANI
+    file[]: crc = 23086e50; size =     44550; name = FUELD.ANI
+    file[]: crc = 71a51101; size =     41650; name = FUELF.ANI
+    file[]: crc = 29f73558; size =       320; name = HIGH.SC
+    file[]: crc = f131c0ae; size =    103009; name = HIT.ANI
+    file[]: crc = 9c95717f; size =    192286; name = HOLE.ANI
+    file[]: crc = ec0fcd0e; size =     14460; name = HUGO.EXE
+    file[]: crc = a8872be2; size =       731; name = INSTALL.BAT
+    file[]: crc = e0568f71; size =    104144; name = INTRO.ANI
+    file[]: crc = d79aa514; size =     68772; name = MAIN.001
+    file[]: crc = fe13c412; size =       340; name = MAIN.DIR
+    file[]: crc = ca0eac86; size =     21456; name = MOUNTA.SMP
+    file[]: crc = 608c740f; size =    447259; name = MOUNTAIN.001
+    file[]: crc = 83444f6f; size =      4144; name = MOUNTAIN.DIR
+    file[]: crc = aa7fcf00; size =     32574; name = MOUNTAIN.EXE
+    file[]: crc = 7fa52724; size =     22586; name = MOUNTB.SMP
+    file[]: crc = 32560376; size =     40126; name = MOUNTC.SMP
+    file[]: crc = 94178bbb; size =     28624; name = MOUNTD.SMP
+    file[]: crc = 9786d07b; size =     25736; name = MOUNTE.SMP
+    file[]: crc = b7d081df; size =     25928; name = MOUNTF.SMP
+    file[]: crc = 10bda873; size =     75680; name = PICK1.ANI
+    file[]: crc = 0e19445d; size =     90259; name = PICK2.ANI
+    file[]: crc = 635b1199; size =    112182; name = PICK3.ANI
+    file[]: crc = c8f78622; size =     63030; name = PICKGUN.ANI
+    file[]: crc = dde406ed; size =    362496; name = PLANE.001
+    file[]: crc = 96738857; size =     92935; name = PLANE.002
+    file[]: crc = 0e1b5cd6; size =      6868; name = PLANE.DIR
+    file[]: crc = 9826e3e2; size =     41503; name = PLANE.EXE
+    file[]: crc = 83c85a32; size =     30391; name = PLANEA.SMP
+    file[]: crc = 8deeb319; size =     31777; name = PLANEB.SMP
+    file[]: crc = 0bd326d3; size =     17919; name = PLANEC.SMP
+    file[]: crc = f859b6cc; size =     30577; name = PLANED.SMP
+    file[]: crc = 95f2cf69; size =     30186; name = PLANEE.SMP
+    file[]: crc = bd21202b; size =    119914; name = PUFROPE1.ANI
+    file[]: crc = bc770d65; size =    131242; name = PUFROPE2.ANI
+    file[]: crc = 98f50377; size =    131836; name = PUFROPE3.ANI
+    file[]: crc = 5ef1011a; size =    123550; name = PUFROPE5.ANI
+    file[]: crc = 7b787276; size =     58748; name = SHOOT.ANI
+    file[]: crc = 70dadab8; size =     68692; name = SHOOT1.ANI
+    file[]: crc = 4247aa8b; size =     69398; name = SHOOT2.ANI
+    file[]: crc = 944373db; size =      1470; name = START.001
+    file[]: crc = c0b43949; size =       112; name = START.DIR
+    file[]: crc = 71dd797a; size =     19270; name = START.EXE
+    file[]: crc = ec0ff872; size =    140324; name = STARTA.ANI
+    file[]: crc = 67c0ec16; size =     27507; name = STARTA.SMP
+    file[]: crc = 6ab8a3bf; size =     64430; name = STARTB.ANI
+    file[]: crc = a83ea146; size =     25348; name = STARTB.SMP
+    file[]: crc = c230b46a; size =     47331; name = STARTC.ANI
+    file[]: crc = 635b480f; size =    142840; name = STARTD.ANI
+    file[]: crc = 26b9afa3; size =     84912; name = STONE.ANI
+    file[]: crc = a50a7b0c; size =    169784; name = STOP.ANI
+    file[]: crc = e8feae7f; size =     30362; name = THEEND.001
+    file[]: crc = 6a783a30; size =       412; name = THEEND.DIR
+    file[]: crc = e4e0babe; size =     22874; name = THEEND.EXE
+    file[]: crc = a6de4183; size =     14589; name = THEENDA.SMP
+    file[]: crc = df2c7929; size =     34704; name = THEENDB.SMP
+    file[]: crc = cfef050d; size =     35460; name = THEENDC.SMP
+    file[]: crc = 7cdc7aa5; size =    544051; name = TRAIN.001
+    file[]: crc = 8fef0929; size =     11164; name = TRAIN.DIR
+    file[]: crc = 5a458883; size =     45491; name = TRAIN.EXE
+    file[]: crc = e6c2727d; size =     35799; name = TRAINA.SMP
+    file[]: crc = 7959051e; size =     30668; name = TRAINB.SMP
+    file[]: crc = 3589f47b; size =     35928; name = TRAINC.SMP
 
 
 end
