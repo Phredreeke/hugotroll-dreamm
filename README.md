@@ -6,7 +6,7 @@ Not to be confused with the Hugo series by Gray Design Associates. This is VERY 
 |Game|Language|Status|
 | --- | --- | --- |
 |Hugo 2 (Windows)|🇦🇷🇩🇪🇩🇰🇵🇹|🇦🇷🇩🇰🇵🇹 works, 🇩🇪 hangs after intro video|
-|Hugo 2 (DOS)|🇩🇪🇩🇰🇸🇪|works, copy protection not automated|
+|Hugo 2 (DOS)|🇩🇪🇩🇰🇪🇸🇸🇪|works, copy protection not automated|
 |Hugo 3 (DOS)|🇦🇷🇩🇪🇩🇰🇫🇮🇭🇷🇮🇱🇸🇪|Works as of 4.0x37|
 |Hugo 4 (DOS)|🇦🇷🇩🇪🇫🇮🇮🇱🇸🇪|Works as of 4.0x37|
 |Hugo 5|🇦🇷🇩🇪🇮🇱🇵🇹🇸🇪|Windows works. DOS has bugged inputs|
@@ -38,8 +38,10 @@ In the case of Hugo 2, the original DOS/Amiga release has the player play two sc
 | --- | --- | --- |
 |Hugo Classic #1|Hugo 2|The Bewitched rollercoaster|
 |Hugo Classic #2|Hugo 4|"Birthday Party"|
-|Hugo Classic #3|Hugo 5|Smakkaball|
-|Hugo Classic #4|Hugo 6 Wild River|Runamukka|
+|Hugo Classic #3|Hugo 5|*Smakkaball*|
+|Hugo Classic #4|Hugo 6 Wild River|*Runamukka*|
+
+Games in italic are late releases and considered out of scope
 
 # But wait, there's more!
 
