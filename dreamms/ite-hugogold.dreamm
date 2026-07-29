@@ -1,0 +1,167 @@
+desc[ite-hugogold]:
+
+name = Hugo Gold
+icon = ite-hugogold.png
+machine = pc
+rootpath = C:\
+launch = $(rootpath)\Hugo.exe
+osenv = windows
+winres=640x480x8
+
+//
+// filesystem
+//
+mount[]: vpath = C:\; srcpath = $(ifsdeltapath); writable = true;
+mount[]: vpath = $(rootpath); srcpath = $(ifsinstallpath)
+
+//
+// warnings
+//
+INCOMPATIBLE = true
+warning[incompatible]:
+    condition = $(INCOMPATIBLE)
+    text = This version does not work in tested DREAMM version (4.0x38)
+end
+
+CPNOTE = false
+warning[incompatiblecpnote]:
+    condition = $(CPNOTE)
+    text = This version does not work due to Laserlock protection
+end
+
+//
+// Finnish version 
+//
+game[pc-fi-990610]:
+    name = Finnish
+    anchorfile = Hugo.exe
+    file[]: crc = 8f691799; size =        50; name = Autorun.inf
+    file[]: crc = 5ec24882; size =    421888; name = CoreW32DLL.dll
+    file[]: crc = b2aa1588; size = 674644392; name = data.big
+    file[]: crc = cbd84a3c; size =    127488; name = DSETUP.DLL
+    file[]: crc = d3851129; size =     63056; name = DSETUP16.DLL
+    file[]: crc = 83379603; size =     41984; name = DSETUP32.DLL
+    file[]: crc = 76ae9b8d; size =     77824; name = GFXDIRX.DLL
+    file[]: crc = 4e6857a0; size =    172106; name = GFXDIRXD.DLL
+    file[]: crc = 7eccc1df; size =    495616; name = Hugo.exe
+    file[]: crc = 1073798a; size =     69632; name = Launch.exe
+    file[]: crc = df6fd4d0; size =      1155; name = Machine.cnf
+    file[]: crc = 21774d7c; size =     53248; name = Sfx32DirX.dll
+    file[]: crc = 60436b03; size =     69632; name = SfxDirX.dll
+    file[]: crc = 87399fb4; size = 273487872; name = BigFile\DATA.RES
+    file[]: crc = fdf5da74; size =       167; name = Config\AutoRun.cnf
+    file[]: crc = b1357775; size =      5523; name = Config\BoltPlugin.cnf
+    file[]: crc = 109f982a; size =       730; name = Config\ErrMsg.txt
+    file[]: crc = 5f22be21; size =        93; name = Config\FileSystems.cnf
+    file[]: crc = 6e4fc27b; size =      6981; name = Config\ForestPlugin.cnf
+    file[]: crc = 98d194fb; size =      2238; name = Config\HUGO.ICO
+    file[]: crc = 0d9910c6; size =      8621; name = Config\IcecavernPlugin.cnf
+    file[]: crc = c8618782; size =      3039; name = Config\KeyPlugin.cnf
+    file[]: crc = 63bbc343; size =      8056; name = Config\LabyrinthPlugin.cnf
+    file[]: crc = f9f6983f; size =        42; name = Config\Launch.txt
+    file[]: crc = af405eb4; size =      1963; name = Config\LoaderPlugin.cnf
+    file[]: crc = c4a7ce3f; size =      6137; name = Config\LumberJackPlugin.cnf
+    file[]: crc = 5ce56de3; size =      4441; name = Config\MenuPlugin.cnf
+    file[]: crc = 14653ebd; size =      6575; name = Config\MountainPlugin.cnf
+    file[]: crc = ab5cb14a; size =      8070; name = Config\PlanePlugin.cnf
+    file[]: crc = fa897c4c; size =      1502; name = Config\RopeIntroPlugin.cnf
+    file[]: crc = 14ac9964; size =      2693; name = Config\RopeOutroPlugin.cnf
+    file[]: crc = ad29c0d8; size =      6102; name = Config\ScubaPlugin.cnf
+    file[]: crc = b6d73341; size =      4335; name = Config\SkateBoardPlugin.cnf
+    file[]: crc = fd018808; size =      7616; name = Config\TrainPlugin.cnf
+    file[]: crc = 3872ec14; size =      5527; name = Config\WitchPlugin.cnf
+
+
+end
+
+//
+// German version 
+//
+game[pc-de-981210]:
+    name = German
+    anchorfile = Hugo.exe
+    file[]: crc = c40524df; size =        50; name = Autorun.inf
+    file[]: crc = 5ec24882; size =    421888; name = CoreW32DLL.dll
+    file[]: crc = 30b84c16; size = 674690102; name = data.big
+    file[]: crc = 4cc7a621; size =    127488; name = dsetup.dll
+    file[]: crc = d3851129; size =     63056; name = dsetup16.dll
+    file[]: crc = 03cf7973; size =     41984; name = dsetup32.dll
+    file[]: crc = 76ae9b8d; size =     77824; name = gfxdirx.dll
+    file[]: crc = 7eccc1df; size =    495616; name = hugo.exe
+    file[]: crc = 98a1130f; size =    323584; name = HugoAutorun.exe
+    file[]: crc = 1073798a; size =     69632; name = Launch.exe
+    file[]: crc = df6fd4d0; size =      1155; name = Machine.cnf
+    file[]: crc = 60436b03; size =     69632; name = SfxDirX.dll
+    file[]: crc = 75f063e7; size =       182; name = config\AutoRun.cnf
+    file[]: crc = 8038f2e3; size =      6981; name = config\ForestPlugin.cnf
+    file[]: crc = 98d194fb; size =      2238; name = config\hugo.ico
+    file[]: crc = 0cabdc4a; size =      8621; name = config\IcecavernPlugin.cnf
+    file[]: crc = d10430c7; size =      3039; name = config\KeyPlugin.cnf
+    file[]: crc = f6e6fcba; size =      8056; name = config\LabyrinthPlugin.cnf
+    file[]: crc = c9a73d33; size =      1961; name = config\LoaderPlugin.cnf
+    file[]: crc = acf1605c; size =      6137; name = config\lumberjackplugin.cnf
+    file[]: crc = 1a0074ab; size =      4351; name = config\MenuPlugin.cnf
+    file[]: crc = a8e5afaa; size =      6575; name = config\MountainPlugin.cnf
+    file[]: crc = 2f008869; size =      8070; name = config\PlanePlugin.cnf
+    file[]: crc = fa897c4c; size =      1502; name = config\RopeIntroPlugin.cnf
+    file[]: crc = 5042dc6f; size =      2693; name = config\RopeOutroPlugin.cnf
+    file[]: crc = 50934f32; size =      6102; name = config\ScubaPlugin.cnf
+    file[]: crc = bec4fb66; size =      4335; name = config\Skateboardplugin.cnf
+    file[]: crc = b39e7edc; size =      7616; name = config\TrainPlugin.cnf
+    file[]: crc = 9b1fc6dd; size =      5527; name = config\WitchPlugin.cnf
+    file[]: crc = e537a61e; size =   1886958; name = wct\wctv_102.exe
+
+
+end
+
+//
+// Swedish version 
+//
+game[pc-se-990610]:
+    name = Swedish
+    anchorfile = Hugo.exe
+    CPNOTE = true
+    file[]: crc = c9d7bf39; size =     10784; name = Autorn.exe
+    file[]: crc = dc1a6ba1; size =        61; name = Autorun.inf
+    file[]: crc = 036ebed1; size =     86016; name = CORENETWORK.DLL
+    file[]: crc = 9afc9af2; size =    512000; name = COREW32DLL.DLL
+    file[]: crc = 4cc7a621; size =    127488; name = DSETUP.DLL
+    file[]: crc = d3851129; size =     63056; name = DSETUP16.DLL
+    file[]: crc = 03cf7973; size =     41984; name = DSETUP32.DLL
+    file[]: crc = 760f83c5; size =     86016; name = GFXDIRX.DLL
+    file[]: crc = 0721bef3; size =    487424; name = Hugo.exe
+    file[]: crc = b49d2e39; size =     90112; name = hugolb32.dll
+    file[]: crc = 09e2f44a; size =   1589301; name = LAUNCH.EXE
+    file[]: crc = a9461aa0; size =      1194; name = MACHINE.CNF
+    file[]: crc = 213da60a; size =     20480; name = nomouse.com
+    file[]: crc = 5a803452; size =       995; name = nomouse.pif
+    file[]: crc = 1a21a57e; size =     20592; name = nomouse.sp
+    file[]: crc = 21774d7c; size =     53248; name = SFX32DIRX.DLL
+    file[]: crc = f3a24876; size =     69632; name = SFXDIRX.DLL
+    file[]: crc = ac888b21; size =     24576; name = VSTRVPLX.DLL
+    file[]: crc = cf2f7ef9; size = 226070528; name = BIGFILE\data.res
+    file[]: crc = 725cedec; size =       175; name = CONFIG\AutoRun.cnf
+    file[]: crc = b1357775; size =      5523; name = CONFIG\BoltPlugin.cnf
+    file[]: crc = 6f28f56a; size =      6603; name = CONFIG\CliffHangerPlugin.cnf
+    file[]: crc = 0a8076b7; size =       815; name = CONFIG\ErrMsg.txt
+    file[]: crc = 63e8c179; size =        38; name = CONFIG\FileSystems.cnf
+    file[]: crc = d7bed60a; size =      7030; name = CONFIG\ForestPlugin.cnf
+    file[]: crc = 28de4767; size =      2238; name = CONFIG\hugo.ico
+    file[]: crc = 9ec5ac77; size =      6032; name = CONFIG\IcecavernPlugin.cnf
+    file[]: crc = acaac95e; size =      2666; name = CONFIG\KeyPlugin.cnf
+    file[]: crc = b35695dc; size =      7538; name = CONFIG\LabyrinthPlugin.cnf
+    file[]: crc = 8ac69aae; size =        36; name = CONFIG\Launch.txt
+    file[]: crc = aea15417; size =      1960; name = CONFIG\LoaderPlugin.cnf
+    file[]: crc = 611ea243; size =      4755; name = CONFIG\MenuPlugin.cnf
+    file[]: crc = bf9b76b4; size =      4454; name = CONFIG\ParachutePlugin.cnf
+    file[]: crc = 4b4f9a74; size =      6490; name = CONFIG\PlanePlugin.cnf
+    file[]: crc = b65b3a52; size =      1517; name = CONFIG\RopeIntroPlugin.cnf
+    file[]: crc = 30d395c5; size =      2234; name = CONFIG\RopeOutroPlugin.cnf
+    file[]: crc = fe44f809; size =      8613; name = CONFIG\snowboardplugin.cnf
+    file[]: crc = 060acd9e; size =      8030; name = CONFIG\SwampPlugin.cnf
+    file[]: crc = e537a61e; size =   1886958; name = WEBCHOICETV\wctv_102.exe
+
+
+end
+
+end
