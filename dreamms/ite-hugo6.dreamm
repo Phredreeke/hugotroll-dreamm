@@ -27,7 +27,7 @@ end
 // Portuguese version 
 //
 game[pc-pt-990804]:
-    name = Portuguese
+    name = Portuguese 1999-08-04
     anchorfile = Hugo6.exe
     file[]: crc = fdad7924; size =        52; name = Autorun.inf
     file[]: crc = 8d016b7f; size = 689884868; name = data.big
@@ -61,7 +61,7 @@ end
 // German version 
 //
 game[pc-de-980324]:
-    name = German
+    name = German 1998-03-24
     anchorfile = Hugo6.exe
     file[]: crc = 40e834e1; size =        53; name = Autorun.inf
     file[]: crc = 7e3d3cbd; size = 679255050; name = data.big
@@ -92,7 +92,7 @@ end
 // Hebrew version 
 //
 game[pc-he-990216]:
-    name = Hebrew
+    name = Hebrew 1999-02-16
     anchorfile = Hugo.exe
     launch = $(rootpath)\hugo.exe
     file[]: crc = c40524df; size =        50; name = Autorun.inf
@@ -124,7 +124,7 @@ end
 // Norwegian version 
 //
 game[pc-no-011015]:
-    name = Norwegian
+    name = Norwegian 2001-10-15
     anchorfile = Hugo.exe
     launch = $(rootpath)\hugo.exe
     INCOMPATIBLE = true

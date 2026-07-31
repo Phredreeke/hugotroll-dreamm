@@ -63,8 +63,8 @@ end
 //
 // Portuguese version 
 //
-game[pc-pt-win]:
-    name = Portuguese
+game[pc-pt-win-980813]:
+    name = Portuguese Windows 1998-08-13
     anchorfile = Hugo.exe
     file[]: crc = cef7e1eb; size =        50; name = Autorun.inf
     file[]: crc = e94ca9ce; size = 673465964; name = data.big
@@ -95,8 +95,8 @@ end
 //
 // German version 
 //
-game[pc-de-win]:
-    name = German
+game[pc-de-win-000411]:
+    name = German Windows 2000-04-11
     anchorfile = Hugo.exe
     INCOMPATIBLE = true
     file[]: crc = 8f691799; size =        50; name = Autorun.inf
@@ -132,8 +132,8 @@ end
 //
 // Danish version 
 //
-game[pc-dk-win]:
-    name = Danish Windows version
+game[pc-dk-win-990311]:
+    name = Danish Windows 1999-03-11
     anchorfile = Hugo.exe
     file[]: crc = cef7e1eb; size =        50; name = Autorun.inf
     file[]: crc = af38be3e; size = 672006291; name = data.big
@@ -164,8 +164,8 @@ end
 //
 // Spanish version 
 //
-game[pc-es]:
-    name = Spanish (Argentina)
+game[pc-es-win-980904]:
+    name = Spanish (Argentina) Windows 1998-09-04
     anchorfile = Hugo.exe
     file[]: crc = c40524df; size =        50; name = Autorun.inf
     file[]: crc = 03d7ca6f; size = 665975093; name = data.big
