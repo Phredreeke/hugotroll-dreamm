@@ -26,7 +26,7 @@ mount[]: vpath = $(rootpath); srcpath = $(ifsinstallpath)
 VIDOPTIONS = true
 config[vidoptions]:
     condition = $(VIDOPTIONS)
-    title = Version
+    title = Graphics Configuration
     option[ega]: name = $(EGA_NAME); videohw = ega; 
     option[vga]: name = $(VGA_NAME); priority = 1;
 end
