@@ -8,6 +8,8 @@ launch = $(rootpath)\Hugo.exe
 osenv = windows
 winres=640x480x8
 
+$(include cp-hugo2.inc)
+
 //
 // filesystem
 //
@@ -23,22 +25,6 @@ warning[incompatible]:
     text = This version does not work in tested DREAMM version (4.0x38)
 end
 
-CPNOTE = false
-warning[incompatiblecpnote]:
-    condition = $(CPNOTE)
-    text = Copy protection solving is currently unimplemented for this game
-end
-
-//
-// Setup
-//
-CRACKCFG = false
-config[veroptions]:
-    condition = $(CRACKCFG)
-    title = Crack setting
-    option[cracked]: name = Cracked; launch=$(rootpath)\HUGOcr.EXE;
-    option[uncracked]: name = Uncracked;  
-end
 
 fragment[base-dos]:
     osenv = dos
@@ -203,8 +189,6 @@ game[pc-se-dos]:
     name = Swedish DOS
     anchorfile = Hugo.exe
     imports = base-dos
-    CRACKCFG = file_exists("$(rootpath)\HUGOcr.EXE")
-    CPNOTE = true
     file[]: crc = a646565b; size =    122406; name = BRANCH.ANI
     file[]: crc = dc422683; size =     73312; name = CAVEWALK.ANI
     file[]: crc = c60dfae8; size =    180872; name = CLIMB.ANI
@@ -246,7 +230,6 @@ game[pc-se-dos]:
     file[]: crc = da2342f3; size =     67526; name = HUGO.001
     file[]: crc = 8a3120d9; size =       226; name = HUGO.DIR
     file[]: crc = b769da47; size =     12966; name = HUGO.EXE
-    file[]: crc = bfac23cf; size =     12966; name = HUGOcr.EXE; optional = true
     file[]: crc = e0568f71; size =    104144; name = INTRO.ANI
     file[]: crc = 1a8a633e; size =     15256; name = MOUNTA.SMP
     file[]: crc = 608c740f; size =    447259; name = MOUNTAIN.001
@@ -428,7 +411,6 @@ game[pc-dk-dos-part1]:
     launch = $(rootpath)\HUGOII.EXE
     imports = base-dos
     VIDOPTIONS = true
-    CPNOTE = true
     file[]: crc = d73e2c63; size =     20464; name = ALLA.SMP
     file[]: crc = 200c12cd; size =     33201; name = ALLB.SMP
     file[]: crc = dc422683; size =     73312; name = CAVEWALK.ANI
