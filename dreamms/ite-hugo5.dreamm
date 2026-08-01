@@ -17,73 +17,61 @@ videohw = svga
 mount[]: vpath = C:\; srcpath = $(ifsdeltapath); writable = true;
 mount[]: vpath = $(rootpath); srcpath = $(ifsinstallpath)
 
-
 $(include cfg-hugo5.inc)
 
 
 //
 // warnings
 //
-INCOMPATIBLE = true
+INCOMPATIBLE = false
 warning[incompatible]:
     condition = $(INCOMPATIBLE)
-    text = The DOS version has erroneous key inputs, use the Windows version (4.0x35)
+    text = The DOS version has erroneous key inputs, use the Windows version (4.0x38)
 end
-INCOMPATIBLE2 = false
-warning[incompatible2]:
-    condition = $(INCOMPATIBLE2)
-    text = The DOS version has erroneous key inputs (4.0x35)
+INCOMPATIBLEHE = false
+warning[incompatiblehe]:
+    condition = $(INCOMPATIBLEHE)
+    text = The DOS version has erroneous key inputs (4.0x38)
 end
-INCOMPATIBLE3 = false
-warning[incompatible3]:
-    condition = $(INCOMPATIBLE3)
-    text = The DOS version has erroneous key inputs (4.0x35) The intro to the rope ending scene gets corrupted in Windows version (not a DREAMM bug)
+INCOMPATIBLEPT = false
+warning[incompatiblept]:
+    condition = $(INCOMPATIBLEPT)
+    text = The DOS version has erroneous key inputs (4.0x38) The intro to the rope ending scene gets corrupted in Windows version (not a DREAMM bug)
 end
-
-//
-// Windows version
-//
-VEROPTIONS = true
-config[veroptions]:
-    condition = $(VEROPTIONS)
-    title = Version
-    option[dos]: name = DOS; audiohw = sb16; osenv = dos; 
-    option[win]: name = Windows 98; launch=$(rootpath)\HUGOW.EXE; priority = 1;
+INCOMPATIBLERU = false
+warning[incompatibleru]:
+    condition = $(INCOMPATIBLERU)
+    text = This version does not work in tested DREAMM version (4.0x38)
 end
 
-// to simplify getting regedit keys from new variants
-configutil[]:
-    name = Windows Installer
-    launch = $(rootpath)\INSTALLW.EXE
-    condition = file_exists("$(rootpath)\INSTALLW.EXE") && file_exists("$(rootpath)\_SETUP.DLL") 
-end
 
 //
 // Swedish version
 //
 game[pc-se-980318]:
-    name = Swedish
-    anchorfile = HUGO.EXE
-    file[]: crc = 3430b8d8; size =     43564; name = CHECKRAM.EXE
-    file[]: crc = a802da90; size =       120; name = DATA.TAG
-    file[]: crc = f459d3df; size =      2705; name = DATA1.CAB
-    file[]: crc = cb214447; size =    265420; name = DOS4GW.EXE
-    file[]: crc = c90f35dc; size =       228; name = DSIK.TXT
+    name = Swedish 1998-03-18
+    anchorfile = HUGOW.EXE
+    launch=$(rootpath)\HUGOW.EXE
+//    file[]: crc = 3430b8d8; size =     43564; name = CHECKRAM.EXE
+//    file[]: crc = a802da90; size =       120; name = DATA.TAG
+//    file[]: crc = f459d3df; size =      2705; name = DATA1.CAB
+//    file[]: crc = cb214447; size =    265420; name = DOS4GW.EXE
+//    file[]: crc = c90f35dc; size =       228; name = DSIK.TXT
     file[]: crc = c4e4dbcd; size = 697629151; name = HUGO.DAT
-    file[]: crc = 955b7683; size =    426448; name = HUGO.EXE
+//    file[]: crc = 955b7683; size =    426448; name = HUGO.EXE
     file[]: crc = f60a1493; size =       766; name = HUGO.ICO
     file[]: crc = a06ec6e6; size =    334336; name = HUGOW.EXE
-    file[]: crc = f6e54499; size =    154319; name = INSTALL.EXE
+//    file[]: crc = f6e54499; size =    154319; name = INSTALL.EXE
     file[]: crc = f5324e10; size =     59904; name = INSTALLW.EXE
-    file[]: crc = ba7ee667; size =      4557; name = LANG.DAT
-    file[]: crc = 76d01c8e; size =       353; name = LAYOUT.BIN
-    file[]: crc = f9edc7a9; size =       417; name = OS.DAT
+//    file[]: crc = ba7ee667; size =      4557; name = LANG.DAT
+//    file[]: crc = 76d01c8e; size =       353; name = LAYOUT.BIN
+//    file[]: crc = f9edc7a9; size =       417; name = OS.DAT
     file[]: crc = fc8a64c1; size =        82; name = README.TXT
-    file[]: crc = 86621fb2; size =    230456; name = SETUP.BMP
-    file[]: crc = 4dbe84a1; size =        61; name = SETUP.INI
-    file[]: crc = 3d98f1df; size =     56681; name = SETUP.INS
-    file[]: crc = 36578683; size =        47; name = SETUP.LID
-    file[]: crc = 0fc692f2; size =    156411; name = SNDSETUP.DAT
+//    file[]: crc = 86621fb2; size =    230456; name = SETUP.BMP
+//    file[]: crc = 4dbe84a1; size =        61; name = SETUP.INI
+//    file[]: crc = 3d98f1df; size =     56681; name = SETUP.INS
+//    file[]: crc = 36578683; size =        47; name = SETUP.LID
+//    file[]: crc = 0fc692f2; size =    156411; name = SNDSETUP.DAT
 
 end
 
@@ -92,30 +80,31 @@ end
 // German version
 //
 game[pc-de-970923]:
-    name = German
-    anchorfile = HUGO.EXE
-    file[]: crc = a4e3d7a1; size =        59; name = AUTORUN.INF
-    file[]: crc = 3430b8d8; size =     43564; name = CHECKRAM.EXE
-    file[]: crc = 35e43452; size =        84; name = DATA.TAG
-    file[]: crc = 647442a8; size =      2705; name = DATA1.CAB
-    file[]: crc = cb214447; size =    265420; name = DOS4GW.EXE
-    file[]: crc = c90f35dc; size =       228; name = DSIK.TXT
+    name = German 1997-09-23
+    anchorfile = HUGOW.EXE
+    launch=$(rootpath)\HUGOW.EXE
+//    file[]: crc = a4e3d7a1; size =        59; name = AUTORUN.INF
+//    file[]: crc = 3430b8d8; size =     43564; name = CHECKRAM.EXE
+//    file[]: crc = 35e43452; size =        84; name = DATA.TAG
+//    file[]: crc = 647442a8; size =      2705; name = DATA1.CAB
+//    file[]: crc = cb214447; size =    265420; name = DOS4GW.EXE
+//    file[]: crc = c90f35dc; size =       228; name = DSIK.TXT
     file[]: crc = 211734b1; size = 126658181; name = HUGO.DAT
-    file[]: crc = bfa96540; size =    429152; name = HUGO.EXE
+//    file[]: crc = bfa96540; size =    429152; name = HUGO.EXE
     file[]: crc = f60a1493; size =       766; name = HUGO.ICO
     file[]: crc = 2be3d222; size =    326144; name = HUGOW.EXE
-    file[]: crc = 13ee710b; size =    114996; name = INSTALL.EXE
-    file[]: crc = 22f20e13; size =       967; name = INSTALL.PIF
-    file[]: crc = a22b1e28; size =     59392; name = INSTALLW.EXE
-    file[]: crc = 13813353; size =      3626; name = LANG.DAT
-    file[]: crc = 1e4c2b55; size =       353; name = LAYOUT.BIN
-    file[]: crc = f9edc7a9; size =       417; name = OS.DAT
+//    file[]: crc = 13ee710b; size =    114996; name = INSTALL.EXE
+//    file[]: crc = 22f20e13; size =       967; name = INSTALL.PIF
+//    file[]: crc = a22b1e28; size =     59392; name = INSTALLW.EXE
+//    file[]: crc = 13813353; size =      3626; name = LANG.DAT
+//    file[]: crc = 1e4c2b55; size =       353; name = LAYOUT.BIN
+//    file[]: crc = f9edc7a9; size =       417; name = OS.DAT
     file[]: crc = b89a0c4c; size =        79; name = README.TXT
-    file[]: crc = 86621fb2; size =    230456; name = SETUP.BMP
-    file[]: crc = 6a698dd3; size =        46; name = SETUP.INI
-    file[]: crc = 922dfff7; size =     56762; name = SETUP.INS
-    file[]: crc = 52771d18; size =        47; name = SETUP.LID
-    file[]: crc = b45bcd18; size =    126862; name = SNDSETUP.DAT
+//    file[]: crc = 86621fb2; size =    230456; name = SETUP.BMP
+//    file[]: crc = 6a698dd3; size =        46; name = SETUP.INI
+//    file[]: crc = 922dfff7; size =     56762; name = SETUP.INS
+//    file[]: crc = 52771d18; size =        47; name = SETUP.LID
+//    file[]: crc = b45bcd18; size =    126862; name = SNDSETUP.DAT
 
 
 end
@@ -126,30 +115,31 @@ end
 // Argentinian version
 //
 game[pc-es-980930]:
-    name = Spanish (Argentina)
-    anchorfile = HUGO.EXE
-    file[]: crc = 3430b8d8; size =     43564; name = CHECKRAM.EXE
-    file[]: crc = a802da90; size =       120; name = DATA.TAG
-    file[]: crc = 5653128a; size =      3073; name = data1.cab
-    file[]: crc = cb214447; size =    265420; name = DOS4GW.EXE
+    name = Spanish (Argentina) 1998-09-30
+    anchorfile = HUGOW.EXE
+    launch=$(rootpath)\HUGOW.EXE
+//    file[]: crc = 3430b8d8; size =     43564; name = CHECKRAM.EXE
+//    file[]: crc = a802da90; size =       120; name = DATA.TAG
+//    file[]: crc = 5653128a; size =      3073; name = data1.cab
+//    file[]: crc = cb214447; size =    265420; name = DOS4GW.EXE
     file[]: crc = c90f35dc; size =       228; name = DSIK.TXT
-    file[]: crc = 8f197220; size =       348; name = hugo.cfg
+//    file[]: crc = 8f197220; size =       348; name = hugo.cfg
     file[]: crc = 6030483a; size = 686779158; name = hugo.dat
-    file[]: crc = 42bbebe3; size =    427216; name = hugo.exe
+//    file[]: crc = 42bbebe3; size =    427216; name = hugo.exe
     file[]: crc = f60a1493; size =       766; name = HUGO.ICO
-    file[]: crc = b68db006; size =    125440; name = hugoautorun.exe
+//    file[]: crc = b68db006; size =    125440; name = hugoautorun.exe
     file[]: crc = c993e904; size =    333824; name = hugow.exe
-    file[]: crc = 07def3ce; size =    154402; name = install.exe
-    file[]: crc = 62937092; size =     60416; name = installw.exe
-    file[]: crc = a22e9a7e; size =      4525; name = lang.dat
-    file[]: crc = e8991b4f; size =       353; name = layout.bin
-    file[]: crc = f9edc7a9; size =       417; name = os.dat
+//    file[]: crc = 07def3ce; size =    154402; name = install.exe
+//    file[]: crc = 62937092; size =     60416; name = installw.exe
+//    file[]: crc = a22e9a7e; size =      4525; name = lang.dat
+//    file[]: crc = e8991b4f; size =       353; name = layout.bin
+//    file[]: crc = f9edc7a9; size =       417; name = os.dat
     file[]: crc = 1c412fcd; size =        82; name = README.TXT
-    file[]: crc = 86621fb2; size =    230456; name = setup.bmp
-    file[]: crc = 9e7f2987; size =        62; name = SETUP.INI
-    file[]: crc = d63fc374; size =     57596; name = setup.ins
-    file[]: crc = 59ea3bae; size =        49; name = setup.lid
-    file[]: crc = a2fd083b; size =    156449; name = sndsetup.dat
+//    file[]: crc = 86621fb2; size =    230456; name = setup.bmp
+//    file[]: crc = 9e7f2987; size =        62; name = SETUP.INI
+//    file[]: crc = d63fc374; size =     57596; name = setup.ins
+//    file[]: crc = 59ea3bae; size =        49; name = setup.lid
+//    file[]: crc = a2fd083b; size =    156449; name = sndsetup.dat
 
 end
 
@@ -157,58 +147,191 @@ end
 // Portuguese version
 //
 game[pc-pt-990615]:
-    name = Portuguese
+    name = Portuguese 1999-06-15
+    anchorfile = HUGOW.EXE
+    INCOMPATIBLEPT = true
+    launch=$(rootpath)\HUGOW.EXE
+//    file[]: crc = 3430b8d8; size =     43564; name = CHECKRAM.EXE
+//    file[]: crc = a802da90; size =       120; name = DATA.TAG
+//    file[]: crc = b69fe2e3; size =      3076; name = DATA1.CAB
+//    file[]: crc = cb214447; size =    265420; name = DOS4GW.EXE
+    file[]: crc = c90f35dc; size =       228; name = DSIK.TXT
+    file[]: crc = 4bc9bf92; size = 678408328; name = HUGO.DAT
+//    file[]: crc = 83e57af6; size =    425936; name = HUGO.EXE
+    file[]: crc = f60a1493; size =       766; name = HUGO.ICO
+//    file[]: crc = 776dd78a; size =       967; name = HUGO.PIF; optional = true
+    file[]: crc = db1e21f7; size =    331776; name = HUGOW.EXE
+//    file[]: crc = 37ed237d; size =    154174; name = INSTALL.EXE
+//    file[]: crc = e739e367; size =       967; name = INSTALL.PIF
+//    file[]: crc = f5324e10; size =     59904; name = INSTALLW.EXE
+//    file[]: crc = a22e9a7e; size =      4525; name = LANG.DAT
+//    file[]: crc = e8991b4f; size =       353; name = LAYOUT.BIN
+//    file[]: crc = f9edc7a9; size =       417; name = OS.DAT
+//    file[]: crc = 86621fb2; size =    230456; name = SETUP.BMP
+//    file[]: crc = 62937092; size =     60416; name = SETUP.EXE
+//    file[]: crc = 79343f65; size =        62; name = SETUP.INI
+//    file[]: crc = d63fc374; size =     57596; name = SETUP.INS
+//    file[]: crc = 2b3ffc31; size =        60; name = SETUP.LID
+//    file[]: crc = 057ce6b6; size =    156333; name = SNDSETUP.DAT
+
+end
+
+//
+// Swedish version
+//
+game[pc-se-980318-dos]:
+    name = Swedish DOS 1998-03-18
     anchorfile = HUGO.EXE
-    INCOMPATIBLE = false
-    INCOMPATIBLE3 = true
+    audiohw = sb16
+    osenv = dos
     file[]: crc = 3430b8d8; size =     43564; name = CHECKRAM.EXE
-    file[]: crc = a802da90; size =       120; name = DATA.TAG
-    file[]: crc = b69fe2e3; size =      3076; name = DATA1.CAB
+//    file[]: crc = a802da90; size =       120; name = DATA.TAG
+//    file[]: crc = f459d3df; size =      2705; name = DATA1.CAB
+    file[]: crc = cb214447; size =    265420; name = DOS4GW.EXE
+    file[]: crc = c90f35dc; size =       228; name = DSIK.TXT
+    file[]: crc = c4e4dbcd; size = 697629151; name = HUGO.DAT
+    file[]: crc = 955b7683; size =    426448; name = HUGO.EXE
+    file[]: crc = f60a1493; size =       766; name = HUGO.ICO
+//    file[]: crc = a06ec6e6; size =    334336; name = HUGOW.EXE
+//    file[]: crc = f6e54499; size =    154319; name = INSTALL.EXE
+//    file[]: crc = f5324e10; size =     59904; name = INSTALLW.EXE
+//    file[]: crc = ba7ee667; size =      4557; name = LANG.DAT
+//    file[]: crc = 76d01c8e; size =       353; name = LAYOUT.BIN
+//    file[]: crc = f9edc7a9; size =       417; name = OS.DAT
+    file[]: crc = fc8a64c1; size =        82; name = README.TXT
+//    file[]: crc = 86621fb2; size =    230456; name = SETUP.BMP
+//    file[]: crc = 4dbe84a1; size =        61; name = SETUP.INI
+//    file[]: crc = 3d98f1df; size =     56681; name = SETUP.INS
+//    file[]: crc = 36578683; size =        47; name = SETUP.LID
+    file[]: crc = 0fc692f2; size =    156411; name = SNDSETUP.DAT
+
+end
+
+
+//
+// German version
+//
+game[pc-de-970923-dos]:
+    name = German DOS 1997-09-23
+    anchorfile = HUGO.EXE
+    audiohw = sb16
+    osenv = dos
+//    file[]: crc = a4e3d7a1; size =        59; name = AUTORUN.INF
+    file[]: crc = 3430b8d8; size =     43564; name = CHECKRAM.EXE
+//    file[]: crc = 35e43452; size =        84; name = DATA.TAG
+//    file[]: crc = 647442a8; size =      2705; name = DATA1.CAB
+    file[]: crc = cb214447; size =    265420; name = DOS4GW.EXE
+    file[]: crc = c90f35dc; size =       228; name = DSIK.TXT
+    file[]: crc = 211734b1; size = 126658181; name = HUGO.DAT
+    file[]: crc = bfa96540; size =    429152; name = HUGO.EXE
+    file[]: crc = f60a1493; size =       766; name = HUGO.ICO
+//    file[]: crc = 2be3d222; size =    326144; name = HUGOW.EXE
+//    file[]: crc = 13ee710b; size =    114996; name = INSTALL.EXE
+//    file[]: crc = 22f20e13; size =       967; name = INSTALL.PIF
+//    file[]: crc = a22b1e28; size =     59392; name = INSTALLW.EXE
+//    file[]: crc = 13813353; size =      3626; name = LANG.DAT
+//    file[]: crc = 1e4c2b55; size =       353; name = LAYOUT.BIN
+//    file[]: crc = f9edc7a9; size =       417; name = OS.DAT
+    file[]: crc = b89a0c4c; size =        79; name = README.TXT
+//    file[]: crc = 86621fb2; size =    230456; name = SETUP.BMP
+//    file[]: crc = 6a698dd3; size =        46; name = SETUP.INI
+//    file[]: crc = 922dfff7; size =     56762; name = SETUP.INS
+//    file[]: crc = 52771d18; size =        47; name = SETUP.LID
+    file[]: crc = b45bcd18; size =    126862; name = SNDSETUP.DAT
+
+
+end
+
+
+
+//
+// Argentinian version
+//
+game[pc-es-980930-dos]:
+    name = Spanish (Argentina) DOS 1998-09-30
+    anchorfile = HUGO.EXE
+    audiohw = sb16
+    osenv = dos
+    file[]: crc = 3430b8d8; size =     43564; name = CHECKRAM.EXE
+//    file[]: crc = a802da90; size =       120; name = DATA.TAG
+//    file[]: crc = 5653128a; size =      3073; name = data1.cab
+    file[]: crc = cb214447; size =    265420; name = DOS4GW.EXE
+    file[]: crc = c90f35dc; size =       228; name = DSIK.TXT
+//    file[]: crc = 8f197220; size =       348; name = hugo.cfg
+    file[]: crc = 6030483a; size = 686779158; name = hugo.dat
+    file[]: crc = 42bbebe3; size =    427216; name = hugo.exe
+    file[]: crc = f60a1493; size =       766; name = HUGO.ICO
+//    file[]: crc = b68db006; size =    125440; name = hugoautorun.exe
+//    file[]: crc = c993e904; size =    333824; name = hugow.exe
+//    file[]: crc = 07def3ce; size =    154402; name = install.exe
+//    file[]: crc = 62937092; size =     60416; name = installw.exe
+//    file[]: crc = a22e9a7e; size =      4525; name = lang.dat
+//    file[]: crc = e8991b4f; size =       353; name = layout.bin
+//    file[]: crc = f9edc7a9; size =       417; name = os.dat
+    file[]: crc = 1c412fcd; size =        82; name = README.TXT
+//    file[]: crc = 86621fb2; size =    230456; name = setup.bmp
+//    file[]: crc = 9e7f2987; size =        62; name = SETUP.INI
+//    file[]: crc = d63fc374; size =     57596; name = setup.ins
+//    file[]: crc = 59ea3bae; size =        49; name = setup.lid
+    file[]: crc = a2fd083b; size =    156449; name = sndsetup.dat
+
+end
+
+//
+// Portuguese version
+//
+game[pc-pt-990615-dos]:
+    name = Portuguese DOS 1999-06-15
+    anchorfile = HUGO.EXE
+    audiohw = sb16
+    osenv = dos
+    file[]: crc = 3430b8d8; size =     43564; name = CHECKRAM.EXE
+//    file[]: crc = a802da90; size =       120; name = DATA.TAG
+//    file[]: crc = b69fe2e3; size =      3076; name = DATA1.CAB
     file[]: crc = cb214447; size =    265420; name = DOS4GW.EXE
     file[]: crc = c90f35dc; size =       228; name = DSIK.TXT
     file[]: crc = 4bc9bf92; size = 678408328; name = HUGO.DAT
     file[]: crc = 83e57af6; size =    425936; name = HUGO.EXE
     file[]: crc = f60a1493; size =       766; name = HUGO.ICO
-    file[]: crc = 776dd78a; size =       967; name = HUGO.PIF; optional = true
-    file[]: crc = db1e21f7; size =    331776; name = HUGOW.EXE
-    file[]: crc = 37ed237d; size =    154174; name = INSTALL.EXE
-    file[]: crc = e739e367; size =       967; name = INSTALL.PIF
-    file[]: crc = f5324e10; size =     59904; name = INSTALLW.EXE
-    file[]: crc = a22e9a7e; size =      4525; name = LANG.DAT
-    file[]: crc = e8991b4f; size =       353; name = LAYOUT.BIN
-    file[]: crc = f9edc7a9; size =       417; name = OS.DAT
-    file[]: crc = 86621fb2; size =    230456; name = SETUP.BMP
-    file[]: crc = 62937092; size =     60416; name = SETUP.EXE
-    file[]: crc = 79343f65; size =        62; name = SETUP.INI
-    file[]: crc = d63fc374; size =     57596; name = SETUP.INS
-    file[]: crc = 2b3ffc31; size =        60; name = SETUP.LID
+//    file[]: crc = 776dd78a; size =       967; name = HUGO.PIF; optional = true
+//    file[]: crc = db1e21f7; size =    331776; name = HUGOW.EXE
+//    file[]: crc = 37ed237d; size =    154174; name = INSTALL.EXE
+//    file[]: crc = e739e367; size =       967; name = INSTALL.PIF
+//    file[]: crc = f5324e10; size =     59904; name = INSTALLW.EXE
+//    file[]: crc = a22e9a7e; size =      4525; name = LANG.DAT
+//    file[]: crc = e8991b4f; size =       353; name = LAYOUT.BIN
+//    file[]: crc = f9edc7a9; size =       417; name = OS.DAT
+//    file[]: crc = 86621fb2; size =    230456; name = SETUP.BMP
+//    file[]: crc = 62937092; size =     60416; name = SETUP.EXE
+//    file[]: crc = 79343f65; size =        62; name = SETUP.INI
+//    file[]: crc = d63fc374; size =     57596; name = SETUP.INS
+//    file[]: crc = 2b3ffc31; size =        60; name = SETUP.LID
     file[]: crc = 057ce6b6; size =    156333; name = SNDSETUP.DAT
 
 end
+
 
 //
 // Hebrew version
 //
 game[pc-he-980905]:
-    name = Hebrew DOS
+    name = Hebrew DOS 1998-09-05
     anchorfile = HUGO.EXE
-    VEROPTIONS = FALSE
-    INCOMPATIBLE = false
-    INCOMPATIBLE2 = true
+    INCOMPATIBLEHE = true
     audiohw = sb16
     osenv = dos
     file[]: crc = 3430b8d8; size =     43564; name = CHECKRAM.EXE
-    file[]: crc = fa58bc5e; size =       131; name = DATA.TAG
+//    file[]: crc = fa58bc5e; size =       131; name = DATA.TAG
     file[]: crc = 2bd6cff1; size =     27504; name = DOS4GW.EXE
     file[]: crc = c90f35dc; size =       228; name = DSIK.TXT
     file[]: crc = 4d3297c7; size = 700508142; name = hugo.dat
     file[]: crc = 7cb29069; size =    426704; name = hugo.exe
-    file[]: crc = a22e9a7e; size =      4525; name = lang.dat
-    file[]: crc = e8991b4f; size =       353; name = layout.bin
-    file[]: crc = f9edc7a9; size =       417; name = os.dat
+//    file[]: crc = a22e9a7e; size =      4525; name = lang.dat
+//    file[]: crc = e8991b4f; size =       353; name = layout.bin
+//    file[]: crc = f9edc7a9; size =       417; name = os.dat
     file[]: crc = 2ac83b2b; size =        82; name = README.TXT
-    file[]: crc = 3637907d; size =        49; name = setup.lid
-    file[]: crc = 7546d58e; size =    156137; name = Sndsetup.dat
+//    file[]: crc = 3637907d; size =        49; name = setup.lid
+//    file[]: crc = 7546d58e; size =    156137; name = Sndsetup.dat
     file[]: crc = 7546d58e; size =    156137; name = SNDSETUP.EXE
 
 
@@ -217,39 +340,30 @@ end
 //
 // Russian version
 //
-game[pc-ru]:
-    name = Russian
+game[pc-ru-070416]:
+    name = Russian 2007-04-16
     anchorfile = HUGO.EXE
-    VEROPTIONS = FALSE
+    INCOMPATIBLERU = true
     file[]: crc = b11caf05; size =     88064; name = _IsRes.dll
     file[]: crc = a2eb0797; size =     16384; name = _ISUser.dll
     file[]: crc = 0d7a400f; size =    385968; name = _Setup.dll
     file[]: crc = 03c5cb86; size =     65503; name = corecomp.ini
     file[]: crc = 3da2a36f; size =    512000; name = CoreW32DLL.dll
-    file[]: crc = 00000000; size =         0; name = data1.cab
-    file[]: crc = 00000000; size =         0; name = data1.hdr
     file[]: crc = 15e1a72d; size =      1168; name = default.pal
     file[]: crc = eae06784; size =        86; name = DIFxData.ini
-    file[]: crc = cad3d8d8; size =     10672; name = dotnetinstaller.exe
     file[]: crc = ee864f94; size =    135680; name = DSETUP.DLL
     file[]: crc = 6b137912; size =     64512; name = DSETUP16.DLL
     file[]: crc = cf811d99; size =     57344; name = DSETUP32.DLL
-    file[]: crc = a1f5342e; size =       133; name = ereg.url
     file[]: crc = f8833805; size =        39; name = FontData.ini
     file[]: crc = 39e0ef59; size =     98304; name = gfxdirx.dll
     file[]: crc = f3f3e628; size =    319488; name = hugo.exe
     file[]: crc = 4874e0c0; size =    246192; name = ISBEW64.exe
-    file[]: crc = 4874e0c0; size =    120240; name = ISBEW64.exe
     file[]: crc = 93a340eb; size =    208304; name = isrt.dll
     file[]: crc = 6573ac2e; size =    492032; name = ISSetup.dll
-    file[]: crc = 00000000; size =         0; name = layout.bin
     file[]: crc = 5f2d2502; size =      5795; name = License.txt
     file[]: crc = 9fdda5fa; size =       917; name = Machine.cnf
-    file[]: crc = 24428d95; size =      6030; name = nd.ico
-    file[]: crc = 13933686; size =        43; name = nd.url
     file[]: crc = f3ee7069; size =    455600; name = setup.exe
     file[]: crc = d7fee8ab; size =       422; name = setup.ini
-    file[]: crc = 05cc9224; size =    241204; name = setup.inx
     file[]: crc = 05cc9224; size =    241204; name = setup.inx
     file[]: crc = e8b13dbb; size =     53248; name = Sfx32DirX.dll
     file[]: crc = dd9b4833; size =     69632; name = SfxDirX.dll
