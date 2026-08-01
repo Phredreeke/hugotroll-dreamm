@@ -26,17 +26,17 @@ $(include cfg-hugo5.inc)
 INCOMPATIBLE = false
 warning[incompatible]:
     condition = $(INCOMPATIBLE)
-    text = The DOS version has erroneous key inputs, use the Windows version (4.0x38)
+    text = The DOS version has erroneous key inputs, use the Windows version (4.0x40)
 end
-INCOMPATIBLEHE = false
+INCOMPATIBLEHEPT = false
 warning[incompatiblehe]:
-    condition = $(INCOMPATIBLEHE)
-    text = The DOS version has erroneous key inputs (4.0x38)
+    condition = $(INCOMPATIBLEHEPT)
+    text = The DOS version has erroneous key inputs (4.0x40)
 end
 INCOMPATIBLEPT = false
 warning[incompatiblept]:
     condition = $(INCOMPATIBLEPT)
-    text = The DOS version has erroneous key inputs (4.0x38) The intro to the rope ending scene gets corrupted in Windows version (not a DREAMM bug)
+    text = The intro to the rope ending scene gets corrupted in Windows version (not a DREAMM bug)
 end
 INCOMPATIBLERU = false
 warning[incompatibleru]:
@@ -184,6 +184,7 @@ game[pc-se-980318-dos]:
     anchorfile = HUGO.EXE
     audiohw = sb16
     osenv = dos
+    INCOMPATIBLE = true
     file[]: crc = 3430b8d8; size =     43564; name = CHECKRAM.EXE
 //    file[]: crc = a802da90; size =       120; name = DATA.TAG
 //    file[]: crc = f459d3df; size =      2705; name = DATA1.CAB
@@ -216,6 +217,7 @@ game[pc-de-970923-dos]:
     anchorfile = HUGO.EXE
     audiohw = sb16
     osenv = dos
+    INCOMPATIBLE = true
 //    file[]: crc = a4e3d7a1; size =        59; name = AUTORUN.INF
     file[]: crc = 3430b8d8; size =     43564; name = CHECKRAM.EXE
 //    file[]: crc = 35e43452; size =        84; name = DATA.TAG
@@ -252,6 +254,7 @@ game[pc-es-980930-dos]:
     anchorfile = HUGO.EXE
     audiohw = sb16
     osenv = dos
+    INCOMPATIBLE = true
     file[]: crc = 3430b8d8; size =     43564; name = CHECKRAM.EXE
 //    file[]: crc = a802da90; size =       120; name = DATA.TAG
 //    file[]: crc = 5653128a; size =      3073; name = data1.cab
@@ -283,6 +286,7 @@ end
 game[pc-pt-990615-dos]:
     name = Portuguese DOS 1999-06-15
     anchorfile = HUGO.EXE
+    INCOMPATIBLEHEPT = true
     audiohw = sb16
     osenv = dos
     file[]: crc = 3430b8d8; size =     43564; name = CHECKRAM.EXE
@@ -317,7 +321,7 @@ end
 game[pc-he-980905]:
     name = Hebrew DOS 1998-09-05
     anchorfile = HUGO.EXE
-    INCOMPATIBLEHE = true
+    INCOMPATIBLEHEPT = true
     audiohw = sb16
     osenv = dos
     file[]: crc = 3430b8d8; size =     43564; name = CHECKRAM.EXE
