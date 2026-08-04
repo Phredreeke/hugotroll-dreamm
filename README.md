@@ -5,6 +5,7 @@ Not to be confused with the Hugo series by Gray Design Associates.
 
 |Game|Language|Status|
 | --- | --- | --- |
+|Hugo (DOS)|🇬🇧||
 |Hugo 2 (Windows)|🇦🇷🇩🇪🇩🇰🇵🇹|🇦🇷🇩🇰🇵🇹 works, 🇩🇪 hangs after intro video|
 |Hugo 2 (DOS)|🇩🇪🇩🇰🇪🇸🇸🇪|works|
 |Hugo 3 (DOS)|🇦🇷🇩🇪🇩🇰🇫🇮🇭🇷🇮🇱🇸🇪|Works as of 4.0x37|
@@ -12,12 +13,12 @@ Not to be confused with the Hugo series by Gray Design Associates.
 |Hugo 5|🇦🇷🇩🇪🇮🇱🇵🇹🇸🇪|Windows works. DOS has bugged inputs|
 |Hugo 6|🇩🇪🇮🇱🇳🇴🇵🇹|🇩🇪🇮🇱🇵🇹 works, 🇳🇴 hangs after intro video|
 |Hugo Jungle Island|🇩🇪🇸🇪|Launches, doesn't read mouse input|
-|Hugo XL|🇩🇪🇫🇮|Mostly working with graphical glitches|
+|Hugo XL|🇩🇪🇫🇮|Mostly working with graphical glitches (possibly part of original)|
 |Hugo Train|🇦🇷🇮🇱|🇮🇱 works, 🇦🇷 hangs after intro video|
 
 # Trying to straighten out the most confused naming scheme
 
-It's actually **worse** than this, most of the boxes/jewelcases I own don't have **any title** on them other than Hugo
+It's actually **worse** than this, most of the boxes/jewelcases I own don't have **any title** on them other than Hugo. Note that just because a game is mentioned does not mean that this pack intends to support it (in particular any versions not on DOS or Windows)
 
 |Game|Re-release|Scenarios|
 | --- | --- | --- |
@@ -30,7 +31,11 @@ It's actually **worse** than this, most of the boxes/jewelcases I own don't have
 |Hugo Jungle Island|Hugo Classic #5|Monkey Hunt, Follow the Monkey, Secret of the Inca Pyramid, Hugocopter, Vine Climbing, Memory|
 |Hugo Jungle Island 2|Hugo Classic #6|Monkey Duel, Obstacle Course, Beetle Battle, Mahjong, Ostrich Race, Volcano Ascent|
 
-In the case of Hugo 2, the original DOS/Amiga release has the player play two scenarios in a row before the final encounter with Scylla. In the Hugo Classic #1 release the player just have to play one scenario. The Re-Release column is correct for German, Danish and Finnish releases. it's not correct for Swedish releases...
+The Re-Release column is correct for German, Danish and Finnish releases. it's not correct for Swedish releases (see further down). Hugo 3 had a Windows re-release as well, but confusingly not under the Hugo Classic name. These re-releases shared the same menu screens as Hugo 6/Wild River.
+
+# Hugo 2 version differences
+
+The second game has pretty significant differences between the various releases. The original Danish version had just the Draisine and Mountain scenarios, and was followed up by a Part 2 which had the Forest and Airplane scenarios. If both were installed the user could mix between the two level sets. After playing two scenarios Hugo would confront Scylla in the rope game. In Danish the game had the name Hugo på nye eventyr, which translates to Hugo on new adventures, and was confusingly re-used as a name for Hugo 3 in other languages. Versions in other languages would be sold with the full set of four. A Mac version was released which had all four scenarios, however they could only be played either in their original pairings or in a four scenario sequence. The Mac version has higher sound quality than the DOS version as well as animated faces when characters speak. The Mac version however omits the intro of Scylla taunting the player. The game was re-released as Hugo Classic #1 which has the player play any one scenario, and with the choice between three different ending scenarios.
 
 # The Classic conundrum
 
@@ -52,7 +57,7 @@ A number of Hugo games were released on the Playstation, of which the first was 
 |Hugo|Hugo XL|Draisine, Forest, Mountain, Airplane, Log riding, Skateboard, Diving|
 |Hugo 2|-|Minecart, Climbing Wall, Ice Cavern, Moor, Sledding, Snowboard|
 
-These have upgraded visuals over their original releases. Notably, in the arcade mode the player have to play through all scenarios to finish the game
+These have upgraded visuals and sometimes gameplay over their original releases. Notably, in the arcade mode the player has to play through all scenarios to finish the game
 
 # Compilations
 
