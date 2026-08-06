@@ -56,6 +56,38 @@ game[pc-pt-990804]:
 
 end
 
+//
+// Dutch version 
+//
+game[pc-nl-981130]:
+    name = Dutch 1998-30-11
+    anchorfile = Hugo6.exe
+    file[]: crc = fdad7924; size =        52; name = Autorun.inf
+    file[]: crc = 12749eea; size = 681356200; name = data.big
+    file[]: crc = bea18e17; size =       114; name = debuglog.reg
+    file[]: crc = 4cc7a621; size =    127488; name = dsetup.dll
+    file[]: crc = d3851129; size =     63056; name = dsetup16.dll
+    file[]: crc = 03cf7973; size =     41984; name = dsetup32.dll
+    file[]: crc = 0e47a77d; size =    542720; name = Hugo6.exe
+    file[]: crc = 3bc46a3b; size =    355840; name = HugoAutorun.exe
+    file[]: crc = 795a23ff; size =     21504; name = InstallW.exe
+    file[]: crc = 82d472be; size =       756; name = machine.cnf
+    file[]: crc = 0d7e96ed; size =     85691; name = mapfile.zip
+    file[]: crc = bfdb5117; size =       134; name = config\AutoRun.cnf
+    file[]: crc = 847babac; size =      2238; name = config\hugo.ico
+    file[]: crc = f11faf61; size =      2923; name = config\KeyPlugin.cnf
+    file[]: crc = c5fcefd9; size =      1344; name = config\LoaderPlugin.cnf
+    file[]: crc = 17150425; size =      3572; name = config\MenuPlugin.cnf
+    file[]: crc = 05f713a7; size =      3575; name = config\MinetrackPlugin.cnf
+    file[]: crc = ca2db6d7; size =      8431; name = config\MoorPlugin.cnf
+    file[]: crc = 87046594; size =      8754; name = config\RiverPlugin.cnf
+    file[]: crc = bcd46b7c; size =      1387; name = config\RopeIntroPlugin.cnf
+    file[]: crc = 6d6b1e05; size =      2579; name = config\RopeOutroPlugin.cnf
+    file[]: crc = 4a0c02d9; size =     15575; name = config\StonesPlugin.cnf
+    file[]: crc = 07175d3c; size =      5413; name = config\WitchPlugin.cnf
+
+
+end
 
 //
 // German version 
