@@ -17,10 +17,10 @@ mount[]: vpath = $(rootpath); srcpath = $(ifsinstallpath)
 //
 // warnings
 //
-INCOMPATIBLE = false
+INCOMPATIBLE = true
 warning[incompatible]:
     condition = $(INCOMPATIBLE)
-    text = This game is currently unplayable due to missing mouse input (4.0x35)
+    text = This game is currently unplayable due to missing mouse input (4.0x53)
 end
 
 //

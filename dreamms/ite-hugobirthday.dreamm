@@ -17,7 +17,7 @@ mount[]: vpath = $(rootpath); srcpath = $(ifsinstallpath)
 //
 // warnings
 //
-INCOMPATIBLE = true
+INCOMPATIBLE = false
 warning[incompatible]:
     condition = $(INCOMPATIBLE)
     text = This game does not run correctly in tested DREAMM version (4.0x35)
@@ -27,7 +27,7 @@ end
 // Swedish version 
 //
 game[pc-se-000410]:
-    name = Swedish
+    name = Swedish 2000-04-10
     anchorfile = Hugo.exe
     file[]: crc = 8f691799; size =        50; name = Autorun.inf
     file[]: crc = 6d0d8c13; size =    512000; name = CoreW32DLL.dll
@@ -69,7 +69,7 @@ end
 // Danish version 
 //
 game[pc-dk-000406]:
-    name = Danish
+    name = Danish 2000-04-06
     anchorfile = Hugo.exe
     file[]: crc = 8f691799; size =        50; name = Autorun.inf
     file[]: crc = 6d0d8c13; size =    512000; name = CoreW32DLL.dll

@@ -159,7 +159,6 @@ game[pc-no-011015]:
     name = Norwegian 2001-10-15
     anchorfile = Hugo.exe
     launch = $(rootpath)\hugo.exe
-    INCOMPATIBLE = true
     file[]: crc = 8f691799; size =        50; name = Autorun.inf
     file[]: crc = 3da2a36f; size =    512000; name = CoreW32DLL.dll
     file[]: crc = ee864f94; size =    135680; name = DSETUP.DLL

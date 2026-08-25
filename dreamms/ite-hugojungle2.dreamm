@@ -17,17 +17,17 @@ mount[]: vpath = $(rootpath); srcpath = $(ifsinstallpath)
 //
 // warnings
 //
-INCOMPATIBLE = false
+INCOMPATIBLE = true
 warning[incompatible]:
     condition = $(INCOMPATIBLE)
-    text = This game is currently unplayable due to missing mouse input (4.0x35)
+    text = This game is currently unplayable due to missing mouse input (4.0x53)
 end
 
 //
 // Norwegian version
 //
 game[pc-no-060429]:
-    name = Norwegian
+    name = Norwegian 2006-04-29
     anchorfile = Jungle2.exe
     file[]: crc = 1f57fd14; size =        51; name = Autorun.inf
     file[]: crc = cbb500e7; size =    358963; name = binkw32.dll

@@ -1,0 +1,70 @@
+desc[ite-hugoplatin]:
+
+name = Hugo Platin
+icon = ite-hugoplatin.png
+machine = pc
+rootpath = C:\
+launch = $(rootpath)\Hugo.exe
+osenv = windows
+winres=640x480x8
+
+//
+// filesystem
+//
+mount[]: vpath = C:\; srcpath = $(ifsdeltapath); writable = true;
+mount[]: vpath = $(rootpath); srcpath = $(ifsinstallpath)
+
+//
+// warnings
+//
+INCOMPATIBLE = false
+warning[incompatible]:
+    condition = $(INCOMPATIBLE)
+    text = This version does not work in tested DREAMM version (4.0x39)
+end
+
+
+
+//
+// German version 
+//
+game[pc-de-991006]:
+    name = German 1999-10-06
+    anchorfile = Hugo.exe
+    file[]: crc = c40524df; size =        50; name = Autorun.inf
+    file[]: crc = 0f6b20d4; size =    512000; name = CoreW32DLL.dll
+    file[]: crc = ee864f94; size =    135680; name = DSETUP.DLL
+    file[]: crc = 6b137912; size =     64512; name = DSETUP16.DLL
+    file[]: crc = cf811d99; size =     57344; name = DSETUP32.DLL
+    file[]: crc = b9eed3c8; size =     86016; name = gfxdirx.dll
+    file[]: crc = 6ba425a6; size =    577536; name = hugo.exe
+    file[]: crc = 438c203c; size =    294912; name = HugoAutorun.exe
+    file[]: crc = a6518431; size =     36864; name = Launch.exe
+    file[]: crc = 6dc91e44; size =      1241; name = Machine.cnf
+    file[]: crc = e6219efb; size = 398637056; name = resource.res
+    file[]: crc = 5015809b; size =     49152; name = Sfx32DirX.dll
+    file[]: crc = e0318a59; size =      3358; name = Config\AppleJackPlugin.cnf
+    file[]: crc = b465451b; size =       541; name = Config\AutoRun.cnf
+    file[]: crc = d4f7f856; size =     11545; name = Config\BalloonPlugin.cnf
+    file[]: crc = 652f44b4; size =      6252; name = Config\CliffHangerPlugin.cnf
+    file[]: crc = 8741db22; size =      8538; name = Config\DolmenPlugin.cnf
+    file[]: crc = 98d194fb; size =      2238; name = Config\hugo.ico
+    file[]: crc = 4ee72b2e; size =      3071; name = Config\KeyPlugin.cnf
+    file[]: crc = 5f93c92c; size =      2000; name = Config\LoaderPlugin.cnf
+    file[]: crc = b79d8458; size =      9763; name = Config\LogBridgePlugin.cnf
+    file[]: crc = 06cbf65b; size =      2173; name = Config\MagicHPlugin.cnf
+    file[]: crc = a3bc9a59; size =      4416; name = Config\MenuPlugin.cnf
+    file[]: crc = a2812af4; size =      5440; name = Config\Nimbus.cnf
+    file[]: crc = c42e4dde; size =      4275; name = Config\ParachutePlugin.cnf
+    file[]: crc = 2bc7dfc0; size =      1731; name = Config\RopeIntroPlugin.cnf
+    file[]: crc = 9d3dfacd; size =      2735; name = Config\RopeOutroPlugin.cnf
+    file[]: crc = 26a31090; size =      6159; name = Config\SledgePlugin.cnf
+    file[]: crc = 1873e215; size =      9732; name = Config\snowboardplugin.cnf
+    file[]: crc = c46c6e7e; size =      5559; name = Config\WitchPlugin.cnf
+
+
+
+end
+
+
+end

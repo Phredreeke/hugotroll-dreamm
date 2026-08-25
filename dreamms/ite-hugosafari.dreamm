@@ -1,0 +1,172 @@
+desc[ite-hugosafari]:
+
+name = Hugo Safari
+icon = ite-hugosafari.png
+machine = pc
+rootpath = C:\
+launch = $(rootpath)\Hugo.exe
+osenv = windows
+winres=640x480x8
+LANGSELECT = false
+LANGCONFIG = Machine.cnf
+
+$(include cfg-hugo-multilang.inc)
+
+//
+// filesystem
+//
+mount[]: vpath = C:\; srcpath = $(ifsdeltapath); writable = true;
+mount[]: vpath = $(rootpath); srcpath = $(ifsinstallpath)
+
+//
+// warnings
+//
+INCOMPATIBLE = true
+warning[incompatible]:
+    condition = $(INCOMPATIBLE)
+    text = The Music Café, Tomato fight and Animal Safari are currently unplayable due to missing mouse input (4.x53)
+end
+
+//
+// Language options
+//
+config[langselect]:
+    condition = $(LANGSELECT)
+    title = Language Configuration
+//    option[en]: name = English; LANGCONFIG = Machineuk.cnf; 
+    option[dk]: name = Danish; LANGCONFIG = Machinedk.cnf;
+    option[fi]: name = Finnish; LANGCONFIG = Machinefi.cnf;	
+    option[no]: name = Norwegian; LANGCONFIG = Machineno.cnf;
+    option[se]: name = Swedish; LANGCONFIG = Machinese.cnf; priority = 1;
+end
+
+//
+// 
+//
+game[pc-pt]:
+    name = Portuguese
+    anchorfile = Hugo.exe
+    file[]: crc = 8f691799; size =        50; name = Autorun.inf
+    file[]: crc = 9afc9af2; size =    512000; name = CoreW32DLL.dll
+    file[]: crc = 4cc7a621; size =    127488; name = dsetup.dll
+    file[]: crc = d3851129; size =     63056; name = dsetup16.dll
+    file[]: crc = 03cf7973; size =     41984; name = dsetup32.dll
+    file[]: crc = 760f83c5; size =     86016; name = gfxdirx.dll
+    file[]: crc = 8981680b; size =    303104; name = Hugo.exe
+    file[]: crc = 3b3ef14d; size =    311296; name = Launch.exe
+    file[]: crc = 9ab5fe0a; size =      1113; name = Machine.cnf
+    file[]: crc = 21774d7c; size =     53248; name = Sfx32DirX.dll
+    file[]: crc = f3a24876; size =     69632; name = SfxDirX.dll
+    file[]: crc = d4a705c9; size = 175841280; name = bigfile\data.res
+    file[]: crc = 90233293; size =       167; name = config\AutoRun.cnf
+    file[]: crc = 9c21794e; size =      5556; name = config\BoltPlugin.cnf
+    file[]: crc = d81a8221; size =        66; name = config\FileSystems.cnf
+    file[]: crc = 28de4767; size =      2238; name = config\hugo.ico
+    file[]: crc = 57e8ea97; size =      3038; name = config\KeyPlugin.cnf
+    file[]: crc = 734afee4; size =        32; name = config\Launch.txt
+    file[]: crc = 60c6105e; size =      1977; name = config\LoaderPlugin.cnf
+    file[]: crc = 013d070b; size =      4522; name = config\MenuPlugin.cnf
+    file[]: crc = 405cb626; size =      6724; name = config\MountainPlugin.cnf
+    file[]: crc = 3d8b8b49; size =      4453; name = config\MusikPlugin.cnf
+    file[]: crc = 3b6eedb2; size =      7410; name = config\PlanePlugin.cnf
+    file[]: crc = 6ba94371; size =      1572; name = config\RopeIntroPlugin.cnf
+    file[]: crc = 95cd8995; size =      2743; name = config\RopeOutroPlugin.cnf
+    file[]: crc = d0d8f7b5; size =      2123; name = config\SafariPlugin.cnf
+    file[]: crc = 7fb70fe5; size =      7801; name = config\SkydePlugin.cnf
+    file[]: crc = c2731cb2; size =       984; name = config\UnisetPlugin.cnf
+    file[]: crc = 62ce86e7; size =      8280; name = manual\Manual.txt
+    file[]: crc = e537a61e; size =   1886958; name = WebChoiceTV\wctv_102.exe
+
+end
+
+//
+// 
+//
+game[pc-win-multi]:
+    name = Multilanguage
+    anchorfile = Hugo.exe
+    LANGSELECT = true
+    file[]: crc = 21ecca17; size =        64; name = Autorun.inf
+    file[]: crc = 9afc9af2; size =    512000; name = CoreW32DLL.dll
+    file[]: crc = 4cc7a621; size =    127488; name = dsetup.dll
+    file[]: crc = d3851129; size =     63056; name = dsetup16.dll
+    file[]: crc = 03cf7973; size =     41984; name = dsetup32.dll
+    file[]: crc = 760f83c5; size =     86016; name = gfxdirx.dll
+    file[]: crc = 8981680b; size =    303104; name = Hugo.exe
+    file[]: crc = c0363fdc; size =    344064; name = HugoLanguageSelector.exe
+    file[]: crc = 98a1130f; size =    323584; name = Launch.exe
+    file[]: crc = 7aa84c87; size =      1113; name = Machinedk.cnf
+    file[]: crc = f44f4200; size =      1110; name = Machinefi.cnf
+    file[]: crc = cf8ddc69; size =      1110; name = Machineno.cnf
+    file[]: crc = ebf52dbe; size =      1110; name = Machinese.cnf
+    file[]: crc = 21774d7c; size =     53248; name = Sfx32DirX.dll
+    file[]: crc = f3a24876; size =     69632; name = SfxDirX.dll
+    file[]: crc = 20293177; size = 244553728; name = BigFile\data.res
+    file[]: crc = d81a8221; size =        66; name = config\FileSystems.cnf
+    file[]: crc = 28de4767; size =      2238; name = config\hugo.ico
+    file[]: crc = 874e18ea; size =       172; name = configdk\AutoRundk.cnf
+    file[]: crc = 4f35830d; size =      5554; name = configdk\BoltPlugin.cnf
+    file[]: crc = 57e8ea97; size =      3038; name = configdk\KeyPlugin.cnf
+    file[]: crc = 1a3453c6; size =      1969; name = configdk\LoaderPlugin.cnf
+    file[]: crc = 8b926d0a; size =      4522; name = configdk\MenuPlugin.cnf
+    file[]: crc = 19d9431f; size =      6722; name = configdk\MountainPlugin.cnf
+    file[]: crc = 9cd578d7; size =      4451; name = configdk\MusikPlugin.cnf
+    file[]: crc = 8de6ac6c; size =      7408; name = configdk\PlanePlugin.cnf
+    file[]: crc = 50363a30; size =      1570; name = configdk\RopeIntroPlugin.cnf
+    file[]: crc = f5735596; size =      2741; name = configdk\RopeOutroPlugin.cnf
+    file[]: crc = 56626608; size =      2125; name = configdk\SafariPlugin.cnf
+    file[]: crc = e574744c; size =      7807; name = configdk\SkydePlugin.cnf
+    file[]: crc = c2731cb2; size =       984; name = configdk\UnisetPlugin.cnf
+    file[]: crc = 8cfe29e0; size =       176; name = configfi\AutoRunfi.cnf
+    file[]: crc = 46b63c6a; size =      5554; name = configfi\BoltPlugin.cnf
+    file[]: crc = 57e8ea97; size =      3038; name = configfi\KeyPlugin.cnf
+    file[]: crc = 58f28a18; size =      1971; name = configfi\LoaderPlugin.cnf
+    file[]: crc = fc0fbef6; size =      4487; name = configfi\MenuPlugin.cnf
+    file[]: crc = 0de3430b; size =      6722; name = configfi\MountainPlugin.cnf
+    file[]: crc = e8d7a4d7; size =      4451; name = configfi\MusikPlugin.cnf
+    file[]: crc = 194f242f; size =      7408; name = configfi\PlanePlugin.cnf
+    file[]: crc = 9de6d38b; size =      1570; name = configfi\RopeIntroPlugin.cnf
+    file[]: crc = 9cc8ab72; size =      2741; name = configfi\RopeOutroPlugin.cnf
+    file[]: crc = d0d8f7b5; size =      2123; name = configfi\SafariPlugin.cnf
+    file[]: crc = 318d8eac; size =      7807; name = configfi\SkydePlugin.cnf
+    file[]: crc = c2731cb2; size =       984; name = configfi\UnisetPlugin.cnf
+    file[]: crc = 3bd80851; size =       187; name = configno\AutoRunno.cnf
+    file[]: crc = 7b2b2f87; size =      5554; name = configno\BoltPlugin.cnf
+    file[]: crc = 57e8ea97; size =      3038; name = configno\KeyPlugin.cnf
+    file[]: crc = 3a82f5d1; size =      1965; name = configno\LoaderPlugin.cnf
+    file[]: crc = 66adcd8f; size =      4430; name = configno\MenuPlugin.cnf
+    file[]: crc = 7c3e173b; size =      6722; name = configno\MountainPlugin.cnf
+    file[]: crc = aefd28fd; size =      4451; name = configno\MusikPlugin.cnf
+    file[]: crc = aca09daf; size =      7418; name = configno\PlanePlugin.cnf
+    file[]: crc = 135f1567; size =      1570; name = configno\RopeIntroPlugin.cnf
+    file[]: crc = ea038a17; size =      2741; name = configno\RopeOutroPlugin.cnf
+    file[]: crc = d0d8f7b5; size =      2123; name = configno\SafariPlugin.cnf
+    file[]: crc = ee10a7a7; size =      7807; name = configno\SkydePlugin.cnf
+    file[]: crc = c2731cb2; size =       984; name = configno\UnisetPlugin.cnf
+    file[]: crc = 9815a23d; size =       178; name = configse\AutoRunse.cnf
+    file[]: crc = 22b3d93e; size =      5554; name = configse\BoltPlugin.cnf
+    file[]: crc = 57e8ea97; size =      3038; name = configse\KeyPlugin.cnf
+    file[]: crc = c198bbc8; size =      1958; name = configse\LoaderPlugin.cnf
+    file[]: crc = 4dae0731; size =      4417; name = configse\MenuPlugin.cnf
+    file[]: crc = 946beac2; size =      6722; name = configse\MountainPlugin.cnf
+    file[]: crc = 64506a83; size =      4451; name = configse\MusikPlugin.cnf
+    file[]: crc = 9040fb0c; size =      7418; name = configse\PlanePlugin.cnf
+    file[]: crc = 958058af; size =      1570; name = configse\RopeIntroPlugin.cnf
+    file[]: crc = 1ab9f552; size =      2741; name = configse\RopeOutroPlugin.cnf
+    file[]: crc = d0d8f7b5; size =      2123; name = configse\SafariPlugin.cnf
+    file[]: crc = 3f04c61b; size =      7807; name = configse\SkydePlugin.cnf
+    file[]: crc = c2731cb2; size =       984; name = configse\UnisetPlugin.cnf
+    file[]: crc = 096c5ead; size =     22230; name = Manuals\Dk.rtf
+    file[]: crc = 316db51f; size =     10318; name = Manuals\Dk.txt
+    file[]: crc = 64736946; size =     40405; name = Manuals\Fi.rtf
+    file[]: crc = a0a9e1df; size =     10269; name = Manuals\Fi.txt
+    file[]: crc = e0801afd; size =     18942; name = Manuals\No.rtf
+    file[]: crc = b956d8fe; size =      9786; name = Manuals\No.txt
+    file[]: crc = e0801afd; size =     18942; name = Manuals\Se.rtf
+    file[]: crc = b956d8fe; size =      9786; name = Manuals\Se.txt
+    file[]: crc = e537a61e; size =   1886958; name = WebChoiceTV\wctv_102.exe
+
+
+end
+
+end
