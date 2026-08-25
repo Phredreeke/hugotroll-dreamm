@@ -5,15 +5,14 @@ icon = ite-hugo3.png
 machine = pc
 rootpath = C:\
 launch = $(rootpath)\HUGO.EXE
-osenv = dos
-fixdivover = true
-mips = $(MIPS_P100)
-ramkb = 16384
-audiohw = sb16
-videohw = svga
+osenv = windows
+winres=640x480x8
+LANGSELECT = false
+LANGCONFIG = Machine.cnf
 
 
 $(include cfg-hugo3.inc)
+$(include cfg-hugo-multilang.inc)
 
 //
 // filesystem
@@ -21,6 +20,14 @@ $(include cfg-hugo3.inc)
 mount[]: vpath = C:\; srcpath = $(ifsdeltapath); writable = true;
 mount[]: vpath = $(rootpath); srcpath = $(ifsinstallpath)
 
+fragment[base-dos]:
+    osenv = dos
+    fixdivover = true
+    mips = $(MIPS_P100)
+    ramkb = 16384
+    audiohw = sb16
+    videohw = svga
+end
 
 //
 // Setup
@@ -29,6 +36,19 @@ configutil[]:
     name = Sound setup
     launch = $(rootpath)\SNDSETUP.EXE
     condition = file_exists("$(rootpath)\SNDSETUP.EXE")
+end
+
+//
+// Language options
+//
+config[langselect]:
+    condition = $(LANGSELECT)
+    title = Language Configuration
+//    option[en]: name = English; LANGCONFIG = Machineuk.cnf;
+    option[dk]: name = Danish; LANGCONFIG = Machinedk.cnf;
+    option[fi]: name = Finnish; LANGCONFIG = Machinefi.cnf;	
+    option[no]: name = Norwegian; LANGCONFIG = Machineno.cnf;
+    option[se]: name = Swedish; LANGCONFIG = Machinese.cnf; priority = 1;
 end
 
 //
@@ -49,6 +69,7 @@ end
 game[pc-se-960124]:
     name = Swedish DOS 1996-01-24
     anchorfile = HUGO.EXE
+    imports = base-dos
     file[]: crc = 29f2099e; size = 642373564; name = 4HUGO.DAT
     file[]: crc = 9486bf0e; size =     26048; name = CHECKRAM.EXE
     file[]: crc = cb214447; size =    265420; name = DOS4GW.EXE
@@ -72,6 +93,7 @@ end
 game[pc-es-971113]:
     name = Spanish DOS 1997-11-13
     anchorfile = HUGO.EXE
+    imports = base-dos
     file[]: crc = 403ef66b; size =  82473609; name = 4HUGO.DAT
     file[]: crc = 3430b8d8; size =     43564; name = CHECKRAM.EXE
     file[]: crc = cb214447; size =    265420; name = DOS4GW.EXE
@@ -126,6 +148,7 @@ end
 game[pc-de-951113]:
     name = German DOS 1995-11-13
     anchorfile = HUGO.EXE
+    imports = base-dos
     file[]: crc = 745210b9; size = 577019412; name = 4HUGO.DAT
     file[]: crc = 9486bf0e; size =     26048; name = CHECKRAM.EXE
     file[]: crc = cb214447; size =    265420; name = DOS4GW.EXE
@@ -152,6 +175,7 @@ end
 game[pc-de-960311]:
     name = German DOS 1996-03-11
     anchorfile = HUGO.EXE
+    imports = base-dos
     file[]: crc = 488802fd; size = 578020845; name = 4HUGO.DAT
     file[]: crc = 9486bf0e; size =     26048; name = CHECKRAM.EXE
     file[]: crc = cb214447; size =    265420; name = DOS4GW.EXE
@@ -178,6 +202,7 @@ end
 game[pc-he-970610]:
     name = Hebrew DOS 1997-06-10
     anchorfile = HUGO.EXE
+    imports = base-dos
     file[]: crc = 37083a1f; size =  66265215; name = 4HUGO.DAT
     file[]: crc = 9486bf0e; size =     26048; name = CHECKRAM.EXE
     file[]: crc = cb214447; size =    265420; name = DOS4GW.EXE
@@ -196,6 +221,7 @@ end
 game[pc-hr-980712]:
     name = Croatian DOS 1998-07-12
     anchorfile = HUGO.EXE
+    imports = base-dos
     file[]: crc = ed2aeb45; size = 698172669; name = 4HUGO.DAT
     file[]: crc = 3430b8d8; size =     43564; name = CHECKRAM.EXE
     file[]: crc = cb214447; size =    265420; name = DOS4GW.EXE
@@ -249,6 +275,7 @@ end
 game[pc-dk-951116]:
     name = Danish DOS 1995-11-16
     anchorfile = HUGO.EXE
+    imports = base-dos
     file[]: crc = 28160c74; size = 642008947; name = 4HUGO.DAT
     file[]: crc = 9486bf0e; size =     26048; name = CHECKRAM.EXE
     file[]: crc = cb214447; size =    265420; name = DOS4GW.EXE
@@ -273,6 +300,7 @@ end
 game[pc-fi-961106]:
     name = Finnish DOS 1996-11-06
     anchorfile = HUGO.EXE
+    imports = base-dos
     file[]: crc = 4432591c; size = 585614403; name = 4HUGO.DAT
     file[]: crc = cb214447; size =    265420; name = DOS4GW.EXE
     file[]: crc = ee471f34; size =       229; name = DSIK.TXT
@@ -325,6 +353,7 @@ end
 game[pc-pt-971114]:
     name = Portuguese DOS 1998-07-12
     anchorfile = HUGO.EXE
+    imports = base-dos
     file[]: crc = 9aa9dfa7; size =  81290043; name = 4HUGO.DAT
     file[]: crc = 3430b8d8; size =     43564; name = CHECKRAM.EXE
     file[]: crc = cb214447; size =    265420; name = DOS4GW.EXE
@@ -371,6 +400,79 @@ game[pc-pt-971114]:
 
 
 end
+
+
+//
+// Multilanguage Windows version
+//
+game[pc-win-multi-981208]:
+    name = Multilanguage Windows 1998-12-08
+    anchorfile = CoreW32DLL.dll
+    LANGSELECT = true
+    file[]: crc = 21ecca17; size =        64; name = Autorun.inf
+    file[]: crc = 5ec24882; size =    421888; name = CoreW32DLL.dll
+    file[]: crc = ae1def0e; size = 623564285; name = data.big
+    file[]: crc = 4cc7a621; size =    127488; name = dsetup.dll
+    file[]: crc = d3851129; size =     63056; name = dsetup16.dll
+    file[]: crc = 03cf7973; size =     41984; name = dsetup32.dll
+    file[]: crc = 76ae9b8d; size =     77824; name = gfxdirx.dll
+    file[]: crc = f2cfdaad; size =    253952; name = hugo.exe
+    file[]: crc = 98a1130f; size =    323584; name = HugoAutoRun.exe
+    file[]: crc = fede2f45; size =    339968; name = HugoLanguageSelector.exe
+    file[]: crc = 1073798a; size =     69632; name = Launch.exe
+    file[]: crc = e2706d21; size =       968; name = Machinedk.cnf
+    file[]: crc = 377fa160; size =       968; name = Machinefi.cnf
+    file[]: crc = 8842b6b3; size =       968; name = Machineno.cnf
+    file[]: crc = ae0dafc4; size =       966; name = Machinese.cnf
+    file[]: crc = 60436b03; size =     69632; name = SfxDirX.dll
+    file[]: crc = 28de4767; size =      2238; name = config\hugo.ico
+    file[]: crc = 3f08d115; size =       165; name = configdk\AutoRundk.cnf
+    file[]: crc = 2e926183; size =      8627; name = configdk\IcecavernPlugin.cnf
+    file[]: crc = d10430c7; size =      3039; name = configdk\KeyPlugin.cnf
+    file[]: crc = 80726b7b; size =      1972; name = configdk\LoaderPlugin.cnf
+    file[]: crc = f5339887; size =      6128; name = configdk\lumberjackplugin.cnf
+    file[]: crc = ae68606d; size =      4036; name = configdk\MenuPlugin.cnf
+    file[]: crc = 5f9a6f1a; size =      1555; name = configdk\RopeIntroPlugin.cnf
+    file[]: crc = 32f0790c; size =      2740; name = configdk\RopeOutroPlugin.cnf
+    file[]: crc = 254a3b46; size =      6163; name = configdk\ScubaPlugin.cnf
+    file[]: crc = 141f559d; size =      4325; name = configdk\Skateboardplugin.cnf
+    file[]: crc = a0f38e9f; size =      5556; name = configdk\WitchPlugin.cnf
+    file[]: crc = 54a54b8c; size =       169; name = configfi\AutoRunfi.cnf
+    file[]: crc = b1453b97; size =      8627; name = configfi\IcecavernPlugin.cnf
+    file[]: crc = d10430c7; size =      3039; name = configfi\KeyPlugin.cnf
+    file[]: crc = 93c62a82; size =      1960; name = configfi\LoaderPlugin.cnf
+    file[]: crc = 7fddf4e1; size =      6128; name = configfi\lumberjackplugin.cnf
+    file[]: crc = f6a0d450; size =      4061; name = configfi\MenuPlugin.cnf
+    file[]: crc = 604b3972; size =      1555; name = configfi\RopeIntroPlugin.cnf
+    file[]: crc = 543a8b8c; size =      2740; name = configfi\RopeOutroPlugin.cnf
+    file[]: crc = 187187a0; size =      6163; name = configfi\ScubaPlugin.cnf
+    file[]: crc = c782f850; size =      4325; name = configfi\Skateboardplugin.cnf
+    file[]: crc = 3068ba24; size =      5554; name = configfi\WitchPlugin.cnf
+    file[]: crc = 5ccd0d32; size =       183; name = configno\AutoRunno.cnf
+    file[]: crc = 54de1303; size =      8627; name = configno\IcecavernPlugin.cnf
+    file[]: crc = d10430c7; size =      3039; name = configno\KeyPlugin.cnf
+    file[]: crc = f4e24516; size =      1965; name = configno\LoaderPlugin.cnf
+    file[]: crc = cfbcb8ac; size =      6128; name = configno\lumberjackplugin.cnf
+    file[]: crc = 3c7eb439; size =      5441; name = configno\MenuPlugin.cnf
+    file[]: crc = f532bef0; size =      1555; name = configno\RopeIntroPlugin.cnf
+    file[]: crc = becb4d66; size =      2740; name = configno\RopeOutroPlugin.cnf
+    file[]: crc = ed815781; size =      6163; name = configno\ScubaPlugin.cnf
+    file[]: crc = ded2e1d9; size =      4325; name = configno\Skateboardplugin.cnf
+    file[]: crc = 37ccbb75; size =      5554; name = configno\WitchPlugin.cnf
+    file[]: crc = db740e26; size =       171; name = configse\AutoRunse.cnf
+    file[]: crc = fef321a4; size =      8627; name = configse\IcecavernPlugin.cnf
+    file[]: crc = d10430c7; size =      3039; name = configse\KeyPlugin.cnf
+    file[]: crc = 1b7c9d53; size =      1951; name = configse\LoaderPlugin.cnf
+    file[]: crc = 133f3365; size =      6128; name = configse\lumberjackplugin.cnf
+    file[]: crc = f77bbb63; size =      4659; name = configse\MenuPlugin.cnf
+    file[]: crc = 5bd9a822; size =      1555; name = configse\RopeIntroPlugin.cnf
+    file[]: crc = ae769b4f; size =      2740; name = configse\RopeOutroPlugin.cnf
+    file[]: crc = e44518a8; size =      6163; name = configse\ScubaPlugin.cnf
+    file[]: crc = 7f352944; size =      4325; name = configse\Skateboardplugin.cnf
+    file[]: crc = c1905d06; size =      5554; name = configse\WitchPlugin.cnf
+
+end
+
 
 
 end

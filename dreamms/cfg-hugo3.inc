@@ -1,4 +1,5 @@
 script[makecfg]:
+    condition = is_dos();
     code = [[[$(CRLF)
     if (!!file_exists("$$(rootpath)\\4HUGO.CFG"))
     { 

@@ -7,6 +7,10 @@ rootpath = C:\
 launch = $(rootpath)\Hugo.exe
 osenv = windows
 winres=640x480x8
+LANGSELECT = false
+LANGCONFIG = Machine.cnf
+
+$(include cfg-hugo-multilang.inc)
 
 //
 // filesystem
@@ -17,18 +21,32 @@ mount[]: vpath = $(rootpath); srcpath = $(ifsinstallpath)
 //
 // warnings
 //
-INCOMPATIBLE = false
+INCOMPATIBLE = true
 warning[incompatible]:
     condition = $(INCOMPATIBLE)
-    text = This game is currently unplayable (4.0x35)
+    text = Waterfall and Memory games are currently unplayable due to missing mouse input (4.x53)
+end
+
+//
+// Language options
+//
+config[langselect]:
+    condition = $(LANGSELECT)
+    title = Language Configuration
+    option[en]: name = English; LANGCONFIG = Machineuk.cnf; priority = 1;
+    option[dk]: name = Danish; LANGCONFIG = Machinedk.cnf;
+    option[fi]: name = Finnish; LANGCONFIG = Machinefi.cnf;	
+    option[no]: name = Norwegian; LANGCONFIG = Machineno.cnf;
+    option[se]: name = Swedish; LANGCONFIG = Machinese.cnf; 
 end
 
 //
 // 
 //
-game[pc]:
-    name = Multilanguage
+game[pc-win-010121]:
+    name = Multilanguage 2001-01-12
     anchorfile = Hugo.exe
+    LANGSELECT = true
     file[]: crc = 6d0d8c13; size =    512000; name = CoreW32DLL.dll
     file[]: crc = b4cf6383; size =     40208; name = dsetup.dll
     file[]: crc = 6b137912; size =     64512; name = dsetup16.dll
