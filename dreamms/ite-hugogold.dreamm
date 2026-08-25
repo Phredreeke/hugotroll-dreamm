@@ -17,11 +17,6 @@ mount[]: vpath = $(rootpath); srcpath = $(ifsinstallpath)
 //
 // warnings
 //
-INCOMPATIBLE = true
-warning[incompatible]:
-    condition = $(INCOMPATIBLE)
-    text = This version does not work in tested DREAMM version (4.0x38)
-end
 
 CPNOTE = false
 warning[incompatiblecpnote]:
@@ -33,7 +28,7 @@ end
 // Finnish version 
 //
 game[pc-fi-990610]:
-    name = Finnish
+    name = Finnish 1999-06-10
     anchorfile = Hugo.exe
     file[]: crc = 8f691799; size =        50; name = Autorun.inf
     file[]: crc = 5ec24882; size =    421888; name = CoreW32DLL.dll
@@ -78,7 +73,7 @@ end
 // German version 
 //
 game[pc-de-981210]:
-    name = German
+    name = German 1998-12-10
     anchorfile = Hugo.exe
     file[]: crc = c40524df; size =        50; name = Autorun.inf
     file[]: crc = 5ec24882; size =    421888; name = CoreW32DLL.dll
@@ -118,7 +113,7 @@ end
 // Swedish version 
 //
 game[pc-se-990610]:
-    name = Swedish
+    name = Swedish 1999-06-10
     anchorfile = Hugo.exe
     CPNOTE = true
     file[]: crc = c9d7bf39; size =     10784; name = Autorn.exe
