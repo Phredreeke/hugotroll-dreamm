@@ -16,7 +16,7 @@ Not to be confused with the Hugo series by Gray Design Associates.
 |Hugo 6|🇩🇪🇮🇱🇳🇴🇵🇹|works|
 |Hugo Jungle Island|🇦🇷🇩🇪🇸🇪|Launches, doesn't read mouse input|
 |Hugo Jungle Island 2|🇳🇴|Launches, doesn't read mouse input|
-|Hugo Jungle Island 3|🇵🇱|Works|
+|Hugo Jungle Island 3|🇵🇱|Partially works|
 |Hugo XL|🇩🇪🇫🇮|Mostly working with graphical glitches (possibly part of original)|
 |Hugo Birthday|🇩🇰🇸🇪|Works|
 |Hugo Gold|🇩🇪🇫🇮🇸🇪|🇩🇪🇫🇮 works, 🇸🇪 does not work due to Laserlock protection|
