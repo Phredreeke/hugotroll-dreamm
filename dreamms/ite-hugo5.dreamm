@@ -393,6 +393,7 @@ end
 game[pc-de-000215]:
     name = German Windows 2000-02-15
     anchorfile = HUGO.EXE
+    mips = $(MIPS_MAX)
     file[]: crc = 8f691799; size =        50; name = Autorun.inf
     file[]: crc = 3da2a36f; size =    512000; name = CoreW32DLL.dll
     file[]: crc = ee864f94; size =    135680; name = DSETUP.DLL
@@ -431,6 +432,7 @@ end
 game[pc-no-000510]:
     name = Norwegian Windows 2000-05-10
     anchorfile = HUGO.EXE
+    mips = $(MIPS_MAX)
     file[]: crc = 8f691799; size =        50; name = Autorun.inf
     file[]: crc = 3da2a36f; size =    512000; name = CoreW32DLL.dll
     file[]: crc = ee864f94; size =    135680; name = DSETUP.DLL
@@ -458,6 +460,46 @@ game[pc-no-000510]:
     file[]: crc = ba26cca5; size =      1590; name = config\RopeIntroPlugin.cnf
     file[]: crc = f493647f; size =      2762; name = config\RopeOutroPlugin.cnf
     file[]: crc = 62338dfb; size =      6152; name = config\SledgePlugin.cnf
+
+
+
+end
+
+//
+// Finnish version
+//
+game[pc-fi-000302]:
+    name = Finnish Windows 2000-03-02
+    anchorfile = HUGO.EXE
+    mips = $(MIPS_MAX)
+    file[]: crc = 8f691799; size =        50; name = Autorun.inf
+    file[]: crc = 3da2a36f; size =    512000; name = CoreW32DLL.dll
+    file[]: crc = ee864f94; size =    135680; name = DSETUP.DLL
+    file[]: crc = 6b137912; size =     64512; name = DSETUP16.DLL
+    file[]: crc = cf811d99; size =     57344; name = DSETUP32.DLL
+    file[]: crc = e8975f85; size =     86016; name = gfxdirx.dll
+    file[]: crc = 407863f1; size =    319488; name = hugo.exe
+    file[]: crc = a7f70521; size =    311296; name = Launch.exe
+    file[]: crc = 9fdda5fa; size =       917; name = Machine.cnf
+    file[]: crc = e8b13dbb; size =     53248; name = Sfx32DirX.dll
+    file[]: crc = dd9b4833; size =     69632; name = SfxDirX.dll
+    file[]: crc = 74c5414c; size = 117200896; name = Bigfile\data.res
+    file[]: crc = ccf552c2; size =       174; name = config\AutoRun.cnf
+    file[]: crc = 72ddeeef; size =      5542; name = config\BoltPlugin.cnf
+    file[]: crc = 24fa71f7; size =      6679; name = config\CliffHangerPlugin.cnf
+    file[]: crc = 109f982a; size =       730; name = config\ErrMsg.txt
+    file[]: crc = 35845843; size =        87; name = config\FileSystems.cnf
+    file[]: crc = 28de4767; size =      2238; name = config\hugo.ico
+    file[]: crc = 57e8ea97; size =      3038; name = config\KeyPlugin.cnf
+    file[]: crc = 9191d1f7; size =        34; name = config\Launch.txt
+    file[]: crc = fe9b9f4a; size =      2009; name = config\LoaderPlugin.cnf
+    file[]: crc = 907fdaa3; size =      9812; name = config\LogBridgePlugin.cnf
+    file[]: crc = 1cbdef95; size =      4108; name = config\MenuPlugin.cnf
+    file[]: crc = fef60b31; size =      4422; name = config\ParachutePlugin.cnf
+    file[]: crc = b65b3a52; size =      1517; name = config\RopeIntroPlugin.cnf
+    file[]: crc = 04d766a7; size =      2736; name = config\RopeOutroPlugin.cnf
+    file[]: crc = 68a15056; size =      6152; name = config\SledgePlugin.cnf
+
 
 
 
