@@ -107,6 +107,48 @@ game[pc-dk-000406]:
 
 end
 
+//
+// Portuguese version 
+//
+game[pc-pt-000417]:
+    name = Portuguese 2000-04-17
+    anchorfile = Hugo.exe
+    file[]: crc = 8f691799; size =        50; name = Autorun.inf
+    file[]: crc = 6d0d8c13; size =    512000; name = CoreW32DLL.dll
+    file[]: crc = 0e00fd84; size =     86016; name = gfxdirx.dll
+    file[]: crc = 464ba419; size =    557056; name = hugo.exe
+    file[]: crc = cf88d569; size =    311296; name = Launch.exe
+    file[]: crc = 93601eaf; size =      1884; name = Machine.cnf
+    file[]: crc = 57738f4d; size =      9062; name = Manual.txt
+    file[]: crc = b5c787d1; size =     53248; name = Sfx32DirX.dll
+    file[]: crc = 84a37cf9; size =     69632; name = SfxDirX.dll
+    file[]: crc = 83622e8b; size = 571596800; name = Bigfile\Data.res
+    file[]: crc = be1b82e2; size =       163; name = Config\AutoRun.cnf
+    file[]: crc = 7cb51934; size =      5545; name = Config\BoltPlugin.cnf
+    file[]: crc = bc6fef39; size =      6769; name = Config\CliffHangerPlugin.cnf
+    file[]: crc = fffc577a; size =     12269; name = Config\CopterPlugin.cnf
+    file[]: crc = a7238cb5; size =      9709; name = Config\DolmenPlugin.cnf
+    file[]: crc = 5f22be21; size =        93; name = Config\FileSystems.cnf
+    file[]: crc = 28de4767; size =      2238; name = Config\hugo.ico
+    file[]: crc = e333aa96; size =      6963; name = Config\IcecavernPlugin.cnf
+    file[]: crc = 57e8ea97; size =      3038; name = Config\KeyPlugin.cnf
+    file[]: crc = 46e7ee27; size =      8239; name = Config\LabyrinthPlugin.cnf
+    file[]: crc = 734afee4; size =        32; name = Config\Launch.txt
+    file[]: crc = a1aa39e0; size =      2004; name = Config\LoaderPlugin.cnf
+    file[]: crc = 6d561d4a; size =      4670; name = Config\MenuPlugin.cnf
+    file[]: crc = 49b3012a; size =      3765; name = Config\MinetrackPlugin.cnf
+    file[]: crc = c71c7de1; size =      7580; name = Config\NimbusPlugin.cnf
+    file[]: crc = a96fa71f; size =      8786; name = Config\RiverPlugin.cnf
+    file[]: crc = 9feac265; size =      1588; name = Config\RopeIntroPlugin.cnf
+    file[]: crc = db371122; size =      2765; name = Config\RopeOutroPlugin.cnf
+    file[]: crc = 495ec6d1; size =      4327; name = Config\Skateboardplugin.cnf
+    file[]: crc = 93060681; size =      7337; name = Config\TrainPlugin.cnf
+
+
+
+end
+
+
 
 
 end
