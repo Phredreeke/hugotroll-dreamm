@@ -44,6 +44,7 @@ fragment[base-dos]:
     ramkb = 16384
     audiohw = sb16
     videohw = svga
+    ENTERTHROTTLE = false
 end
 
 //
