@@ -14,6 +14,23 @@ LANGCONFIG = Machine.cnf
 $(include cfg-hugo3.inc)
 $(include cfg-hugo-multilang.inc)
 
+
+//
+// Throttle enter press
+//
+script[remap]:
+    condition = $(ENTERTHROTTLE)
+    code = [[[$(CRLF)
+       keyboard_install_hook(0x28, "remap");
+       func remap() {
+       keyboard_lockout(true);
+       keyboard_type("`28"); 
+       sleep(20);
+       keyboard_lockout(false);
+       }
+    ]]]
+end
+
 //
 // filesystem
 //
@@ -409,6 +426,7 @@ game[pc-win-multi-981208]:
     name = Multilanguage Windows 1998-12-08
     anchorfile = CoreW32DLL.dll
     LANGSELECT = true
+    ENTERTHROTTLE = true
     file[]: crc = 5ec24882; size =    421888; name = CoreW32DLL.dll
     file[]: crc = ae1def0e; size = 623564285; name = data.big
     file[]: crc = 4cc7a621; size =    127488; name = dsetup.dll
@@ -480,6 +498,7 @@ game[pc-win-pt-000223]:
     name = Portuguese Windows 2000-02-23
     anchorfile = CoreW32DLL.dll
     launch = $(rootpath)\Hugo2.exe
+    ENTERTHROTTLE = true
     file[]: crc = 5ec24882; size =    421888; name = CoreW32DLL.dll
     file[]: crc = 5a0f9f49; size = 675766563; name = data.big
     file[]: crc = ee864f94; size =    135680; name = dsetup.dll

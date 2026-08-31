@@ -8,11 +8,13 @@ launch = $(rootpath)\Train.exe
 osenv = windows
 winres=640x480x8
 
+
 //
 // filesystem
 //
 mount[]: vpath = C:\; srcpath = $(ifsdeltapath); writable = true;
 mount[]: vpath = $(rootpath); srcpath = $(ifsinstallpath)
+
 
 //
 // warnings
@@ -26,8 +28,8 @@ end
 //
 // Argentinian version 
 //
-game[pc-ar]:
-    name = Spanish (Argentina)
+game[pc-ar-060320]:
+    name = Spanish (Argentina) 2006-03-20
     anchorfile = Train.exe
     file[]: crc = c6b0204c; size =        49; name = Autorun.inf
     file[]: crc = 495589a4; size =    528384; name = CoreW32DLL.dll
@@ -60,16 +62,16 @@ end
 //
 // Hebrew version 
 //
-game[pc-he]:
-    name = Hebrew
+game[pc-he-980824]:
+    name = Hebrew 1998-08-24
     anchorfile = Hugo.exe
     launch = $(rootpath)\Hugo.exe
     file[]: crc = 231618dc; size = 163014399; name = data.big
     file[]: crc = bea18e17; size =       114; name = debuglog.reg
     file[]: crc = 4cc7a621; size =    127488; name = dsetup.dll
     file[]: crc = d3851129; size =     63056; name = dsetup16.dll
-//    file[]: crc = 03cf7973; size =     41984; name = dsetup32.dll
-    file[]: crc = a29029cb; size =      1967; name = Go.bat
+    file[]: crc = 03cf7973; size =     41984; name = dsetup32.dll
+//    file[]: crc = a29029cb; size =      1967; name = Go.bat
     file[]: crc = 7e1b046d; size =    622592; name = Hugo.exe
     file[]: crc = e04cc930; size =       748; name = machine.cnf
     file[]: crc = e32ddf70; size =     83027; name = mapfile.zip
