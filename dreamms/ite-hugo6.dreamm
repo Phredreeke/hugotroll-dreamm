@@ -7,24 +7,8 @@ rootpath = C:\
 launch = $(rootpath)\Hugo6.exe
 osenv = windows
 winres=640x480x8
-ENTERTHROTTLE = true
 maxfps = 60
-
-//
-// Throttle enter press
-//
-script[remap]:
-    condition = $(ENTERTHROTTLE)
-    code = [[[$(CRLF)
-       keyboard_install_hook(0x28, "remap");
-       func remap() {
-       keyboard_lockout(true);
-       keyboard_type("`28"); 
-       sleep(100);
-       keyboard_lockout(false);
-       }
-    ]]]
-end
+mips = $(MIPS_P75)
 
 //
 // filesystem

@@ -7,7 +7,8 @@ rootpath = C:\
 launch = $(rootpath)\Hugo.exe
 osenv = windows
 winres=640x480x8
-
+maxfps = 60
+mips = $(MIPS_P75)
 $(include cp-hugo2.inc)
 
 //
@@ -15,22 +16,6 @@ $(include cp-hugo2.inc)
 //
 mount[]: vpath = C:\; srcpath = $(ifsdeltapath); writable = true;
 mount[]: vpath = $(rootpath); srcpath = $(ifsinstallpath)
-
-//
-// Throttle enter press
-//
-script[remap]:
-    condition = $(ENTERTHROTTLE)
-    code = [[[$(CRLF)
-       keyboard_install_hook(0x28, "remap");
-       func remap() {
-       keyboard_lockout(true);
-       keyboard_type("`28"); 
-       sleep(50);
-       keyboard_lockout(false);
-       }
-    ]]]
-end
 
 //
 // warnings
@@ -45,11 +30,10 @@ end
 fragment[base-dos]:
     osenv = dos
     fixdivover = true
-    mips = $(MIPS_P75)
     ramkb = 16384
     audiohw = sb16
     videohw = vga
-    ENTERTHROTTLE = false
+ 
 end
 
 //
@@ -69,7 +53,6 @@ end
 game[pc-pt-win-980813]:
     name = Portuguese Windows 1998-08-13
     anchorfile = Hugo.exe
-    ENTERTHROTTLE = false
     file[]: crc = cef7e1eb; size =        50; name = Autorun.inf
     file[]: crc = e94ca9ce; size = 673465964; name = data.big
     file[]: crc = bea18e17; size =       114; name = debuglog.reg
@@ -102,7 +85,6 @@ end
 game[pc-de-win-000411]:
     name = German Windows 2000-04-11
     anchorfile = Hugo.exe
-    ENTERTHROTTLE = false
     file[]: crc = 8f691799; size =        50; name = Autorun.inf
     file[]: crc = 3da2a36f; size =    512000; name = CoreW32DLL.dll
     file[]: crc = ee864f94; size =    135680; name = DSETUP.DLL
@@ -139,8 +121,6 @@ end
 game[pc-dk-win-990311]:
     name = Danish Windows 1999-03-11
     anchorfile = Hugo.exe
-    ENTERTHROTTLE = true
-    maxfps = 60
     file[]: crc = cef7e1eb; size =        50; name = Autorun.inf
     file[]: crc = af38be3e; size = 672006291; name = data.big
     file[]: crc = bea18e17; size =       114; name = debuglog.reg
@@ -173,7 +153,6 @@ end
 game[pc-es-win-980904]:
     name = Spanish (Argentina) Windows 1998-09-04
     anchorfile = Hugo.exe
-    ENTERTHROTTLE = false
     file[]: crc = c40524df; size =        50; name = Autorun.inf
     file[]: crc = 03d7ca6f; size = 665975093; name = data.big
     file[]: crc = bea18e17; size =       114; name = debuglog.reg
@@ -207,7 +186,6 @@ end
 game[pc-es-win-010406]:
     name = Spanish (Argentina) Windows 2001-04-06
     anchorfile = Hugo.exe
-    ENTERTHROTTLE = false
     file[]: crc = 3da2a36f; size =    512000; name = CoreW32DLL.dll
     file[]: crc = ee864f94; size =    135680; name = DSETUP.DLL
     file[]: crc = 6b137912; size =     64512; name = DSETUP16.DLL
@@ -895,7 +873,6 @@ end
 game[pc-fi-win-000214]:
     name = Finnish Windows 2000-02-14
     anchorfile = Hugo.exe
-    ENTERTHROTTLE = false
     file[]: crc = 3da2a36f; size =    512000; name = CoreW32DLL.dll
     file[]: crc = ee864f94; size =    135680; name = DSETUP.DLL
     file[]: crc = 6b137912; size =     64512; name = DSETUP16.DLL
