@@ -7,7 +7,7 @@ rootpath = C:\
 launch = $(rootpath)\HUGO.EXE
 osenv = windows
 winres=640x480x8
-
+maxfps = 60
 $(include cfg-hugo4.inc)
 
 //
