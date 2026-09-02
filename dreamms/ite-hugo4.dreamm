@@ -873,4 +873,42 @@ game[pc-no-win-000413]:
 end
 
 
+//
+// Finnish Windows version
+//
+game[pc-fi-win-000312]:
+    name = Finnish Windows 2000-03-14
+    anchorfile = HUGO.EXE
+    file[]: crc = 8f691799; size =        50; name = Autorun.inf
+    file[]: crc = 6d0d8c13; size =    512000; name = CoreW32DLL.dll
+    file[]: crc = ee864f94; size =    135680; name = DSETUP.DLL
+    file[]: crc = 6b137912; size =     64512; name = DSETUP16.DLL
+    file[]: crc = cf811d99; size =     57344; name = DSETUP32.DLL
+    file[]: crc = 0e00fd84; size =     86016; name = gfxdirx.dll
+    file[]: crc = 0b5e1f55; size =    389120; name = Hugo.exe
+    file[]: crc = a7f70521; size =    311296; name = Launch.exe
+    file[]: crc = 3929bc53; size =       964; name = Machine.cnf
+    file[]: crc = b5c787d1; size =     53248; name = Sfx32DirX.dll
+    file[]: crc = 84a37cf9; size =     69632; name = SfxDirX.dll
+    file[]: crc = 677fe5f0; size = 279222272; name = BigFile\Data.res
+    file[]: crc = a927c2ce; size =       178; name = Config\AutoRun.cnf
+    file[]: crc = a479d14b; size =      9267; name = Config\BalloonPlugin.cnf
+    file[]: crc = 68bf0b10; size =      5546; name = Config\BoltPlugin.cnf
+    file[]: crc = 89ebbe8d; size =      9711; name = Config\DolmenPlugin.cnf
+    file[]: crc = 109f982a; size =       730; name = Config\ErrMsg.txt
+    file[]: crc = 5f22be21; size =        93; name = Config\FileSystems.cnf
+    file[]: crc = 28de4767; size =      2238; name = Config\hugo.ico
+    file[]: crc = 57e8ea97; size =      3038; name = Config\KeyPlugin.cnf
+    file[]: crc = 9191d1f7; size =        34; name = Config\Launch.txt
+    file[]: crc = fe9b9f4a; size =      2009; name = Config\LoaderPlugin.cnf
+    file[]: crc = e529b921; size =      4937; name = Config\MenuPlugin.cnf
+    file[]: crc = fc262335; size =      7538; name = Config\NimbusPlugin.cnf
+    file[]: crc = 7e6cd548; size =      1531; name = Config\RopeIntroPlugin.cnf
+    file[]: crc = a6b125e7; size =      2662; name = Config\RopeOutroPlugin.cnf
+    file[]: crc = 1ed65877; size =      9233; name = Config\SnowboardPlugin.cnf
+
+
+end
+
+
 end
