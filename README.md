@@ -22,7 +22,7 @@ Not to be confused with the Hugo series by Gray Design Associates.
 |Hugo Gold|🇩🇪🇫🇮🇸🇪|🇩🇪🇫🇮 works, 🇸🇪 does not work due to Laserlock protection|
 |Hugo Platin|🇩🇪|Works|
 |Hugo Rainforest|(🇬🇧🇩🇰🇫🇮🇳🇴🇸🇪)|Partially works|
-|Hugo Safari|🇩🇪(🇩🇰🇫🇮🇳🇴🇸🇪)|Partially works|
+|Hugo Safari|🇩🇪(🇩🇰🇫🇮🇳🇴🇸🇪)🇵🇹|Partially works|
 |Hugo Winter Games|🇩🇪(🇩🇰🇸🇪🇸🇮)|Works, defaults to Danish, press Escape to go to language selection|
 |Hugo Train|🇦🇷🇮🇱|Works|
 
