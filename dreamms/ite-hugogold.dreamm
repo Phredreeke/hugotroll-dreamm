@@ -25,6 +25,51 @@ warning[incompatiblecpnote]:
 end
 
 //
+// Danish version 
+//
+game[pc-dk-991122]:
+    name = Danish 1999-11-22
+    anchorfile = Hugo.exe
+    file[]: crc = 8f691799; size =        50; name = Autorun.inf
+    file[]: crc = 9afc9af2; size =    512000; name = CoreW32DLL.dll
+    file[]: crc = 4cc7a621; size =    127488; name = DSETUP.DLL
+    file[]: crc = d3851129; size =     63056; name = DSETUP16.DLL
+    file[]: crc = 03cf7973; size =     41984; name = DSETUP32.DLL
+    file[]: crc = 760f83c5; size =     86016; name = GFXDIRX.DLL
+    file[]: crc = 4e6857a0; size =    172106; name = GFXDIRXD.DLL
+    file[]: crc = 31bfe397; size =    503808; name = Hugo.exe
+    file[]: crc = c3997259; size =   1609781; name = Launch.exe
+    file[]: crc = 782caf7c; size =      1259; name = Machine.cnf
+    file[]: crc = 21774d7c; size =     53248; name = Sfx32DirX.dll
+    file[]: crc = f3a24876; size =     69632; name = SfxDirX.dll
+    file[]: crc = 87399fb4; size = 273487872; name = BigFile\DATA.RES
+    file[]: crc = 54a220ea; size =       176; name = Config\AutoRun.cnf
+    file[]: crc = b1357775; size =      5523; name = Config\BoltPlugin.cnf
+    file[]: crc = 109f982a; size =       730; name = Config\ErrMsg.txt
+    file[]: crc = 5f22be21; size =        93; name = Config\FileSystems.cnf
+    file[]: crc = 6a37e65c; size =      6859; name = Config\ForestPlugin.cnf
+    file[]: crc = 28de4767; size =      2238; name = Config\HUGO.ICO
+    file[]: crc = c8c00f77; size =      6575; name = Config\IcecavernPlugin.cnf
+    file[]: crc = 57e8ea97; size =      3038; name = Config\KeyPlugin.cnf
+    file[]: crc = becfb82c; size =      7972; name = Config\LabyrinthPlugin.cnf
+    file[]: crc = f9f6983f; size =        42; name = Config\Launch.txt
+    file[]: crc = 9e0bb07a; size =      1968; name = Config\LoaderPlugin.cnf
+    file[]: crc = afb30bd1; size =      6225; name = Config\LumberJackPlugin.cnf
+    file[]: crc = adb5e7a9; size =      4980; name = Config\MenuPlugin.cnf
+    file[]: crc = a573905c; size =      6666; name = Config\MountainPlugin.cnf
+    file[]: crc = 7ee371b5; size =      7403; name = Config\PlanePlugin.cnf
+    file[]: crc = b65b3a52; size =      1517; name = Config\RopeIntroPlugin.cnf
+    file[]: crc = 67f4cdd5; size =      2742; name = Config\RopeOutroPlugin.cnf
+    file[]: crc = b45890b1; size =      6144; name = Config\ScubaPlugin.cnf
+    file[]: crc = 1c81db8c; size =      4320; name = Config\SkateBoardPlugin.cnf
+    file[]: crc = c36679e9; size =      7572; name = Config\TrainPlugin.cnf
+    file[]: crc = e537a61e; size =   1886958; name = WebChoiceTV\WCTV_102.EXE
+
+
+
+end
+
+//
 // Finnish version 
 //
 game[pc-fi-990610]:
@@ -112,8 +157,8 @@ end
 //
 // Swedish version 
 //
-game[pc-se-990610]:
-    name = Swedish 1999-06-10
+game[pc-se-991029]:
+    name = Swedish 1999-10-29
     anchorfile = Hugo.exe
     CPNOTE = true
     file[]: crc = c9d7bf39; size =     10784; name = Autorn.exe
