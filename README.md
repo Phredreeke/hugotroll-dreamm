@@ -19,7 +19,7 @@ Not to be confused with the Hugo series by Gray Design Associates.
 |Hugo Jungle Island 3|🇵🇱|Partially works|
 |Hugo XL|🇩🇪🇫🇮|Mostly working with graphical glitches (possibly part of original)|
 |Hugo Birthday|🇩🇰🇵🇹🇸🇪|Works|
-|Hugo Gold|🇩🇪🇫🇮🇸🇪|🇩🇪🇫🇮 works, 🇸🇪 does not work due to Laserlock protection|
+|Hugo Gold|🇩🇪🇩🇰🇫🇮🇸🇪|🇩🇪🇩🇰🇫🇮 works, 🇸🇪 does not work due to Laserlock protection|
 |Hugo Platin|🇩🇪|Works|
 |Hugo Rainforest|(🇬🇧🇩🇰🇫🇮🇳🇴🇸🇪)|Partially works|
 |Hugo Safari|🇩🇪(🇩🇰🇫🇮🇳🇴🇸🇪)🇵🇹|Partially works|
