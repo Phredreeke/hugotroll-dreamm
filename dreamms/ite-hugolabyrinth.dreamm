@@ -27,13 +27,21 @@ VIDOPTIONS = true
 config[vidoptions]:
     condition = $(VIDOPTIONS)
     title = Graphics Configuration
-    option[ega]: name = $(EGA_NAME); videohw = ega; 
-    option[vga]: name = $(VGA_NAME); priority = 1;
+    option[ega]: name = $(EGA_NAME); TEMPTHROTTLE = 161; videohw = ega; 
+    option[vga]: name = $(VGA_NAME); TEMPTHROTTLE = 142; priority = 1;
+end
+SKIPOPTION = false
+config[skipoptions]:
+    condition = $(SKIPOPTION)
+    title = Intro Configuration
+    option[noskip]: name = Normal;  
+    option[fast]: name = Skip credits; nothrottle = $(TEMPTHROTTLE); priority = 1;
 end
 
 
+
 //
-// English DOS version
+// English DOS version 
 //
 game[pc-940827]:
     name = English DOS
@@ -41,6 +49,163 @@ game[pc-940827]:
     file[]: crc = 0539b2dc; size =   1072340; name = HUGO.001
     file[]: crc = 59b378b3; size =      3160; name = HUGO.DIR
     file[]: crc = 04281767; size =    102395; name = Hugo.exe
+
+end
+
+
+//
+// Danish DOS version
+//
+game[pc-dk]:
+    name = Danish DOS
+    anchorfile = HUGO.EXE
+    SKIPOPTION = true
+    mips = $(MIPS_286_10)
+    file[]: crc = d1ea93cf; size =      1096; name = ARROWS.MSK
+    file[]: crc = f6e67369; size =     14004; name = BIGBANG1.VGA
+    file[]: crc = de451432; size =      9072; name = BIGBANG2.VGA
+    file[]: crc = 40f73712; size =     10408; name = BIGBANG3.VGA
+    file[]: crc = 542f45f6; size =      1305; name = BLAM.MSK
+    file[]: crc = 0cd3eee2; size =     17608; name = BRIDGE1A.VGA
+    file[]: crc = 01a41cd6; size =     17710; name = BRIDGE1B.VGA
+    file[]: crc = 9f200cf1; size =     17624; name = BRIDGE1C.VGA
+    file[]: crc = b2b336d5; size =     17530; name = BRIDGE1D.VGA
+    file[]: crc = 8e7524d7; size =     17636; name = BRIDGE1E.VGA
+    file[]: crc = 13506bce; size =     17762; name = BRIDGE1F.VGA
+    file[]: crc = e9a345d1; size =     17660; name = BRIDGE1G.VGA
+    file[]: crc = 7cf53c40; size =     17544; name = BRIDGE1H.VGA
+    file[]: crc = 13712147; size =     17628; name = BRIDGE1I.VGA
+    file[]: crc = 40736ba5; size =     17772; name = BRIDGE1J.VGA
+    file[]: crc = 680d9c6c; size =     17638; name = BRIDGE1K.VGA
+    file[]: crc = 795d3372; size =     17552; name = BRIDGE1L.VGA
+    file[]: crc = fb3f105b; size =      5558; name = DEAD01.MSK
+    file[]: crc = f329b29d; size =     15158; name = DEAD01.VGA
+    file[]: crc = 43e4ec15; size =      9428; name = DEAD02.VGA
+    file[]: crc = ce3cd8db; size =      4823; name = DEAD03.MSK
+    file[]: crc = ff14f2a2; size =     12528; name = DEAD03.VGA
+    file[]: crc = aab214d1; size =     19356; name = DEAD04.VGA
+    file[]: crc = d789cfcc; size =     16380; name = DEAD05.VGA
+    file[]: crc = 371aa667; size =     14622; name = DEAD06.VGA
+    file[]: crc = ba757a2e; size =     29232; name = DOOR.MSK
+    file[]: crc = 6974ec98; size =     12146; name = DOOR01.VGA
+    file[]: crc = 0416cc78; size =     13240; name = DOOR02.VGA
+    file[]: crc = 710b2365; size =     13712; name = DOOR03.VGA
+    file[]: crc = ee6b9992; size =     13672; name = DOOR04.VGA
+    file[]: crc = 41561539; size =     12364; name = DOOR05.VGA
+    file[]: crc = 6685f9d5; size =      9142; name = DOOR06.VGA
+    file[]: crc = 34e7ea90; size =      3230; name = DOOR07.VGA
+    file[]: crc = 873ea26d; size =     24524; name = EXIT01.VGA
+    file[]: crc = 67796eff; size =     16926; name = EXIT02.VGA
+    file[]: crc = da39639f; size =     19142; name = EXIT03.VGA
+    file[]: crc = 4bf0677e; size =     26818; name = FALL01.VGA
+    file[]: crc = eeb37f6e; size =     22168; name = FALL02.VGA
+    file[]: crc = e3658833; size =        48; name = GAMEOVER.PAL
+    file[]: crc = aa29c907; size =     19734; name = GAMEOVER.VGA
+    file[]: crc = 62973879; size =     21663; name = GOLD.MSK
+    file[]: crc = 06e7b61a; size =     17634; name = GOLD1A.VGA
+    file[]: crc = 9d968585; size =     15770; name = GOLD1B.VGA
+    file[]: crc = 1b05c118; size =     13442; name = GOLD1C.VGA
+    file[]: crc = bf6ad1b9; size =     10256; name = GOLD1D.VGA
+    file[]: crc = bc5a23e1; size =      4923; name = HALLO.MSK
+    file[]: crc = 790075b9; size =     11866; name = HALLO.VGA
+    file[]: crc = fe28dff8; size =       904; name = HIT.MSK
+    file[]: crc = 61834284; size =     19534; name = HOLE01.VGA
+    file[]: crc = 0b96a733; size =     14544; name = HOLE02.VGA
+    file[]: crc = 640ee335; size =     10906; name = HOLE03.VGA
+    file[]: crc = 50593cb1; size =     91736; name = HUGO.EXE
+    file[]: crc = 68d6186a; size =        48; name = HUGO.PAL
+    file[]: crc = a68c80ff; size =      1286; name = HUGO.PIF
+    file[]: crc = 214ea9f5; size =       560; name = ICONS.MSK
+    file[]: crc = f74b0936; size =      3196; name = INSTALL.BAT
+    file[]: crc = 980969fa; size =       967; name = INSTALL.PIF
+    file[]: crc = f74b0936; size =      3196; name = INSTALL3.BAT
+    file[]: crc = 0696f742; size =      4687; name = INTRO.MSK
+    file[]: crc = c9599c16; size =        48; name = INTRO.PAL
+    file[]: crc = 774445a6; size =     19926; name = INTRO01.VGA
+    file[]: crc = 69bfb1c8; size =     11778; name = INTRO02.VGA
+    file[]: crc = 4b0aad6b; size =     11770; name = MAP.VGA
+    file[]: crc = 1e396ada; size =     20486; name = MENU.VGA
+    file[]: crc = dbbcf8da; size =      6000; name = MINE00.DAT
+    file[]: crc = 4850913b; size =      6000; name = MINE01.DAT
+    file[]: crc = 83a99798; size =      6000; name = MINE02.DAT
+    file[]: crc = e0a4e0a8; size =      6000; name = MINE03.DAT
+    file[]: crc = cbb3ba4b; size =     13918; name = MINE1A.VGA
+    file[]: crc = c8634cff; size =     13516; name = MINE1B.VGA
+    file[]: crc = 03c355c8; size =     13030; name = MINE1C.VGA
+    file[]: crc = 4b42d8de; size =     13116; name = MINE1D.VGA
+    file[]: crc = ed832a88; size =     12760; name = MINE1E.VGA
+    file[]: crc = 5f115089; size =     13212; name = MINE1F.VGA
+    file[]: crc = c6460f80; size =     13864; name = MINE1G.VGA
+    file[]: crc = a16faba8; size =     14060; name = MINE1H.VGA
+    file[]: crc = faf08f3c; size =     13948; name = MINE1I.VGA
+    file[]: crc = 86fe6a60; size =     13888; name = MINE1J.VGA
+    file[]: crc = a6afc566; size =     13914; name = MINE1K.VGA
+    file[]: crc = 171dcb52; size =     13848; name = MINE1L.VGA
+    file[]: crc = e1079048; size =     18310; name = MINE2A.VGA
+    file[]: crc = 2fe40234; size =     18130; name = MINE2B.VGA
+    file[]: crc = e97fc536; size =     17642; name = MINE2C.VGA
+    file[]: crc = 115d00d9; size =     17718; name = MINE2D.VGA
+    file[]: crc = 07d66b3e; size =     17744; name = MINE2E.VGA
+    file[]: crc = b4fa6e82; size =     18244; name = MINE2F.VGA
+    file[]: crc = e28ac013; size =     18836; name = MINE2G.VGA
+    file[]: crc = 2a9198df; size =     19072; name = MINE2H.VGA
+    file[]: crc = 9182463d; size =     18742; name = MINE2I.VGA
+    file[]: crc = f95bc58f; size =     18466; name = MINE2J.VGA
+    file[]: crc = 1cb50db5; size =     18240; name = MINE2K.VGA
+    file[]: crc = 9ee4014b; size =     18078; name = MINE2L.VGA
+    file[]: crc = b003712f; size =     28730; name = OBJECTSA.VGA
+    file[]: crc = ed07902d; size =     23538; name = OBJECTSB.VGA
+    file[]: crc = de01dc3c; size =     23758; name = OBJECTSC.VGA
+    file[]: crc = b64311d7; size =      7256; name = PANEL01.VGA
+    file[]: crc = 93a3db7a; size =      5908; name = PANEL02.VGA
+    file[]: crc = 832270d6; size =     20654; name = RAILS01.VGA
+    file[]: crc = f536a9f0; size =      3262; name = SAMPLEA.SND
+    file[]: crc = 9af57f1a; size =     20627; name = SAMPLEB.SND
+    file[]: crc = e7a002d3; size =     17402; name = SAMPLEC.SND
+    file[]: crc = b33a04aa; size =     25922; name = SAMPLEE.SND
+    file[]: crc = 235b176d; size =     15212; name = SAMPLEF.SND
+    file[]: crc = 04e104f5; size =     18295; name = SAMPLEG.SND
+    file[]: crc = 95091bd8; size =     19936; name = SAMPLEH.SND
+    file[]: crc = f6694334; size =      9803; name = SAMPLEI.SND
+    file[]: crc = ffe59c25; size =     28089; name = SAMPLEJ.SND
+    file[]: crc = 1e1407c2; size =     17431; name = SAMPLEL.SND
+    file[]: crc = 557dfa00; size =     15917; name = SAMPLEM.SND
+    file[]: crc = 09327cee; size =     21782; name = SAMPLEN.SND
+    file[]: crc = fb8a0fff; size =     22366; name = SAMPLEO.SND
+    file[]: crc = 5b3821b4; size =      2341; name = SAMPLEP.SND
+    file[]: crc = bdee2a19; size =     11852; name = SAMPLEQ.SND
+    file[]: crc = bfb8078f; size =     11147; name = SAMPLES.SND
+    file[]: crc = bb4563f9; size =     12016; name = SAMPLET.SND
+    file[]: crc = 1f0955ca; size =      1776; name = SCARED.MSK
+    file[]: crc = a271dbd4; size =      3150; name = SCROLL.FNT
+    file[]: crc = fdfc6744; size =        48; name = SCROLL.PAL
+    file[]: crc = 5e463da3; size =      6081; name = SCROLL.TXT
+    file[]: crc = cd54090f; size =      1914; name = SILUET.MSK
+    file[]: crc = 6b4666ea; size =       360; name = SPARK.MSK
+    file[]: crc = 2526bc9c; size =      1040; name = THEEND.MSK
+    file[]: crc = 714c8f08; size =     17242; name = THEEND.VGA
+    file[]: crc = 50438c46; size =        48; name = TITLE.PAL
+    file[]: crc = a20995cb; size =     18038; name = TITLE.VGA
+    file[]: crc = ec21f6ec; size =     10608; name = TROLDA.MSK
+    file[]: crc = 3154361b; size =     19948; name = TROLDA.VGA
+    file[]: crc = 6c8e9bc5; size =      3208; name = TROLDB.MSK
+    file[]: crc = 4188cfa4; size =     15056; name = TROLDB.VGA
+    file[]: crc = d46a6843; size =     20938; name = TROLDC.VGA
+    file[]: crc = fca1bae2; size =      3616; name = TROLDD.MSK
+    file[]: crc = d2048c9d; size =     19952; name = TROLDD.VGA
+    file[]: crc = bd19db73; size =      6882; name = TROLDE.MSK
+    file[]: crc = 8a4d08b6; size =     20416; name = TROLDE.VGA
+    file[]: crc = d4c8c23d; size =      3616; name = TROLDF.MSK
+    file[]: crc = 8625b8f3; size =      8872; name = TROLDF.VGA
+    file[]: crc = 5800a2a7; size =      4778; name = TROLDG.MSK
+    file[]: crc = a40a83b6; size =     11876; name = TROLDG.VGA
+    file[]: crc = b955f4bd; size =      5258; name = WAGON.MSK
+    file[]: crc = 67522314; size =     17110; name = WAGON.VGA
+    file[]: crc = 205c940b; size =     24398; name = WALL01.VGA
+    file[]: crc = 4cf1852f; size =     24008; name = WALL02.VGA
+    file[]: crc = 438f5be9; size =     19486; name = WALL03.VGA
+    file[]: crc = 6d5174f5; size =     22422; name = WALL04.VGA
+
 
 end
 
