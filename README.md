@@ -5,7 +5,7 @@ Not to be confused with the Hugo series by Gray Design Associates.
 
 |Game|Language|Status|
 | --- | --- | --- |
-|Hugo (DOS)|🇬🇧||
+|Hugo (DOS)|🇬🇧🇩🇰|
 |Hugo 2 (DOS)|🇩🇪🇩🇰🇫🇮🇪🇸🇸🇪|works|
 |Hugo 2 (Windows)|🇦🇷🇩🇪🇩🇰🇵🇹|works|
 |Hugo 3 (DOS)|🇦🇷🇩🇪🇩🇰🇫🇮🇭🇷🇮🇱🇵🇹🇸🇪|Works as of 4.0x37|
