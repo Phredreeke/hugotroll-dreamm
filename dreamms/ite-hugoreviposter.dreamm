@@ -23,7 +23,7 @@ warning[incompatible]:
 end
 
 //
-// Argentinian version 
+// Forest
 //
 game[pc-ar-forest]:
     name = La Selva / Forest
@@ -52,6 +52,287 @@ game[pc-ar-forest]:
     file[]: crc = 7a62e549; size =      2628; name = config\RopeOutroPlugin.cnf
     file[]: crc = ca0dd77e; size =      7545; name = config\TrainPlugin.cnf
     file[]: crc = b74b67eb; size =      5458; name = config\WitchPlugin.cnf
+
+
+
+end
+
+//
+// Skateboard
+//
+game[pc-ar-skate]:
+    name = Skate
+    anchorfile = Machine.cnf
+    launch = $(rootpath)\Hugo.exe
+    file[]: crc = 8f691799; size =        50; name = Autorun.inf
+    file[]: crc = 6d0d8c13; size =    512000; name = CoreW32DLL.dll
+    file[]: crc = ee864f94; size =    135680; name = DSETUP.DLL
+    file[]: crc = 6b137912; size =     64512; name = DSETUP16.DLL
+    file[]: crc = cf811d99; size =     57344; name = DSETUP32.DLL
+    file[]: crc = 0e00fd84; size =     86016; name = gfxdirx.dll
+    file[]: crc = f4f80a26; size =     55808; name = Hugo.exe
+    file[]: crc = 5d688c3c; size =    126976; name = Launch.exe
+    file[]: crc = 6b1bb154; size =      1816; name = Machine.cnf
+    file[]: crc = b5c787d1; size =     53248; name = Sfx32DirX.dll
+    file[]: crc = c44a5cd0; size =     40593; name = bigfile\IntroData\GoldLogo.PCX
+    file[]: crc = c44a5cd0; size =     40593; name = bigfile\IntroData\INTRO.PCX
+    file[]: crc = 184e7210; size =     77600; name = bigfile\IntroData\INTRO.RAW
+    file[]: crc = 95d94041; size =   4399337; name = bigfile\IntroData\ite-media.lzp
+    file[]: crc = e8a83bf8; size =    671116; name = bigfile\IntroData\ite-media.wav
+    file[]: crc = 4f679973; size =    236514; name = bigfile\IntroData\itejingle.wav
+    file[]: crc = d6724324; size =     37990; name = bigfile\IntroData\itemedia2logo.lbm
+    file[]: crc = d6724324; size =     37990; name = bigfile\IntroData\itemedialogo.lbm
+    file[]: crc = ce15130d; size =    308278; name = bigfile\IntroData\PlatinLogo.bmp
+    file[]: crc = c3fd91a1; size =     77698; name = bigfile\IntroData\nylyd\hit1.wav
+    file[]: crc = c028eef2; size =     39556; name = bigfile\IntroData\nylyd\hit2.wav
+    file[]: crc = 306489c5; size =    143722; name = bigfile\IntroData\nylyd\hit3.wav
+    file[]: crc = 76197413; size =     62720; name = bigfile\IntroData\nylyd\logofalderned.wav
+    file[]: crc = bee63677; size =    669934; name = bigfile\IntroData\nylyd\musik.wav
+    file[]: crc = fcbf462b; size =    144104; name = bigfile\IntroData\nylyd\vind.wav
+    file[]: crc = 844d3b0e; size =    172346; name = bigfile\IntroData\nylyd\xplosion.wav
+    file[]: crc = ba960518; size =     77878; name = bigfile\LoaderData\background.bmp
+    file[]: crc = a205aea1; size =     29829; name = bigfile\LoaderData\font.cgf
+    file[]: crc = 8a81746d; size =     18540; name = bigfile\MenuData\Arrows.cgf
+    file[]: crc = a205aea1; size =     29829; name = bigfile\MenuData\CreditFont.cgf
+    file[]: crc = b7ba622b; size =     19982; name = bigfile\MenuData\credits.raw
+    file[]: crc = 11eb0856; size =     84080; name = bigfile\MenuData\Cursor.wav
+    file[]: crc = bea3a1c6; size =      2444; name = bigfile\MenuData\Film.cgf
+    file[]: crc = 240b5e86; size =    101582; name = bigfile\MenuData\film.raw
+    file[]: crc = 86b535ee; size =    168112; name = bigfile\MenuData\Filmmove.wav
+    file[]: crc = 240b5e86; size =    101582; name = bigfile\MenuData\filmskygge.raw
+    file[]: crc = 806bf7c6; size =     31088; name = bigfile\MenuData\Filmstop.wav
+    file[]: crc = dd0d523f; size =    110222; name = bigfile\MenuData\highscore.raw
+    file[]: crc = 717f74ff; size =    110222; name = bigfile\MenuData\highscorefi.raw
+    file[]: crc = 30921c39; size =    411254; name = bigfile\MenuData\HiScore-df.wav
+    file[]: crc = 85aa83c8; size =    307982; name = bigfile\MenuData\hiscoreback.raw
+    file[]: crc = 4e14daad; size =     79274; name = bigfile\MenuData\Hiscorescreens.cgf
+    file[]: crc = 40e29927; size =     53902; name = bigfile\MenuData\Hiscreens.cgf
+    file[]: crc = 4a5f90c3; size =     40832; name = bigfile\MenuData\hugologo.raw
+    file[]: crc = 755dc078; size =     19982; name = bigfile\MenuData\intro_outro.raw
+    file[]: crc = 7d1f04a0; size =     19982; name = bigfile\MenuData\JoyPad.raw
+    file[]: crc = af0c6ed0; size =     19982; name = bigfile\MenuData\joystick.raw
+    file[]: crc = 4156930a; size =     19982; name = bigfile\MenuData\keyboard.raw
+    file[]: crc = b5e396c4; size =       780; name = bigfile\MenuData\mainpal.pal
+    file[]: crc = 315d5963; size =    307982; name = bigfile\MenuData\mainpix.raw
+    file[]: crc = 6487d853; size =     41707; name = bigfile\MenuData\MenuFont.cgf
+    file[]: crc = 617637b6; size =   1155118; name = bigfile\MenuData\Menyhed-df.wav
+    file[]: crc = 24415413; size =      3637; name = bigfile\MenuData\ModeIcon.cgf
+    file[]: crc = ccee0a10; size =     99422; name = bigfile\MenuData\ok_Hiscreens.cgf
+    file[]: crc = 224b5f15; size =       778; name = bigfile\MenuData\ok_mainpal.pal
+    file[]: crc = 5a4a0001; size =     19612; name = bigfile\MenuData\olestest.cgf
+    file[]: crc = 6c3f4d99; size =      3648; name = bigfile\MenuData\PlayersIcon.cgf
+    file[]: crc = cc8097e2; size =       768; name = bigfile\MenuData\rawmain.pal
+    file[]: crc = f1782c05; size =     19986; name = bigfile\MenuData\scene.tga
+    file[]: crc = 88608658; size =     78192; name = bigfile\MenuData\Toggle.wav
+    file[]: crc = cf48ecbc; size =     12376; name = bigfile\MenuData\UltraFont.cgf
+    file[]: crc = e4095732; size =     19982; name = bigfile\MenuData\volume.raw
+    file[]: crc = f3e9308f; size =       835; name = bigfile\MenuData\volumebar.cgf
+    file[]: crc = 88e1462e; size =      7310; name = bigfile\MenuData\volumebar.raw
+    file[]: crc = 2e6b726e; size =      4202; name = bigfile\MenuData\volumeprogress.raw
+    file[]: crc = b83dc8f9; size =    151280; name = bigfile\MenuData\Wipe.wav
+    file[]: crc = e7aeeaca; size =     20000; name = bigfile\MenuData\StrimmelPic\Balloon.raw
+    file[]: crc = 58ae5118; size =     20000; name = bigfile\MenuData\StrimmelPic\bolt.raw
+    file[]: crc = db55682f; size =     20000; name = bigfile\MenuData\StrimmelPic\CliffHanger.raw
+    file[]: crc = a64ec2b9; size =     20000; name = bigfile\MenuData\StrimmelPic\Dolmen.raw
+    file[]: crc = 2ec30a56; size =     20000; name = bigfile\MenuData\StrimmelPic\Forest.raw
+    file[]: crc = 2afe8c7b; size =     20000; name = bigfile\MenuData\StrimmelPic\IceCavern.raw
+    file[]: crc = 97a8dd7a; size =     20000; name = bigfile\MenuData\StrimmelPic\Labyrinth.raw
+    file[]: crc = 65504513; size =     20000; name = bigfile\MenuData\StrimmelPic\LogBridge.raw
+    file[]: crc = 8eef08e7; size =     20000; name = bigfile\MenuData\StrimmelPic\LumberJack.raw
+    file[]: crc = 8a5c4b53; size =     19982; name = bigfile\MenuData\StrimmelPic\Minetrack.raw
+    file[]: crc = 6055e4f1; size =     20000; name = bigfile\MenuData\StrimmelPic\Mountain.raw
+    file[]: crc = 1feda4e9; size =     20000; name = bigfile\MenuData\StrimmelPic\Nimbus.raw
+    file[]: crc = c880cea5; size =     20000; name = bigfile\MenuData\StrimmelPic\ParaChute.raw
+    file[]: crc = 062f20ae; size =     20000; name = bigfile\MenuData\StrimmelPic\Plane.raw
+    file[]: crc = b213690d; size =     19982; name = bigfile\MenuData\StrimmelPic\River.raw
+    file[]: crc = 583493b5; size =     20000; name = bigfile\MenuData\StrimmelPic\SCUBA.RAW
+    file[]: crc = ee6a543d; size =     20000; name = bigfile\MenuData\StrimmelPic\SkateBoard.raw
+    file[]: crc = 20063087; size =     20000; name = bigfile\MenuData\StrimmelPic\Sledge.raw
+    file[]: crc = d499b2df; size =     20000; name = bigfile\MenuData\StrimmelPic\Snowboard.raw
+    file[]: crc = 759a3962; size =     19982; name = bigfile\MenuData\StrimmelPic\Stones.raw
+    file[]: crc = 5388d0bc; size =     19982; name = bigfile\MenuData\StrimmelPic\swamp.raw
+    file[]: crc = 2399372f; size =     20000; name = bigfile\MenuData\StrimmelPic\Train.raw
+    file[]: crc = 7ddd867f; size =     17146; name = bigfile\SkateboardData\gfx\!VulcanSmoke.flc
+    file[]: crc = 0f8ca3b7; size =      3497; name = bigfile\SkateboardData\gfx\afskylia.cgf
+    file[]: crc = d6ac02f8; size =      4594; name = bigfile\SkateboardData\gfx\arrows.cgf
+    file[]: crc = 080a2980; size =    700144; name = bigfile\SkateboardData\gfx\backgr.til
+    file[]: crc = e4e29188; size =   1341835; name = bigfile\SkateboardData\gfx\beaverdie.lzp
+    file[]: crc = bca8703a; size =     13431; name = bigfile\SkateboardData\gfx\bird.cgf
+    file[]: crc = bca8703a; size =     13431; name = bigfile\SkateboardData\gfx\birdbenny.cgf
+    file[]: crc = c1658fe4; size =   1909555; name = bigfile\SkateboardData\gfx\endscene.lzp
+    file[]: crc = ab8c651c; size =    476624; name = bigfile\SkateboardData\gfx\flyingdie.lzp
+    file[]: crc = 75c2ea81; size =     16559; name = bigfile\SkateboardData\gfx\goldleft.cgf
+    file[]: crc = 8a5cd858; size =     17599; name = bigfile\SkateboardData\gfx\goldright.cgf
+    file[]: crc = 9fe8dd48; size =     23403; name = bigfile\SkateboardData\gfx\grenleft.cgf
+    file[]: crc = fc1d3527; size =     24724; name = bigfile\SkateboardData\gfx\grenright.cgf
+    file[]: crc = 33b74c7d; size =    281319; name = bigfile\SkateboardData\gfx\hugoboard.cgf
+    file[]: crc = b11fd29d; size =    282662; name = bigfile\SkateboardData\gfx\hugotalk.cgf
+    file[]: crc = fe58543d; size =    143867; name = bigfile\SkateboardData\gfx\hugotosides.cgf
+    file[]: crc = 2d2f210b; size =     10915; name = bigfile\SkateboardData\gfx\intohole.cgf
+    file[]: crc = a117505d; size =  27016509; name = bigfile\SkateboardData\gfx\mandag.lzp
+    file[]: crc = 8f19df68; size =    247764; name = bigfile\SkateboardData\gfx\obstbeaver.cgf
+    file[]: crc = 1f01c4e2; size =     75736; name = bigfile\SkateboardData\gfx\rockcent.cgf
+    file[]: crc = 62580c24; size =     87289; name = bigfile\SkateboardData\gfx\rockleft.cgf
+    file[]: crc = a3ed838e; size =     78218; name = bigfile\SkateboardData\gfx\rockright.cgf
+    file[]: crc = 7f8556df; size =      9228; name = bigfile\SkateboardData\gfx\score.cgf
+    file[]: crc = 9f4865b8; size =     92723; name = bigfile\SkateboardData\gfx\startup.cgf
+    file[]: crc = 5d03feed; size =   1503792; name = bigfile\SkateboardData\gfx\stonedie.lzp
+    file[]: crc = de170fa4; size =     15026; name = bigfile\SkateboardData\gfx\vulcan.cgf
+    file[]: crc = 582e3cb0; size =  58202181; name = bigfile\SkateboardData\gfx\world.lzp
+    file[]: crc = ba960518; size =     77878; name = bigfile\SkateboardData\gfx\player\background.bmp
+    file[]: crc = c730aa24; size =     27562; name = bigfile\SkateboardData\gfx\player\font.cgf
+    file[]: crc = 67d2d9b0; size =     74288; name = bigfile\SkateboardData\sfx\avoid.wav
+    file[]: crc = b3a58ec0; size =     81228; name = bigfile\SkateboardData\sfx\beat.wav
+    file[]: crc = f37470b2; size =    118906; name = bigfile\SkateboardData\sfx\birds.wav
+    file[]: crc = fbd3edb0; size =     81458; name = bigfile\SkateboardData\sfx\board_a.wav
+    file[]: crc = 51f6484f; size =     32854; name = bigfile\SkateboardData\sfx\board_b.wav
+    file[]: crc = 82c6890f; size =    161146; name = bigfile\SkateboardData\sfx\board_c.wav
+    file[]: crc = 34817914; size =     53474; name = bigfile\SkateboardData\sfx\board_d.wav
+    file[]: crc = 25e3774c; size =     20048; name = bigfile\SkateboardData\sfx\bonk.wav
+    file[]: crc = 70c5be50; size =      2178; name = bigfile\SkateboardData\sfx\choose_l.wav
+    file[]: crc = 765d1241; size =      2032; name = bigfile\SkateboardData\sfx\choose_r.wav
+    file[]: crc = 9634514c; size =     49294; name = bigfile\SkateboardData\sfx\crow.wav
+    file[]: crc = c92ce7b8; size =     70342; name = bigfile\SkateboardData\sfx\dizzy.wav
+    file[]: crc = ebdf227b; size =    162768; name = bigfile\SkateboardData\sfx\first.wav
+    file[]: crc = 7ba22a55; size =     19938; name = bigfile\SkateboardData\sfx\flyby.wav
+    file[]: crc = dbb10e85; size =    649558; name = bigfile\SkateboardData\sfx\full.wav
+    file[]: crc = fc5ce033; size =     31050; name = bigfile\SkateboardData\sfx\gold.wav
+    file[]: crc = 296ffe2c; size =     44590; name = bigfile\SkateboardData\sfx\intowood.wav
+    file[]: crc = 776c8ebb; size =      4042; name = bigfile\SkateboardData\sfx\knock.wav
+    file[]: crc = 539bec1d; size =      5074; name = bigfile\SkateboardData\sfx\onboard.wav
+    file[]: crc = 6c3f6db8; size =      9402; name = bigfile\SkateboardData\sfx\pickup.wav
+    file[]: crc = d61aa134; size =     61930; name = bigfile\SkateboardData\sfx\plask.wav
+    file[]: crc = 3d26d6bb; size =    100610; name = bigfile\SkateboardData\sfx\scylla.wav
+    file[]: crc = 428a292b; size =     49442; name = bigfile\SkateboardData\sfx\stonedie.wav
+    file[]: crc = 6aafd5e4; size =     13562; name = bigfile\SkateboardData\sfx\toside.wav
+    file[]: crc = bddedf5a; size =     38976; name = bigfile\SkateboardData\sfx\tunnel.wav
+    file[]: crc = a3fa5e07; size =     49698; name = bigfile\SkateboardData\sfx\weeee.wav
+    file[]: crc = 95e4aa83; size =     80202; name = bigfile\SkateboardData\sfx\wind.wav
+    file[]: crc = f4079d74; size =    235670; name = bigfile\SkateboardData\speak\dk\011-01.wav
+    file[]: crc = a1cb445d; size =    203886; name = bigfile\SkateboardData\speak\dk\011-02.wav
+    file[]: crc = d5b67708; size =    340190; name = bigfile\SkateboardData\speak\dk\011-03.wav
+    file[]: crc = 1e2fea44; size =    347406; name = bigfile\SkateboardData\speak\dk\011-04.wav
+    file[]: crc = 9558676b; size =    366190; name = bigfile\SkateboardData\speak\dk\011-05.wav
+    file[]: crc = 6cef00a8; size =    430254; name = bigfile\SkateboardData\speak\dk\011-06.wav
+    file[]: crc = d28c4964; size =    334894; name = bigfile\SkateboardData\speak\dk\011-07.wav
+    file[]: crc = 45d64bd1; size =     52842; name = bigfile\SkateboardData\speak\dk\011-08.wav
+    file[]: crc = 287ee74c; size =       186; name = bigfile\SkateboardData\sync\dk\011-01.oos
+    file[]: crc = f99ef49b; size =       197; name = bigfile\SkateboardData\sync\dk\011-03.oos
+    file[]: crc = 8083cc4a; size =       197; name = bigfile\SkateboardData\sync\dk\011-04.oos
+    file[]: crc = b586a83f; size =       203; name = bigfile\SkateboardData\sync\dk\011-06.oos
+    file[]: crc = 60acd70b; size =       196; name = bigfile\SkateboardData\sync\dk\011-07.oos
+    file[]: crc = 95f0189a; size =       170; name = Config\AutoRun.cnf
+    file[]: crc = 5f22be21; size =        93; name = Config\FileSystems.cnf
+    file[]: crc = 361f4978; size =        94; name = Config\FileSystems.cnf.bak
+    file[]: crc = 28de4767; size =      2238; name = Config\hugo.ico
+    file[]: crc = f7c0a223; size =        37; name = Config\Launch.txt
+    file[]: crc = abab0131; size =      1977; name = Config\LoaderPlugin.cnf
+    file[]: crc = a76a5b50; size =      5100; name = Config\MenuPlugin.cnf
+    file[]: crc = cf79c740; size =      4322; name = Config\Skateboardplugin.cnf
+
+
+
+
+end
+
+//
+// Diving
+//
+game[pc-ar-diving]:
+    name = El buceador / Diving
+    anchorfile = Machine.cnf
+    launch = $(rootpath)\Hugo.exe
+    file[]: crc = 8f691799; size =        50; name = Autorun.inf
+    file[]: crc = 6d0d8c13; size =    512000; name = CoreW32DLL.dll
+    file[]: crc = ee864f94; size =    135680; name = DSETUP.DLL
+    file[]: crc = 6b137912; size =     64512; name = DSETUP16.DLL
+    file[]: crc = cf811d99; size =     57344; name = DSETUP32.DLL
+    file[]: crc = 0e00fd84; size =     86016; name = gfxdirx.dll
+    file[]: crc = f5c655a2; size =     59904; name = Hugo.exe
+    file[]: crc = 5d688c3c; size =    126976; name = Launch.exe
+    file[]: crc = 6b1bb154; size =      1816; name = Machine.cnf
+    file[]: crc = b5c787d1; size =     53248; name = Sfx32DirX.dll
+    file[]: crc = 84a37cf9; size =     69632; name = SfxDirX.dll
+    file[]: crc = ea9e20af; size =  31086592; name = bigfile\data.res
+    file[]: crc = 95f0189a; size =       170; name = Config\AutoRun.cnf
+    file[]: crc = 361f4978; size =        94; name = Config\FileSystems.cnf
+    file[]: crc = 28de4767; size =      2238; name = Config\hugo.ico
+    file[]: crc = f7c0a223; size =        37; name = Config\Launch.txt
+    file[]: crc = abab0131; size =      1977; name = Config\LoaderPlugin.cnf
+    file[]: crc = 00336480; size =      5090; name = Config\MenuPlugin.cnf
+    file[]: crc = b45890b1; size =      6144; name = Config\ScubaPlugin.cnf
+
+
+
+
+
+end
+
+//
+// Lumberjack
+//
+game[pc-ar-lumber]:
+    name = El leñador / Lumberjack
+    anchorfile = Machine.cnf
+    launch = $(rootpath)\Hugo.exe
+    file[]: crc = 8f691799; size =        50; name = Autorun.inf
+    file[]: crc = 6d0d8c13; size =    512000; name = CoreW32DLL.dll
+    file[]: crc = ee864f94; size =    135680; name = DSETUP.DLL
+    file[]: crc = 6b137912; size =     64512; name = DSETUP16.DLL
+    file[]: crc = cf811d99; size =     57344; name = DSETUP32.DLL
+    file[]: crc = 0e00fd84; size =     86016; name = gfxdirx.dll
+    file[]: crc = e9cb8027; size =        58; name = Hugo.bat
+    file[]: crc = cd39c87a; size =     59904; name = Hugo.exe
+    file[]: crc = 5d688c3c; size =    126976; name = Launch.exe
+    file[]: crc = 6b1bb154; size =      1816; name = Machine.cnf
+    file[]: crc = b5c787d1; size =     53248; name = Sfx32DirX.dll
+    file[]: crc = 84a37cf9; size =     69632; name = SfxDirX.dll
+    file[]: crc = 02278e44; size =  33224704; name = bigfile\data.res
+    file[]: crc = 95f0189a; size =       170; name = Config\AutoRun.cnf
+    file[]: crc = 5f22be21; size =        93; name = Config\FileSystems.cnf
+    file[]: crc = 28de4767; size =      2238; name = Config\hugo.ico
+    file[]: crc = f7c0a223; size =        37; name = Config\Launch.txt
+    file[]: crc = abab0131; size =      1977; name = Config\LoaderPlugin.cnf
+    file[]: crc = 767e3cea; size =      6194; name = Config\lumberjackplugin.cnf
+    file[]: crc = ed431236; size =      5112; name = Config\MenuPlugin.cnf
+    file[]: crc = e537a61e; size =   1886958; name = WebChoiceTV\wctv_102.exe
+
+
+
+
+
+end
+
+//
+// Ice Cavern
+//
+game[pc-ar-icecavern]:
+    name = La cueva de hielo / Ice Cavern
+    anchorfile = Machine.cnf
+    launch = $(rootpath)\Hugo.exe
+    file[]: crc = 8f691799; size =        50; name = Autorun.inf
+    file[]: crc = 6d0d8c13; size =    512000; name = CoreW32DLL.dll
+    file[]: crc = ee864f94; size =    135680; name = DSETUP.DLL
+    file[]: crc = 6b137912; size =     64512; name = DSETUP16.DLL
+    file[]: crc = cf811d99; size =     57344; name = DSETUP32.DLL
+    file[]: crc = 0e00fd84; size =     86016; name = gfxdirx.dll
+    file[]: crc = e9cb8027; size =        58; name = Hugo.bat
+    file[]: crc = 589ab2de; size =     58368; name = Hugo.exe
+    file[]: crc = 5d688c3c; size =    126976; name = Launch.exe
+    file[]: crc = 6b1bb154; size =      1816; name = Machine.cnf
+    file[]: crc = b5c787d1; size =     53248; name = Sfx32DirX.dll
+    file[]: crc = 84a37cf9; size =     69632; name = SfxDirX.dll
+    file[]: crc = 64420237; size =  29499392; name = bigfile\data.res
+    file[]: crc = 95f0189a; size =       170; name = Config\AutoRun.cnf
+    file[]: crc = 5f22be21; size =        93; name = Config\FileSystems.cnf
+    file[]: crc = 28de4767; size =      2238; name = Config\hugo.ico
+    file[]: crc = 7206f8ec; size =      7043; name = Config\IcecavernPlugin.cnf
+    file[]: crc = f7c0a223; size =        37; name = Config\Launch.txt
+    file[]: crc = abab0131; size =      1977; name = Config\LoaderPlugin.cnf
+    file[]: crc = 75f0b348; size =      5107; name = Config\MenuPlugin.cnf
+    file[]: crc = e537a61e; size =   1886958; name = WebChoiceTV\wctv_102.exe
+
+
 
 
 
