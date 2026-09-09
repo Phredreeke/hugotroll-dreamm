@@ -10,9 +10,9 @@ Not to be confused with the Hugo series by Gray Design Associates.
 |Hugo 2 (Windows)|🇦🇷🇩🇪🇩🇰🇵🇹|works|
 |Hugo 3 (DOS)|🇦🇷🇩🇪🇩🇰🇫🇮🇭🇷🇮🇱🇵🇹🇸🇪|Works as of 4.0x37|
 |Hugo 3 (Windows)|(🇩🇰🇫🇮🇳🇴🇸🇪)🇵🇹|Works|
-|Hugo 4 (DOS)|🇦🇷🇩🇪🇫🇮🇮🇱🇸🇪|Works as of 4.0x37|
+|Hugo 4 (DOS)|🇦🇷🇩🇪🇫🇮🇭🇷🇮🇱🇸🇪|Works as of 4.0x37|
 |Hugo 4 (Windows)|🇩🇪🇫🇮🇳🇴|Works|
-|Hugo 5|🇦🇷🇩🇪🇮🇱🇳🇴🇵🇹🇸🇪|Windows mostly works. See https://github.com/Phredreeke/hugotroll-dreamm/issues/1|
+|Hugo 5|🇦🇷🇩🇪🇫🇮🇮🇱🇳🇴🇵🇹🇸🇪|Windows mostly works. See https://github.com/Phredreeke/hugotroll-dreamm/issues/1|
 |Hugo 6|🇩🇪🇫🇮🇮🇱🇳🇴🇵🇹|works|
 |Hugo Jungle Island|🇦🇷🇩🇪🇸🇪|Launches, doesn't read mouse input|
 |Hugo Jungle Island 2|🇳🇴|Launches, doesn't read mouse input|
