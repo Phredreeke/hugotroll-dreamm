@@ -509,6 +509,35 @@ game[pc-win-pt-000223]:
 
 end
 
+//
+// Swedish Ice Cavern (found on Smatterbandet audio CD)
+//
+game[pc-se-icecavern-971125]:
+    name = Swedish Ice Cavern 1997-11-25
+    anchorfile = HUGO.EXE
+    imports = base-dos
+    file[]: crc = 5cc34b0f; size =    265396; name = DOS4GW.EXE
+    file[]: crc = c90f35dc; size =       228; name = DSIK.TXT
+    file[]: crc = ae3ffe61; size =   6240467; name = HUGO.DAT
+    file[]: crc = 43da3da2; size =    236074; name = HUGO.EXE
+    file[]: crc = 5fe637d2; size =    127162; name = SNDSETUP.EXE
+//    file[]: crc = 51eda47c; size =      2048; name = CDPLUS\INFO.CDP
+//    file[]: crc = 7656cb6f; size =       784; name = CDPLUS\SUB_INFO.SV
+//    file[]: crc = 5dd40174; size =     16464; name = PICTURES\JACKET01.00A
+//    file[]: crc = 9ada4c34; size =     19840; name = PICTURES\JACKET01.00J
+//    file[]: crc = 3c2cf914; size =     32928; name = PICTURES\JACKET01.00L
+//    file[]: crc = ea9689d4; size =      7056; name = PICTURES\JACKET01.00P
+    file[]: crc = 144dee79; size =    152336; name = RESOURCE\BOKSHITL.RAS
+    file[]: crc = 08a5b941; size =    152459; name = RESOURCE\BOKSHITR.RAS
+    file[]: crc = 49964f05; size =     64553; name = RESOURCE\BOKSWALL.RAS
+    file[]: crc = e649df94; size =     92523; name = RESOURCE\GITTER.RAS
+    file[]: crc = a5bcacc2; size =     88330; name = RESOURCE\HUGOFALD.RAS
+    file[]: crc = 7c26f0ba; size =    229690; name = RESOURCE\HUGOFALL.RAS
+    file[]: crc = 96a73e01; size =    228552; name = RESOURCE\HUGOFALR.RAS
+    file[]: crc = 5cdb0844; size =    215300; name = RESOURCE\STONEHIT.RAS
+    file[]: crc = 037c4a4e; size =     50043; name = RESOURCE\STONEWAL.RAS
+
+end
 
 
 end
