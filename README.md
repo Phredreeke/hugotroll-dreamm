@@ -7,7 +7,7 @@ Not to be confused with the Hugo series by Gray Design Associates.
 | --- | --- | --- |
 |Hugo (DOS)|🇬🇧🇩🇰|
 |Hugo 2 (DOS)|🇩🇪🇩🇰🇫🇮🇪🇸🇸🇪|works|
-|Hugo 2 (Windows)|🇦🇷🇩🇪🇫🇮🇩🇰🇵🇹|works|
+|Hugo 2 (Windows)|🇦🇷🇩🇪🇩🇰🇫🇮🇵🇹|works|
 |Hugo 3 (DOS)|🇦🇷🇩🇪🇩🇰🇫🇮🇭🇷🇮🇱🇵🇹🇸🇪|Works as of 4.0x37|
 |Hugo 3 (Windows)|(🇩🇰🇫🇮🇳🇴🇸🇪)🇵🇹|Works|
 |Hugo 4 (DOS)|🇦🇷🇩🇪🇫🇮🇭🇷🇮🇱🇸🇪|Works as of 4.0x37|
