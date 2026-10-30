@@ -1,5 +1,5 @@
 # Hugo Games for DREAMM
-Not to be confused with the Hugo series by Gray Design Associates.
+Not to be confused with the [Hugo series by Gray Design Associates](https://github.com/exmensa/hugo-dreamm).
 
 # Supported Games
 
