@@ -3,7 +3,7 @@ desc[ite-hugo3]:
 name = Hugo 3
 icon = ite-hugo3.png
 machine = pc
-rootpath = C:\
+rootpath = D:\
 launch = $(rootpath)\HUGO.EXE
 osenv = windows
 winres=640x480x8
@@ -19,16 +19,20 @@ $(include cfg-hugo-multilang.inc)
 //
 // filesystem
 //
-mount[]: vpath = C:\; srcpath = $(ifsdeltapath); writable = true;
+mount[]: vpath = C:\HUGO3; srcpath = $(ifsdeltapath); writable = true; condition = is_dos()
+mount[]: vpath = C:\; srcpath = $(ifsdeltapath); writable = true; condition = is_windows()
 mount[]: vpath = $(rootpath); srcpath = $(ifsinstallpath)
+mount[]: vpath = C:\; srcpath = $(ifsinstallpath); condition = is_dos()
 
 fragment[base-dos]:
+    rootpath = C:\HUGO3
     osenv = dos
     fixdivover = true
     mips = $(MIPS_P100)
     ramkb = 16384
     audiohw = sb16
     videohw = svga
+
 end
 
 //
@@ -37,7 +41,7 @@ end
 configutil[]:
     name = Sound setup
     launch = $(rootpath)\SNDSETUP.EXE
-    condition = file_exists("$(rootpath)\SNDSETUP.EXE")
+    condition = file_exists("$$(rootpath)\\SNDSETUP.EXE")
 end
 
 //

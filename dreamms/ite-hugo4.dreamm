@@ -3,7 +3,7 @@ desc[ite-hugo4]:
 name = Hugo 4
 icon = ite-hugo4.png
 machine = pc
-rootpath = C:\
+rootpath = D:\
 launch = $(rootpath)\HUGO.EXE
 osenv = windows
 winres=640x480x8
@@ -13,8 +13,10 @@ $(include cfg-hugo4.inc)
 //
 // filesystem
 //
-mount[]: vpath = C:\; srcpath = $(ifsdeltapath); writable = true;
+mount[]: vpath = C:\HUGO4; srcpath = $(ifsdeltapath); writable = true; condition = is_dos()
+mount[]: vpath = C:\; srcpath = $(ifsdeltapath); writable = true; condition = is_windows()
 mount[]: vpath = $(rootpath); srcpath = $(ifsinstallpath)
+mount[]: vpath = C:\; srcpath = $(ifsinstallpath); condition = is_dos()
 
 //
 // warnings
@@ -26,6 +28,7 @@ warning[incompatible]:
 end
 
 fragment[base-dos]:
+    rootpath = C:\HUGO4
     osenv = dos
     fixdivover = true
     mips = $(MIPS_P100)
@@ -40,7 +43,7 @@ end
 configutil[]:
     name = Sound setup
     launch = $(rootpath)\SNDSETUP.EXE
-    condition = file_exists("$(rootpath)\SNDSETUP.EXE")
+    condition = file_exists("$$(rootpath)\\SNDSETUP.EXE")
 end
 
 //
