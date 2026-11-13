@@ -3,13 +3,13 @@ desc[ite-hugolabyrinth]:
 name = Hugo Labyrinth
 icon = ite-hugolabyrinth.png
 machine = pc
-rootpath = C:\
+rootpath = C:\HUGO
 launch = $(rootpath)\HUGO.EXE
 osenv = dos
 fixdivover = true
 mips = $(MIPS_386SX_20)
 ramkb = 16384
-audiohw = sb16
+audiohw = speaker
 videohw = vga
 
 

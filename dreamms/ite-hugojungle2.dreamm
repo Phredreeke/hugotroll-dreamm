@@ -3,7 +3,7 @@ desc[ite-hugojungle2]:
 name = Hugo Jungle Island 2
 icon = ite-hugojungle2.png
 machine = pc
-rootpath = C:\
+rootpath = D:\
 launch = $(rootpath)\Jungle2.exe
 osenv = windows
 winres=640x480x8

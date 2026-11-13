@@ -3,7 +3,7 @@ desc[ite-hugoxl]:
 name = Hugo XL
 icon = ite-hugoxl.png
 machine = pc
-rootpath = C:\
+rootpath = D:\
 launch = $(rootpath)\hugo.exe
 osenv = windows
 mips = 260

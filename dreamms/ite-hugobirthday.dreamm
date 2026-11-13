@@ -3,7 +3,7 @@ desc[ite-hugobirthday]:
 name = Hugo Birthday Party
 icon = ite-hugobirthday.png
 machine = pc
-rootpath = C:\
+rootpath = D:\
 launch = $(rootpath)\hugo.exe
 osenv = windows
 winres=640x480x8

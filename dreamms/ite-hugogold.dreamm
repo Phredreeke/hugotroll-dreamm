@@ -3,7 +3,7 @@ desc[ite-hugogold]:
 name = Hugo Gold
 icon = ite-hugogold.png
 machine = pc
-rootpath = C:\
+rootpath = D:\
 launch = $(rootpath)\Hugo.exe
 osenv = windows
 winres=640x480x8

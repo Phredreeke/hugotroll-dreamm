@@ -3,7 +3,7 @@ desc[ite-hugo2]:
 name = Hugo 2
 icon = ite-hugo2.png
 machine = pc
-rootpath = C:\
+rootpath = D:\
 launch = $(rootpath)\Hugo.exe
 osenv = windows
 winres=640x480x8
@@ -14,7 +14,8 @@ $(include cp-hugo2.inc)
 //
 // filesystem
 //
-mount[]: vpath = C:\; srcpath = $(ifsdeltapath); writable = true;
+mount[]: vpath = C:\HUGO3; srcpath = $(ifsdeltapath); writable = true; condition = is_dos()
+mount[]: vpath = C:\; srcpath = $(ifsdeltapath); writable = true; condition = is_windows()
 mount[]: vpath = $(rootpath); srcpath = $(ifsinstallpath)
 
 //
@@ -28,6 +29,7 @@ end
 
 
 fragment[base-dos]:
+    rootpath = C:\HUGO2
     osenv = dos
     fixdivover = true
     ramkb = 16384

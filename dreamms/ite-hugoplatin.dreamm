@@ -3,7 +3,7 @@ desc[ite-hugoplatin]:
 name = Hugo Platin
 icon = ite-hugoplatin.png
 machine = pc
-rootpath = C:\
+rootpath = D:\
 launch = $(rootpath)\Hugo.exe
 osenv = windows
 winres=640x480x8
